@@ -17,33 +17,33 @@ void Group::electionOfHead()
     head = students[num];
 }
 
-size_t Group::findByName(std::string name) const
+int Group::findByName(std::string name) const
 {
-    for (size_t i = 0; i < students.size(); i++)
+    for (long unsigned int i = 0; i < students.size(); i++)
     {
-        if (students[i]->getFIO = name)
+        if (students[i]->getFIO() == name)
         {
             return i;
         }
     }
-    return NULL;
+    return -1;
 }
 
-size_t Group::findByID(unsigned int id) const
+int Group::findByID(unsigned int id) const
 {
     for (size_t i = 0; i < students.size(); i++)
     {
-        if (students[i]->getID = id)
+        if (students[i]->getID() == id)
         {
             return i;
         }
     }
-    return NULL;
+    return -1;
 }
 
 void Group::estimate(unsigned int id)
 {
-    if (this->findByID(id) != NULL)
+    if (this->findByID(id) != -1)
     {
         int mark = rand() % 10;
         students[findByID(id)]->addMark(mark);
@@ -54,7 +54,7 @@ int Group::findMean() const
 {
     int num = students.size();
     int sum = 0;
-    for (size_t i = 0; i < num; i++)
+    for (int i = 0; i < num; i++)
     {
         sum += students[i]->calcMean();
     }
@@ -65,7 +65,7 @@ int Group::findMean() const
 void Group::exclude(unsigned int id)
 {
     int index = this->findByID(id);
-    if (index != NULL)
+    if (index != -1)
     {
         students.erase(students.begin() + index);
     }

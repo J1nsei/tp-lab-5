@@ -18,9 +18,9 @@ void Student::addMark(int mark)
 
 int Student::calcMean() const 
 {
-    int num = marks.size();
-    int sum = 0;
-    for (size_t i = 0; i < num; i ++)
+    long unsigned int num = marks.size();
+    long unsigned int sum = 0;
+    for (long unsigned int i = 0; i < num; i ++)
     {
         sum += marks[i];
     }
