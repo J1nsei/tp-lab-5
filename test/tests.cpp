@@ -3,6 +3,8 @@
 #include "group.h"
 #include "dean.h"
 
+int Student::static_ID = 0;
+
 TEST(lab5, test1)
 {
     Dean* dean = new Dean("students.txt");
