@@ -3,7 +3,7 @@
 //
 #include <iostream>
 #include <vector>
-#include <sstream>
+#include <windows.h>
 #include "dean.h"
 #include "student.h"
 
@@ -14,7 +14,75 @@ int Student::static_ID = 0;
 int main()
 {
     system("chcp 65001");
-    Dean* dean = new Dean(R"(C:\Users\lacos\Desktop\Coding\C++\tp-lab-5\src\students.txt)");
+
+    cout << "**********************************************************" << endl;
+    cout << "Создание деканата..." << endl;
+    Dean* dean = new Dean("students.txt");
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Запрос информации по группам:" << endl;
+    dean->ShowShortStatistics();
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Выставление оценок за экзамен по мат анализу..." << endl;
+    dean->AddRandomMarksToStudents();
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Выставление оценок за экзамен по программированию..." << endl;
+    dean->AddRandomMarksToStudents();
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Исключение студентов после первого семестра..." << endl;
+    dean->CheckForKick();
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Переизбрание старост..." << endl;
+    dean->ChangeHeads();
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Запрос информации по группам:" << endl;
+    dean->ShowShortStatistics();
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Выставление оценок за экзамен по английскому языку..." << endl;
+    dean->AddRandomMarksToStudents();
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Выставление оценок за экзамен по ассемблеру..." << endl;
+    dean->AddRandomMarksToStudents();
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Исключение студентов после второго семестра..." << endl;
+    dean->CheckForKick();
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Переизбрание старост..." << endl;
+    dean->ChangeHeads();
+
+    Sleep(3000);
+
+    cout << "**********************************************************" << endl;
+    cout << "Полная статистика:" << endl;
     dean->ShowStatistics();
     return 0;
 }

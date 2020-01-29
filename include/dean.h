@@ -18,10 +18,11 @@ public:
     bool ChangeGroupOfStudent(Group* from, Group* in, int ID);
     void ShowStatistics();
     void CheckForKick();
-    void SaveData();
+    void SaveData(std::string);
     void ChangeHeads();
     bool IsGroupExist(std::string);
-
+    void ShowShortStatistics();
+    Group* GetGroup(std::string);
 private:
     std::vector<Group*> groups;
 };

@@ -88,4 +88,9 @@ void Group::SetHead()
     this->head = currentHead;
 }
 
+std::string Group::GetHead()
+{
+    return this->head->GetFIO();
+}
+
 

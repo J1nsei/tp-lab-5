@@ -2,7 +2,6 @@
 // Created by Egor on 22.01.2020.
 //
 #include <fstream>
-#include <iomanip>
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -10,7 +9,6 @@
 #include "student.h"
 #include "group.h"
 #include "dean.h"
-#include <stdio.h>
 
 
 bool Dean::IsGroupExist(std::string name)
@@ -72,6 +70,8 @@ Dean::Dean(std::string path)
 
     this->AddRandomMarksToStudents();
 
+    this->ChangeHeads();
+
 }
 
 void Dean::AddRandomMarksToStudents()
@@ -111,8 +111,10 @@ void Dean::CheckForKick()
         for (auto student : group->students)
         {
             if (student->GetAverageMark() < 4)
+            {
                 group->KickStudent(student);
-            delete student;
+                delete student;
+            }
         }
 }
 
@@ -132,8 +134,42 @@ void Dean::ShowStatistics()
     std::cout << "***********************************" << std::endl;
 }
 
-void Dean::SaveData()
+void Dean::SaveData(std::string path)
 {
-    
+    std::ofstream out;
+    out.open(path);
+
+    out << "";
+    out.close();
+
+    out.open(path, std::ios::app);
+    for (auto group : this->groups)
+        for (auto student : group->students)
+            out << student->GetFIO() << ";" << group->GetTitle() << std::endl;
+
+    out.close();
+}
+
+void Dean::ShowShortStatistics()
+{
+    std::cout << "Short statistics:" << std::endl;
+
+    int index = 1;
+    for (auto group : this->groups) {
+        std::cout << index++ << ") " << group->GetTitle() << std::endl;
+        std::cout << "> Количество студентов: " << group->students.size() << std::endl;
+        std::cout << "> Староста: " << group->GetHead() << std::endl;
+    }
+}
+
+Group* Dean::GetGroup(std::string title)
+{
+    for (auto group : this->groups)
+    {
+        if (group->GetTitle() == title)
+            return group;
+    }
+
+    return nullptr;
 }
 

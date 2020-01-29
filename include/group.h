@@ -21,6 +21,7 @@ public:
     int GetAverageGroupMark();
     bool KickStudent(Student*);
     std::string GetTitle();
+    std::string GetHead();
 
     friend bool Student::AddToGroup(Group* groupToAdd);
     friend class Dean;

@@ -45,7 +45,8 @@ int Student::GetAverageMark()
     if (this->marks.empty())
         return 0;
 
-    return sum / this->marks.size();
+    int average = sum / this->marks.size();
+    return average;
 }
 
 int Student::GetID()
