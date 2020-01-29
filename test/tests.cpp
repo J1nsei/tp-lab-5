@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
-#include "dean.h"
-#include "group.h"
 #include "student.h"
+#include "group.h"
+#include "dean.h"
 
 TEST(lab5, test1)
 {
