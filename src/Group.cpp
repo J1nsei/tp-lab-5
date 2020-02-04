@@ -7,15 +7,13 @@ Group::Group(string title) {
 }
 
 int Group::addStudent(Student* student) {
-	if (student == NULL) {
-		return -1;
-	}
-	if (searchStudent(student->getId()) == student) {
+	if (student == NULL || searchStudent(student->getId()) == student) {
 		return -1;
 	}
 	students.push_back(student);
 	student->setGroup(this);
 	num++;
+	return 1;
 }
 
 int Group::setHead(Student* student) {
@@ -24,7 +22,7 @@ int Group::setHead(Student* student) {
 	}
 	if (searchStudent(student->getId()) == student) {
 		head = student;
-		return 0;
+		return 1;
 	}
 	else {
 		return -1;
@@ -70,11 +68,18 @@ int Group::eraseStudent(Student* student) {
 	Student* foundStudent = searchStudent(student->getId());
 	if (foundStudent != NULL) {
 		students.erase(find(students.begin(), students.end(), foundStudent));
+		if (head == student) {
+			head = NULL;
+		}
 		num--;
-		return 0;
+		return 1;
 	}
 	else
 		return -1;
+}
+
+vector<int> Group::getMarks(Student* student) {
+	return vector<int>(student->marks);
 }
 
 string Group::getTitle()

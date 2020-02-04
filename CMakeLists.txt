@@ -16,7 +16,7 @@ set(CMAKE_CXX_FLAGS "-g -Wall")
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
 include_directories(${COMMON_INCLUDES})
 file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
-
+file(GLOB TEST_FILE  ${PROJECT_SOURCE_DIR}/src/test.txt)
 set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/Student.cpp
 			  ${PROJECT_SOURCE_DIR}/src/Group.cpp
 			  ${PROJECT_SOURCE_DIR}/src/Deanery.cpp

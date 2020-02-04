@@ -13,7 +13,7 @@ int Student::addMark(int mark) {
 	if (mark >= 0 && mark < 11) {
 		marks.push_back(mark);
 		num++;
-		return 0;
+		return 1;
 	}
 	else {
 		return -1;
@@ -35,7 +35,7 @@ int Student::setGroup(Group* group) {
 		return -1;
 	}
 	this->group = group;
-	return 0;
+	return 1;
 }
 
 string Student::getFio() {
