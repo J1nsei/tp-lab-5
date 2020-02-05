@@ -16,10 +16,15 @@ private:
     vector<int> marks;
 
 public:
+
+    int getId();
+    string getFio();
+
     Student(int id, string fio);
     void addToGroup(Group * group);
     void addMark(int mark);
     double calcAverageMark();
+    vector<int>& getMarks();
 };
 
 

@@ -11,14 +11,16 @@
 class Deanery{
 private:
     vector<Group*> groups;
+    int last_id;
 public:
-    Deanery(string filename); // make students, make groups
-    void addRandomMarks();
+    Deanery();
+    void createGroup(string, string);
+    void addRandomMarks(int);
     void fullStatistics();
-    void changeGroup(int id, string title, string spec);
+    void changeGroup(string, string, string);
     void excludeStudents();
-    void saveData();
-    void choose();
+    void saveData(string, string);
+    void chooseHeads();
     void printData();
 };
 

@@ -25,3 +25,16 @@ double Student::calcAverageMark(){
     }
     return (double)sum / marks.size();
 }
+
+int Student::getId(){
+    return id;
+}
+
+string Student::getFio(){
+    return fio;
+}
+
+
+vector<int>& Student::getMarks(){
+    return marks;
+}
