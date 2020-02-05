@@ -29,8 +29,8 @@ TEST(Deanery, dean_4) {
 }
 
 TEST(Deanery, dean_5) {
-	Student student_1;
-	Student student_2("Полюхов Владислав Вадимович", "18-ПМИ");
+	Student* student_1 = new Student();
+	Student* student_2 = new Student("Полюхов Владислав Вадимович", "18-ПМИ");
 	EXPECT_EQ(-1, student_1.getId());
 	EXPECT_EQ(1, student_2.getId());
 	EXPECT_EQ("18-ПМИ", student_2.getGroup());
@@ -39,8 +39,8 @@ TEST(Deanery, dean_5) {
 }
 
 TEST(Deanery, dean_6) {
-	Group group("18-ПМИ");
-    Student student("Полюхов Владислав Вадимович", "18-ПМИ");
+	Group* group = new Group("18-ПМИ");
+    Student* student = new Student("Полюхов Владислав Вадимович", "18-ПМИ");
 	group.addStudent(student);
 
 	EXPECT_EQ(1, group.findStudent("Полюхов Владислав Вадимович")->getId());
