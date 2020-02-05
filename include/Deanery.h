@@ -17,8 +17,8 @@ private:
   vector<Group*> groups;
 public:
     Deanery();
-  void createStudents(vector<string> StudNAME);//, vector <Student> *StudentList);
-  void createGroups(vector<string> Groups);//, vector <Group> *GroupList);
+  void createStudents(vector<string> StudNAME);
+  void createGroups(vector<string> Groups);
   void makeMarks();
   int getStat();
   void StudSwap(string candidat, string Gto);

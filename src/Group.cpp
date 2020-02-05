@@ -31,7 +31,7 @@ void Group::chHead(){
 bool Group::findS(const string _name){
     for (int i=0;i<students.size();i++){
      if(_name==students[i]->getName()){
-       //  delStud(i);// for swap function in deanery cpp
+
          return true;
      }
     }

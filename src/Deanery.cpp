@@ -10,12 +10,7 @@ using namespace std;
 Deanery::Deanery(){
 
 };
-void Deanery::createStudents(vector<string> StudNAME){//, vector <Student> *StudentList){
-  //  for (int i=0;i<StudNAME.size();i++){
-    //    (*StudentList).emplace_back(Student());
-     //   (*StudentList)[i].create(StudNAME[i],i);
-    //}
-   // for (int i=0;i<groups.size();i++){
+void Deanery::createStudents(vector<string> StudNAME){
 
         for (int i=0;i<StudNAME.size();i++){
             Student *temp=new Student();
@@ -30,23 +25,16 @@ void Deanery::createStudents(vector<string> StudNAME){//, vector <Student> *Stud
                 groups[2]->addstud(temp);
             }
         }
-      //  temp->create(GroupsNAME[i],spec);
-     //   groups.push_back(temp);
- //   }
+
 };
-void Deanery::createGroups(vector<string> GroupsNAME){//, vector <Group> *GroupList){
+void Deanery::createGroups(vector<string> GroupsNAME){
     string spec = "Aplied math and inf";
     for (int i=0;i<GroupsNAME.size();i++){
- //       (*GroupList).push_back(Group());
- //       (*GroupList)[i].create(GroupsNAME[i],spec);
-       // groups.push_back(&(*GroupList)[i]);
        Group *temp=new Group();
        temp->create(GroupsNAME[i],spec);
        groups.push_back(temp);
     }
- //   for (int i=0;i<GroupsNAME.size();i++){
- //       groups.push_back(&(*GroupList)[i]);
- //   }
+
 };
 void Deanery::makeMarks(){
     for (int i=0;i<groups.size();i++){

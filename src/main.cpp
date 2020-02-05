@@ -88,7 +88,7 @@ fs1.close();
  D1.createStudents(STDN);//, &StudentList);
 
 // D1.fillupGRs(&StudentList);
-for(int i; i<=10;i++)  D1.makeMarks();
+for(int i=0; i<=10;i++)  D1.makeMarks();
 
 D1.HeadChoice();
 
@@ -106,7 +106,12 @@ D1.OutPut();
 //D1.OutPut();
 
 D1.SaveData();
-
+Deanery D2;
+    std::vector<string> STDN1{"Maxim","Jora"};
+    std::vector<string> GRP1{"AMI 2","EC 4"};
+    D2.createGroups(GRP1);
+    D2.createStudents(STDN1);
+    D2.StudSwap("Jora","EC 4");
 
 
 
