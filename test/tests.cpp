@@ -32,7 +32,7 @@ TEST(Deanery, dean_5) {
 	Student* student_1 = new Student();
 	Student* student_2 = new Student("Полюхов Владислав Вадимович", "18-ПМИ");
 	EXPECT_EQ(-1, student_1->getId());
-	EXPECT_EQ(1, student_2->getId());
+	EXPECT_EQ(2, student_2->getId());
 	EXPECT_EQ("18-ПМИ", student_2->getGroup());
 	delete student_1;
 	delete student_2;
@@ -43,7 +43,7 @@ TEST(Deanery, dean_6) {
     Student* student = new Student("Полюхов Владислав Вадимович", "18-ПМИ");
 	group->addStudent(*student);
 
-	EXPECT_EQ(1, group->findStudent("Полюхов Владислав Вадимович")->getId());
+	EXPECT_EQ(3, group->findStudent("Полюхов Владислав Вадимович")->getId());
     delete student;
     delete group;
 }
