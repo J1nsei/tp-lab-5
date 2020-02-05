@@ -1,9 +1,6 @@
 //
 // Created by Илья on 026 26.01.20.
 //
-#include <iostream>
-#include <cstring>
-#include <windows.h>
 
 #include "group.h"
 #include "Student.h"

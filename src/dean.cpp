@@ -3,9 +3,7 @@
 //
 #include <iostream>
 #include <fstream>
-#include <windows.h>
 #include <ctime>
-#include <locale>
 #include <algorithm>
 
 #include "Student.h"
