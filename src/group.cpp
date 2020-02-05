@@ -1,9 +1,8 @@
 //
 // Created by Илья on 026 26.01.20.
 //
-
+#include "student.h"
 #include "group.h"
-#include "Student.h"
 
 Group::Group(string title, string spec){
     this->title = title;

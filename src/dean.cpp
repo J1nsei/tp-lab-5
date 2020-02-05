@@ -6,7 +6,7 @@
 #include <ctime>
 #include <algorithm>
 
-#include "Student.h"
+#include "student.h"
 #include "dean.h"
 
 using std::cout;
