@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
-#include "../tp-lab-5/dean.h"
-#include "../tp-lab-5/group.h"
-#include "../tp-lab-5/student.h"
+#include "../include/dean.h"
+#include "../include/group.h"
+#include "../include/student.h"
 
 TEST(Deanery, dean_1) {
     Dean* dean = new Dean();
