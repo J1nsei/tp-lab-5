@@ -36,7 +36,7 @@ D1.StudSwap("Jora","EC-2");
     std::vector<string> GRP{"AMI 2","EC 4"};
     D1.createGroups(GRP);
     D1.createStudents(STDN);
-    D1.StudSwap("Jora","EC-2");
+    D1.StudSwap("Jora","EC 4");
 EXPECT_EQ(1, D1.GRsize(1));
 }
 
