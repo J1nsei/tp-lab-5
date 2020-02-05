@@ -6,6 +6,6 @@
 
 TEST(testStudent, init) {
 Student S1;
-S1.create("Maxim",1)
+S1.create("Maxim",1);
 EXPECT_EQ("Maxim", S1.getName());
 }
