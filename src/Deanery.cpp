@@ -10,22 +10,43 @@ using namespace std;
 Deanery::Deanery(){
 
 };
-void Deanery::createStudents(vector<string> StudNAME, vector <Student> *StudentList){
-    for (int i=0;i<StudNAME.size();i++){
-        (*StudentList).emplace_back(Student());
-        (*StudentList)[i].create(StudNAME[i],i);
-    }
+void Deanery::createStudents(vector<string> StudNAME){//, vector <Student> *StudentList){
+  //  for (int i=0;i<StudNAME.size();i++){
+    //    (*StudentList).emplace_back(Student());
+     //   (*StudentList)[i].create(StudNAME[i],i);
+    //}
+   // for (int i=0;i<groups.size();i++){
+
+        for (int i=0;i<StudNAME.size();i++){
+            Student *temp=new Student();
+            temp->create(StudNAME[i],i);
+            if(i<10){
+                groups[0]->addstud(temp);
+            }
+            else  if(i>10 and i<20){
+                groups[1]->addstud(temp);
+            }
+            else if(i>20){
+                groups[2]->addstud(temp);
+            }
+        }
+      //  temp->create(GroupsNAME[i],spec);
+     //   groups.push_back(temp);
+ //   }
 };
-void Deanery::createGroups(vector<string> GroupsNAME, vector <Group> *GroupList){
+void Deanery::createGroups(vector<string> GroupsNAME){//, vector <Group> *GroupList){
     string spec = "Aplied math and inf";
     for (int i=0;i<GroupsNAME.size();i++){
-        (*GroupList).push_back(Group());
-        (*GroupList)[i].create(GroupsNAME[i],spec);
+ //       (*GroupList).push_back(Group());
+ //       (*GroupList)[i].create(GroupsNAME[i],spec);
        // groups.push_back(&(*GroupList)[i]);
+       Group *temp=new Group();
+       temp->create(GroupsNAME[i],spec);
+       groups.push_back(temp);
     }
-    for (int i=0;i<GroupsNAME.size();i++){
-        groups.push_back(&(*GroupList)[i]);
-    }
+ //   for (int i=0;i<GroupsNAME.size();i++){
+ //       groups.push_back(&(*GroupList)[i]);
+ //   }
 };
 void Deanery::makeMarks(){
     for (int i=0;i<groups.size();i++){
@@ -39,12 +60,20 @@ int Deanery::getStat(){
         cout<<OUTtmp<<"\n";
     }
 };
-void Deanery::StudSwap(Student* candidat, Group* Gto){
-     Group * Gfrom = candidat->getGroup();
-     string tmpName = candidat->getName();
-     Gfrom->findS(tmpName);
-     Gto->addstud(candidat);
-     candidat->ingroup(Gto);
+void Deanery::StudSwap(string candidat, string Gto) {
+
+    for (int i = 0; i < groups.size(); i++) {
+        if (groups[i]->findS(candidat)) {
+            Student *tmp = groups[i]->getStudent(candidat);
+            groups[i]->findStodel(candidat);
+            for (int i = 0; i < groups.size(); i++) {
+                if (groups[i]->getName() == Gto) {
+                    groups[i]->addstud(tmp);
+                    tmp->ingroup(groups[i]);
+                }
+            }
+        }
+    }
 };
 void Deanery::DelStud(double aver){
     for (int i=0;i<groups.size();i++){
@@ -74,7 +103,7 @@ void Deanery::OutPut(){
         cout<< groups[i]->WriteStudents()<<"\n";
     }
 };
-
+/*
 void Deanery::fillupGRs(vector <Student> *StudentList){
     for (int i=0;i<(*StudentList).size();i++){
        if(i<10){
@@ -88,3 +117,4 @@ void Deanery::fillupGRs(vector <Student> *StudentList){
         }
     }
 };
+ */

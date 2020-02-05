@@ -31,11 +31,20 @@ void Group::chHead(){
 bool Group::findS(const string _name){
     for (int i=0;i<students.size();i++){
      if(_name==students[i]->getName()){
-         delStud(i);// for swap function in deanery cpp
+       //  delStud(i);// for swap function in deanery cpp
          return true;
      }
     }
     return false;
+};
+void Group::findStodel(string _name){
+    for (int i=0;i<students.size();i++){
+        if(_name==students[i]->getName()){
+              delStud(i);// for swap function in deanery cpp
+
+        }
+    }
+
 };
 double Group::cntBall(){
     int tmpSum=0;
@@ -73,4 +82,16 @@ string Group::WriteStudents() {
         else  tmpSTR = tmpSTR + students[i]->getName() + ", средний балл - " + to_string(students[i]->countAve())+"\n";
     }
     return tmpSTR;
+}
+
+Student* Group::getStudent(string candidat){
+    for (int i=0;i<students.size();i++){
+        if(candidat==students[i]->getName()) {
+            return students[i];
+        }
+        }
+}
+
+int Group::getSize(){
+    return students.size();
 }

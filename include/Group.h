@@ -30,6 +30,9 @@ public:
     void drop(double aver);
     string getName();
     string WriteStudents();
+    Student* getStudent(string candidat);
+    void findStodel(string _name);
+    int getSize();
 };
 
 

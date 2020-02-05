@@ -29,5 +29,6 @@ public:
     double countAve();
     string getName();
     Group * getGroup();
+    int getMarkssize();
 };
 #endif //LAB5_STUDENT_H

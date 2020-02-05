@@ -43,3 +43,7 @@ string Student::getName(){
 Group * Student::getGroup(){
     return group;
 }
+
+int Student::getMarkssize(){
+    return marks.size();
+};

@@ -80,14 +80,14 @@ fs1.close();
     }
     fs2.close();
 
-  vector <Student> StudentList;
+ // vector <Student> StudentList;
    // StudentList.push_back(Student());
-  vector <Group> GroupList;
+//  vector <Group> GroupList;
  Deanery D1;
- D1.createGroups(GRPS, &GroupList);
- D1.createStudents(STDN, &StudentList);
+ D1.createGroups(GRPS);//, &GroupList);
+ D1.createStudents(STDN);//, &StudentList);
 
- D1.fillupGRs(&StudentList);
+// D1.fillupGRs(&StudentList);
 for(int i; i<=10;i++)  D1.makeMarks();
 
 D1.HeadChoice();
@@ -100,8 +100,9 @@ D1.DelStud(3.59);
 
 D1.OutPut();
 
-D1.StudSwap(&StudentList[2],&GroupList[1]);
+D1.StudSwap("Лужкова Владлена Гавриловна", "AMI 2");
 
+D1.OutPut();
 //D1.OutPut();
 
 D1.SaveData();

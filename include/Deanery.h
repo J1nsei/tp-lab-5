@@ -17,15 +17,15 @@ private:
   vector<Group*> groups;
 public:
     Deanery();
-  void createStudents(vector<string> StudNAME, vector <Student> *StudentList);
-  void createGroups(vector<string> Groups, vector <Group> *GroupList);
+  void createStudents(vector<string> StudNAME);//, vector <Student> *StudentList);
+  void createGroups(vector<string> Groups);//, vector <Group> *GroupList);
   void makeMarks();
   int getStat();
-  void StudSwap(Student* candidat, Group* Gto);
+  void StudSwap(string candidat, string Gto);
   void DelStud(double aver);
   void SaveData();
   void HeadChoice();
   void OutPut();
-  void fillupGRs(vector <Student> *StudentList);
+  //void fillupGRs(vector <Student> *StudentList);
 };
 #endif //LAB5_DEANERY_H
