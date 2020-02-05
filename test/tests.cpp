@@ -17,6 +17,7 @@ EXPECT_EQ("AMI-1", G1.getName());
 }
 
 TEST(testSwap, init3) {
+    /*
 Deanery D1;
 Group G1;
 G1.create("AMI-1", "Aplied math");
@@ -29,8 +30,14 @@ S2.create("Jora",1);
 G1.addstud(&S1);
 G2.addstud(&S2);
 D1.StudSwap("Jora","EC-2");
-
-EXPECT_EQ(2, G2.getSize());
+*/
+    Deanery D1;
+    std::vector<string> STDN{"Maxim","Jora"};
+    std::vector<string> GRP{"AMI 2","EC 4"};
+    D1.createGroups(GRP);
+    D1.createStudents(STDN);
+    D1.StudSwap("Jora","EC-2");
+EXPECT_EQ(1, D1.GRsize(1));
 }
 
 TEST(testDel, init4) {

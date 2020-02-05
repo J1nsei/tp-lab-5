@@ -26,6 +26,6 @@ public:
   void SaveData();
   void HeadChoice();
   void OutPut();
-  //void fillupGRs(vector <Student> *StudentList);
+  int GRsize(int i);
 };
 #endif //LAB5_DEANERY_H

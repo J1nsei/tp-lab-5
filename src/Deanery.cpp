@@ -103,18 +103,7 @@ void Deanery::OutPut(){
         cout<< groups[i]->WriteStudents()<<"\n";
     }
 };
-/*
-void Deanery::fillupGRs(vector <Student> *StudentList){
-    for (int i=0;i<(*StudentList).size();i++){
-       if(i<10){
-           groups[0]->addstud(&(*StudentList)[i]);
-       }
-      else  if(i>10 and i<20){
-           groups[1]->addstud(&(*StudentList)[i]);
-        }
-       else if(i>20){
-           groups[2]->addstud(&(*StudentList)[i]);
-        }
-    }
+
+int Deanery::GRsize(int i){
+return groups[i]->getSize();
 };
- */
