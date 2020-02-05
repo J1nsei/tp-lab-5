@@ -2,6 +2,9 @@
 #include "../include/dean.h"
 #include "../include/group.h"
 #include "../include/student.h"
+#include <vector>
+#include <string>
+using namespace std;
 
 TEST(Deanery, dean_1) {
     Dean* dean = new Dean();
