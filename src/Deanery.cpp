@@ -47,10 +47,17 @@ Group* Deanery::searchGroup(string groupName) {
 
 void Deanery::extractDataFromFile(string filename) {
 	ifstream file(filename);
+	if (!file.is_open()) {
+		cout << "NO FILE" << endl;
+		return;
+	}
 	string line;
 	int all = 0;
 	int success = 0;
 	while (getline(file, line)) {
+		if (line == "") {
+			continue;
+		}
 		all += 1;
 		if (createStudent(extractGroup(line), extractName(line)) == 1) {
 			success += 1;
@@ -66,7 +73,7 @@ void Deanery::randMarks() {
 	for (int i = 0; i < groups.size(); i++)
 	{
 		for (int j = 0; j < groups[i]->students.size(); j++) {
-			groups[i]->students[i]->addMark(rand() % 10 + 1);
+			groups[i]->students[j]->addMark(rand() % 10 + 1);
 		}
 	}	
 }
@@ -98,9 +105,14 @@ int Deanery::eraseWithBadMarks(double min_mark){
 	}
 	for (int i = 0; i < groups.size(); i++)
 	{
-		for (int j = 0; j < groups[i]->students.size(); j++) {
-			if (groups[i]->students[i]->getAvr() < min_mark) {
-				groups[i]->eraseStudent(groups[i]->students[i]);
+		int hasErases = 1;
+		if (hasErases) {
+			hasErases = 0;
+			for (int j = 0; j < groups[i]->students.size(); j++) {
+				if (groups[i]->students[j]->getAvr() < min_mark && groups[i]->students[j]->marks.size() > 0) {
+					groups[i]->eraseStudent(groups[i]->students[j]);
+					hasErases = 1;
+				}
 			}
 		}
 	}
@@ -136,8 +148,4 @@ void Deanery::getStatistics(){
 		}
 		cout << endl;
 	}
-}
-
-int saveData(file) {
-
 }

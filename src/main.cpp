@@ -8,7 +8,6 @@
 using namespace std;
 
 int main() {
-	setlocale(LC_ALL, "ru");
 	/*
 	Student student(12, "234");
 	cout << student.getId() << " " << student.getFio() << endl;
@@ -30,10 +29,17 @@ int main() {
 	group.eraseStudent(group.searchStudent(12));
 	cout << group.getHead() << endl;
 	*/
-
+	cout << "START" << endl;
 	Deanery deanery;
-	deanery.createGroup("test.txt");
-	cout << deanery.getId();
+	deanery.extractDataFromFile("C:\\www\\testu.txt");
+	deanery.electionHead();
+	cout << deanery.searchGroup("rt");
+	cout << deanery.searchGroup("uoi");
+	cout << deanery.eraseWithBadMarks(2.0);
+	deanery.randMarks();
+	cout << deanery.eraseWithBadMarks(9.0);
+	deanery.getStatistics();
+	deanery.electionHead();
 	return 0;
 }
 

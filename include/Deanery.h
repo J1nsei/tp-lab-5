@@ -2,8 +2,9 @@
 #include "Group.h"
 #include <fstream> 
 #include <ctime>
+using namespace std;
 
-
+class Group;
 
 class Deanery {
 private:
