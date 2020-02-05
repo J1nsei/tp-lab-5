@@ -20,7 +20,8 @@ file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 
 set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/Deanery.cpp
         ${PROJECT_SOURCE_DIR}/src/Student.cpp
-        ${PROJECT_SOURCE_DIR}/src/Group.cpp)
+        ${PROJECT_SOURCE_DIR}/src/Group.cpp
+        ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
 set(CMAKE_CXX_STANDARD 11)
 
