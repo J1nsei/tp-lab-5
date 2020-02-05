@@ -41,7 +41,7 @@ TEST(Deanery, dean_5) {
 TEST(Deanery, dean_6) {
 	Group* group = new Group("18-ПМИ");
     Student* student = new Student("Полюхов Владислав Вадимович", "18-ПМИ");
-	group->addStudent(student);
+	group->addStudent(&student);
 
 	EXPECT_EQ(1, group->findStudent("Полюхов Владислав Вадимович")->getId());
     delete student;
