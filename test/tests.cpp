@@ -1,5 +1,7 @@
 #include "gtest/gtest.h"
-#include "../tp-lab-5/include/Dean.h"
+#include "Dean.h"
+#include "Student.h"
+#include "Group.h"
 #include <string>
 
 TEST(testStudent, init) {
