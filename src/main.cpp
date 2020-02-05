@@ -8,34 +8,10 @@
 #include <fstream>
 #include "Deanery.h"
 
-//#include <file.h>
 
 using namespace std;
 
-/*
-std::vector<std::string> split(const std::string& s, char delimiter){
-    std::vector<std::string> tokens;
-    std::string token;
-    std::istringstream tokenStream(s);
-    while(std::getline(tokenStream,token,delimiter))
-        tokens.push_back(token);
-    return tokens;
-}
 
-int main() {
-    std::cout << "Hello, World!" << std::endl;
-    std::ifstream file("students.txt");
-    system("chcp 1251");
-    while(!file.eof()){
-        std::string buf;
-        getline(file,buf,'\n');
-        std::vector<std::string> data=split(buf,':');
-        for(auto s : data)
-            std::cout << s << " ";
-        std::cout << std::endl;
-    }
-}
-*/
 
 std::vector<std::string> split(const std::string& s, char delimiter){
     std::vector<std::string> tokens;
