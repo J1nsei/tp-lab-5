@@ -29,7 +29,6 @@ TEST(testGroup, init) {
 	EXPECT_EQ(0, group.find_student("Alexey Scherbakov")->get_id());
 }
 
-/*
 TEST(testDean, init) {
 	std::string filename = "students1.txt";
 	Dean dean(filename);
@@ -63,4 +62,4 @@ TEST(testDean, transfer) {
 
 	EXPECT_EQ(nullptr, groupU->find_student("Нечаев Лавр Тимурович"));
 	EXPECT_EQ("Нечаев Лавр Тимурович", groupPI->find_student(groupPI->get_size() - 1)->get_name());
-} */
+} 

@@ -106,7 +106,7 @@ std::vector<std::string> Dean::split(const std::string & s, char delimiter) {
 }
 
 void Dean::fill(const std::string & filename) {
-	std::ifstream file (std::string("C:\\Users\\Anton Musatov\\source\\repos\\tp-lab-5\\tp-lab-5\\") + filename);
+	std::ifstream file (filename);
 	if (file.is_open()) {
 		while (!file.eof()) {
 			std::string buf;
