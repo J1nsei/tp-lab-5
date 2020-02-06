@@ -1,0 +1,27 @@
+The number of students is  17
+In 18pmi-1 8 people.  The averade groups mark - 4.25
+Head: Britton Elwin Richard
+Jonah Henry Nicholas-3   3 
+Arnold James Anthony-5   5 
+Barrie Dale Emil-5   5 
+Lesley Anthony Matthew-5   5 
+Richard Lenard James-4   4 
+Britton Elwin Richard-4   4 
+Raymond Harry Jeffry-3   3 
+Samson Marshall Evan-5   5 
+
+In 18pmi-2 3 people.  The averade groups mark - 3
+Head: Theodora Mary Isabella
+Jonathan John Horace-3   3 
+Melanie Fay Agatha-3   3 
+Theodora Mary Isabella-3   3 
+
+In 18pmi-3 6 people.  The averade groups mark - 3.66667
+Head: Lisa Sophie Phebe
+Lisa Sophie Phebe-5   5 
+Ashlynn Briana Susan-3   3 
+Patricia Margaret Jennifer-4   4 
+Hopeó Jocelyn Sharon-3   3 
+Jane Elisabeth Ami-3   3 
+Sharon Jane Penelopeó-4   4 
+
