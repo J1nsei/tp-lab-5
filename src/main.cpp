@@ -9,7 +9,7 @@
 using namespace std;
 
 int main() {
-	system("chcp 1251");
+	//system("chcp 1251");
 	string filename = "students1.txt";
 	Dean dean(filename);
 
