@@ -11,24 +11,23 @@ Deanery::Deanery(){
 
 };
 void Deanery::createStudents(vector<string> StudNAME){
-
-        for (int i=0;i<StudNAME.size();i++){
-            Student *temp=new Student();
-            temp->create(StudNAME[i],i);
-            if(i<10){
+    if(groups.size()!=0) {
+        for (int i = 0; i < StudNAME.size(); i++) {
+            Student *temp = new Student();
+            temp->create(StudNAME[i], i);
+            if (i < 10) {
                 groups[0]->addstud(temp);
-            }
-            else  if(i>10 and i<20){
+            } else if (i >= 10 and i <= 20) {
                 groups[1]->addstud(temp);
-            }
-            else if(i>20){
+            } else if (i > 20) {
                 groups[2]->addstud(temp);
             }
         }
+    }
+    else  cout<<"create groups first "<<"\n";
 
 };
-void Deanery::createGroups(vector<string> GroupsNAME){
-    string spec = "Aplied math and inf";
+void Deanery::createGroups(vector<string> GroupsNAME, string spec){
     for (int i=0;i<GroupsNAME.size();i++){
        Group *temp=new Group();
        temp->create(GroupsNAME[i],spec);

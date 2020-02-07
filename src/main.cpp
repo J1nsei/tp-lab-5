@@ -56,11 +56,8 @@ fs1.close();
     }
     fs2.close();
 
- // vector <Student> StudentList;
-   // StudentList.push_back(Student());
-//  vector <Group> GroupList;
  Deanery D1;
- D1.createGroups(GRPS);//, &GroupList);
+ D1.createGroups(GRPS, "Aplied math and inf");//, &GroupList);
  D1.createStudents(STDN);//, &StudentList);
 
 // D1.fillupGRs(&StudentList);
@@ -70,11 +67,11 @@ D1.HeadChoice();
 
 D1.getStat();
 
+D1.OutPut();
+
 D1.DelStud(3.59);
 
 //D1.getStat();
-
-D1.OutPut();
 
 D1.StudSwap("Лужкова Владлена Гавриловна", "AMI 2");
 
@@ -82,14 +79,6 @@ D1.OutPut();
 //D1.OutPut();
 
 D1.SaveData();
-Deanery D2;
-    std::vector<string> STDN1{"Maxim","Jora"};
-    std::vector<string> GRP1{"AMI 2","EC 4"};
-    D2.createGroups(GRP1);
-    D2.createStudents(STDN1);
-    D2.StudSwap("Jora","EC 4");
-
-
 
 return 0;
 }

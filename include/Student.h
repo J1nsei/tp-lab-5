@@ -7,11 +7,9 @@
 #include <cstdio>
 #include <vector>
 #include <string>
-//#include "Group.h"
 
 using namespace std;
 
-//class Group{};
 class Group;
 class Deanery;
 
