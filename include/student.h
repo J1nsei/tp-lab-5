@@ -1,37 +1,39 @@
-#pragma once
-#include <iostream>
-#include <string.h>
-#include <vector>
+#pragma once 
 
+#include "Header.h"
 #include "group.h"
 
-using namespace std;
+class Group;
 
 class Student
 {
 public:
 	Student(int id, string fio);
 	~Student();
-
-	void addToGroup(Group& group);
+	
+	void addToGroup(Group* group);
+	
 	void addMark(int mark);
-	int getMean();
+	int meanMark();
+
+
+	string getFIO();
+	int getID();
+	Group* getGroup();
+
+	void setFIO(string fio);
+	void setID(int id);
+
+	bool is_head();
+
+	void printStudentInf();
 
 private:
-	int id;
 	string fio;
-	Group & group;
-	vector<int> marks;
+	int id;
+	vector <int>marks;
+	Group* group;
+
 };
 
-Student::Student(int id, string fio):
-{
-	this->id = id;
-	this->fio = fio;
-	
 
-}
-
-Student::~Student()
-{
-}

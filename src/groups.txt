@@ -1,0 +1,93 @@
+group1 Tourism
+James J
+1
+%
+Britney H
+2
+%
+Nelson G
+3
+%
+Wilyam V
+4
+%
+Konstantin D
+5
+%
+Khris F
+6
+%
+Jhonatan V
+7
+!
+group2 Management
+Olivia F
+8
+%
+Benjhamin D
+9
+%
+Natan N
+10
+%
+Oliwer B
+11
+%
+Max S
+12
+%
+Milana G
+13
+%
+Vitliy D
+14
+%
+Richard D
+15
+%
+Roderik B
+16
+%
+Valentina T
+17
+!
+group3 IT
+Mitch V
+18
+%
+Roland G
+19
+%
+Michael W
+20
+%
+Vernard H
+21
+%
+Sam B
+22
+%
+Lukas K
+23
+%
+Nick E
+24
+%
+Lindsey T
+25
+%
+Miranda R
+26
+%
+Vanessa M
+27
+%
+Leongard J
+28
+%
+Hugo C
+29
+%
+Tim A
+30
+!
