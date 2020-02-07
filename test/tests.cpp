@@ -38,11 +38,10 @@ TEST(student, check_group)
 TEST(student, average_mark)
 {
 	Student* stud = new Student(0, "FIO of student");
-	stud->set_mark(1);
 	stud->set_mark(5);
 	stud->set_mark(10);
 	float mark = stud->average_mark();
-	EXPECT_EQ((1 + 5 + 10) / 3, mark);
+	EXPECT_EQ(7.5, mark);
 }
 
 TEST(group, title)
@@ -79,7 +78,7 @@ TEST(group, average_mark)
 	stud1->set_mark(5);
 	stud2->set_mark(10);
 	float mark = gr->average_mark();
-	EXPECT_EQ((5 + 10)/2, mark);
+	EXPECT_EQ(7.5, mark);
 }
 
 TEST(group, find_by_fio)
