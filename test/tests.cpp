@@ -12,7 +12,7 @@ TEST(student, get_id)
 {
 	Student* stud = new Student(0, "FIO of student");
 	int id = stud->get_id();
-	EXPECT_EQ("FIO of student", id);
+	EXPECT_EQ(0, id);
 }
 
 TEST(student, check_marks)
