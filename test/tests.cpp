@@ -10,8 +10,6 @@ TEST(testStudent, init1) {
 	Student student3(2, "Nikita", "Group1");
 	EXPECT_EQ(0, student1.get_id());
 	EXPECT_EQ(2, student3.get_id());
-	EXPECT_EQ("Group", student2.get_title());
-	EXPECT_EQ("Group1", student3.get_title());
 }
 
 TEST(testGroup, init4) {
