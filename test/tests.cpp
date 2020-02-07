@@ -5,10 +5,6 @@
 #include <string>
 
 
-
-
-system("chcp 1251");
-
 TEST(testStudent, init1) {
 	Student student1(0, "Artem", "Group");
 	Student student2(1, "Anton", "Group");
