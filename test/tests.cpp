@@ -54,7 +54,7 @@ S3.create("Petya",11);
 Group G3;
 G3.create("AMI-1", "Aplied math");
 S3.ingroup(&G3);
-EXPECT_EQ(&G3, 3.getGroup());
+EXPECT_EQ(&G3, G3.getGroup());
 }
 
 TEST(testFindStudent, init7) {
@@ -71,5 +71,5 @@ G2.create("AMI-2", "Aplied math");
 G1.addstud(&S1);
 G1.addstud(&S3);
 G2.addstud(&S2);
-EXPECT_TRUE(G1.finds("Vika"));
+EXPECT_TRUE(G1.findS("Vika"));
 }
