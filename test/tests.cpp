@@ -54,7 +54,7 @@ S3.create("Petya",11);
 Group G3;
 G3.create("AMI-1", "Aplied math");
 S3.ingroup(&G3);
-EXPECT_EQ(&G3, G3.getGroup());
+EXPECT_EQ(&G3, S3.getGroup());
 }
 
 TEST(testFindStudent, init7) {
