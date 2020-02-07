@@ -68,6 +68,7 @@ void Group::drop(double aver){
         double a = students[i]->countAve();
         if(a < aver){
             delStud(i);
+            i-=1;
         }
     }
 }
