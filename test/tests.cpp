@@ -155,5 +155,5 @@ TEST(deanery, average_mark_for_student)
 	dean.add_mark(gr, "FIO of student", 5);
 	dean.add_mark(gr, "FIO of student", 10);
 	float mark = dean.get_average_mark_student(gr, "FIO of student");
-	EXPECT_EQ(7.5 == mark);
+	EXPECT_EQ(7.5, mark);
 }
