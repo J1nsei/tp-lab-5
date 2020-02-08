@@ -13,26 +13,17 @@ TEST(testStudent, init1) {
 	EXPECT_EQ(2, student3.get_id());
 }
 
-TEST(testGroup, init4) {
+TEST(testGroup, init2) {
 	Group group("18PMI");
 	group.add_Student("Anton");
 
 	EXPECT_EQ(1, group.get_size());
 }
 
-TEST(testGroup, init2) {
+TEST(testGroup, init3) {
 	Group group("Group");
 	group.add_Student("Anton");
 
 	EXPECT_EQ("Group", group.get_title());
 	EXPECT_EQ(1, group.get_size());
-}
-
-TEST(testDean, init3) {
-	string filename = "students1.txt";
-	Dean dean(filename);
-
-	EXPECT_EQ(29, dean.find_group("18олх-1")->get_size());
-	EXPECT_EQ(48, dean.find_group("18олх-2")->get_size());
-	EXPECT_EQ(nullptr, dean.find_group("18ох-3"));
 }
