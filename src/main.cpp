@@ -3,7 +3,6 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include "stdafx.h"
 #include <iostream>
 #include <clocale>
 //#include <Windows.h>
