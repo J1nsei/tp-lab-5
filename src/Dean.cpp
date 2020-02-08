@@ -82,7 +82,7 @@ vector<string> Dean::split(const string& s, char delimiter)
 void Dean::create_students()
 {
 	ifstream file("student.txt");
-	system("chcp 65001");
+	//system("chcp 65001");
 	while (!file.eof()) {
 		string buf;
 		getline(file, buf, '\n');
@@ -149,7 +149,7 @@ Group* Dean::find_group(const std::string& group_name) {
 
 void Dean::perform_file(const string& filename) {
 	ifstream file(filename);
-	system("chcp 1251");
+	//system("chcp 1251");
 	if (file.is_open()) {
 		while (!file.eof()) {
 			string buf;
