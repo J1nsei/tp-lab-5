@@ -35,32 +35,68 @@ Student * Group::find_student(const std::string & student_name) {
 
 void Group::expel_student(const std::string & student_name) {
 	int id = find_student(student_name)->get_id();
-	for (int i = id + 1; i < students.size(); i++) {
-		students[i].set_id(i - 1);
+	if (head.get_id() == id) {
+		for (int i = id + 1; i < students.size(); i++) {
+			students[i].set_id(i - 1);
+		}
+		students.erase(students.begin() + id);
+		size--;
+
+		set_head(rand() % size);
 	}
-	students.erase(students.begin() + id);
-	size--;
+	else {
+		for (int i = id + 1; i < students.size(); i++) {
+			students[i].set_id(i - 1);
+		}
+		students.erase(students.begin() + id);
+		size--;
+	}
 }
 
 void Group::expel_student(const int id) {
-	for (int i = id + 1; i < students.size(); i++) {
-		students[i].set_id(i - 1);
+	if (head.get_id() == id) {
+		for (int i = id + 1; i < students.size(); i++) {
+			students[i].set_id(i - 1);
+		}
+		students.erase(students.begin() + id);
+		size--;
+
+		set_head(rand() % size);
 	}
-	students.erase(students.begin() + id);
-	size--;
+	else {
+		for (int i = id + 1; i < students.size(); i++) {
+			students[i].set_id(i - 1);
+		}
+		students.erase(students.begin() + id);
+		size--;
+	}
+	
 }
 
 void Group::set_head(int id) {
-	head = students[id];
+	if (size == 0) {
+		head = Student();
+	}
+	else {
+		head = students[id];
+	}
 }
 
-Student Group::get_head() const { return head; }
+Student Group::get_head() const { 
+	return head; 
+}
 
-std::string Group::get_name() const { return name; }
+std::string Group::get_name() const { 
+	return name; 
+}
 
-std::string Group::get_spec() const { return spec; }
+std::string Group::get_spec() const { 
+	return spec; 
+}
 
-size_t Group::get_size() const { return size; }
+size_t Group::get_size() const { 
+	return size; 
+}
 
 double Group::average_group() const {
 	double sum = 0;

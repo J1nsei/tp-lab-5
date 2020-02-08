@@ -23,7 +23,9 @@ std::string Student::get_group() const {
 	return group;
 }
 
-std::vector<int> Student::get_marks() const { return marks; }
+std::vector<int> Student::get_marks() const { 
+	return marks;
+}
 
 void Student::set_mark(int mark) {
 	marks.push_back(mark);

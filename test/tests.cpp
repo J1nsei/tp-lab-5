@@ -1,7 +1,5 @@
 #include "gtest/gtest.h"
-#include "Dean.h"
-#include "Student.h"
-#include "Group.h"
+#include "../tp-lab-5/Dean.h"
 #include <string>
 
 TEST(testStudent, init) {
@@ -29,38 +27,21 @@ TEST(testGroup, init) {
 	EXPECT_EQ(0, group.find_student("Alexey Scherbakov")->get_id());
 }
 
-/*
-TEST(testDean, init) {
-	std::string filename = "students1.txt";
-	Dean dean(filename);
-
-	dean.find_group("17Ю-2")->set_spec("Юрисприденция");
-	dean.find_group("18ПМИ-2")->set_spec("Прикладная математика и информатика");
-	dean.find_group("19ПИ-1")->set_spec("Программирование");
-
-	EXPECT_EQ(13, dean.find_group("17Ю-2")->get_size());
-	EXPECT_EQ(nullptr, dean.find_group("17-2"));
-}
-
-TEST(testDean, expel) {
-	std::string filename = "students1.txt";
-	Dean dean(filename);
-
-	EXPECT_EQ("17Ю-2", dean.find_group("17Ю-2")->find_student("Херман Моисей Ульянович")->get_group());
-
-	dean.find_group("17Ю-2")->expel_student("Херман Моисей Ульянович");
-
-	EXPECT_EQ(nullptr, dean.find_group("17Ю-2")->find_student("Херман Моисей Ульянович"));
+TEST(testGroup, expelling) {
+	Group group("18PMI", "Math");
+	group.add_student("George Washington");
+	EXPECT_EQ(1, group.get_size());
+	group.expel_student(0);
+	EXPECT_EQ(nullptr, group.find_student("George Washington"));
 }
 
 TEST(testDean, transfer) {
-	std::string filename = "students1.txt";
-	Dean dean(filename);
-
-	dean.student_transfer("Нечаев Лавр Тимурович", "17Ю-2", "19ПИ-1");
-	Group *groupU = dean.find_group("17Ю-2");
-	Group *groupPI = dean.find_group("19ПИ-1");
-
-	EXPECT_EQ(nullptr, groupU->find_student("Нечаев Лавр Тимурович"));
-	EXPECT_EQ("Нечаев Лавр Тимурович", groupPI->find_student(groupPI->get_size() - 1)->get_name());
-} */
+	Group group1("18PMI", "Math"),
+		group2("18PI", "Programming");
+	group1.add_student("George Washington");
+	Dean dean(group1);
+	dean.add_group(group2);
+	dean.student_transfer("George Washington", "18PMI", "18PI");
+	EXPECT_EQ(dean.find_group("18PMI")->get_size(), 0);
+	EXPECT_EQ(dean.find_group("18PI")->get_size(), 1);
+}
