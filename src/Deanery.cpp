@@ -141,8 +141,8 @@ void Deanery::getStatistics(){
 		for (int j = 0; j < groups[i]->getNum(); j++) {
 			Student* student = groups[i]->students[j];
 			cout << student->getId() << " ";
-			for (auto &i: groups[i]->getMarks(student)) {
-				cout << i << " ";
+			for (auto &mark: groups[i]->getMarks(student)) {
+				cout << mark << " ";
 			}
 			cout << endl;
 		}
