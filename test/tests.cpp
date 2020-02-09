@@ -9,7 +9,7 @@ TEST(TestStudent, createFromFile) {
     auto dean = new Dean{};
     dean->createGroups(deanery_path);
     dean->createStudents(students_path);
-    map<string,vector<vector<string>> dataMap;
+    map<string,vector<vector<string>>> dataMap;
     dean->showData(dataMap);
     EXPECT_GT(dataMap.size(), 0);
 }
