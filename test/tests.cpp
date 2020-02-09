@@ -64,7 +64,7 @@ TEST(lab5, test5){
     auto groups = hse.getGroups();
     int groupSize = groups[0].getSize();
     int result = 5;
-    EXPECT_EQ(groupName, result);
+    EXPECT_EQ(groupSize, result);
 }
 
 TEST(lab5, test6){
