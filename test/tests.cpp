@@ -3,5 +3,5 @@
 #include "Group.h"
 
 TEST(student, student_create) {
-	Deanery deanery;
+	Deanery deanery; //ok
 }
