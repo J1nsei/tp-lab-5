@@ -5,7 +5,7 @@
 #include <vector>
 //#include "Group.h"
 
-extern class Group;
+class Group;
 
 class Student
 {
