@@ -4,18 +4,18 @@
 #include "Dean.h"
 
 int main() {
-	Dean* dean = new Dean("students.csv");
+	Dean* dean = new Dean("../file/students.csv");
 	dean->createGroups();
 	Group* group = dean->findGroupByName("18PI-2");
 	Group* group2 = dean->findGroupByName("18PMI-1");
 	std::cout << group << std::endl;
 	dean->createStudents();
 	if (group != 0) {
-		std::cout << group->getName() << std::endl;
+		std::cout <<"Group name "<< group->getName() << std::endl;
 		Student* Igor = group->findStudentById(35);
 		Student* Sasha = group->findStudentByName("Конак Альбина Эрнестовна");
 		Student* Miroslava = group->findStudentByName("Хейчеева Василиса Сидоровна");
-
+		
 		if (Igor != 0 && Sasha != 0) {
 			for (int i = 0; i < 5; i++) {
 				Igor->addMark(i);
@@ -57,6 +57,4 @@ int main() {
 			dean->outputData();
 		}
 	}
-	//dean->getGroupStatistics(group);	
-	//dean->outputData();
 }
