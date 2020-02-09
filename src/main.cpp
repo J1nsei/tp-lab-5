@@ -59,7 +59,7 @@ int main() {
     dean->addGrades(2);
     dean->chooseHeadman();
     dean->migrateStudent("ЮРИСТ",99,"ЭКОНОМ");
-    dean->expelStudents();
+    dean->expelStudents(3);
     map<string,vector<vector<string>>> dataMap;
     dean->showData(dataMap);
     for (auto group:dataMap){
