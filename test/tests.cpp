@@ -86,7 +86,7 @@ TEST(task1, case_5) {
     student_2->addMark(10);
 
     student_1->addToGroup(PI_1);
-    student_2->addToGroup(PI_1)
+    student_2->addToGroup(PI_1);
 
     PI_1->addStudent(student_1);
     PI_1->addStudent(student_2);
