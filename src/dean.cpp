@@ -3,6 +3,7 @@
 //
 #include <sstream>
 #include <fstream>
+#include <iostream>
 #include <assert.h>
 #include <dean.h>
 #include <student.h>
@@ -18,7 +19,7 @@ vector<string> split(const string &s, char del){
 }
 
 void Dean::Add_students() {
-    ifstream fin("../res/Names.txt");
+    ifstream fin("../Names.txt");
     string input;
     while(getline(fin, input)){
         vector<string> inputParts = split(input, ' ');
@@ -30,7 +31,7 @@ void Dean::Add_students() {
     fin.close();
 }
 void Dean::Add_groups() {
-    std::ifstream fin("../res/Groups.txt");
+    std::ifstream fin("../Groups.txt");
     string input;
     while(getline(fin, input)){
         vector<string> inputParts = split(input, ':');
@@ -75,27 +76,33 @@ void Dean::Add_marks(string Name_of_group, int count) {
     }
 }
 
-vector<vector<pair<int, int> > > Dean::Get_state() {
-    vector<vector<pair<int,int>>> state;
-    for(auto group: groups){
-        vector<pair<int,int> > State_of_group;
+vector<pair<vector<string>,pair<int,int>>> Dean::Get_state() {
+    vector<pair<vector<string>,pair<int,int>>> state;
+    for(auto group : groups){
+        vector<string> State_of_group_feature;
+        pair<int,int> State_of_group_amount(0, 0);
         for(auto student: group->Get_students()){
-            pair<int,int> State_of_student(0, 0);
-            if(student->Calc_aver_mark() < 3.5){
-
+            if(student->Calc_aver_mark() > 3.5){
+                State_of_group_feature.push_back("studying well and excellent");
+                State_of_group_amount.first++;
+            } else {
+                State_of_group_feature.push_back("studying satisfactorily");
+                State_of_group_amount.second++;
             }
-            groupStat.emplace_back(studentStat);
         }
-        stat.emplace_back(groupStat);
+        pair<vector<string>,pair<int,int>> State_of_group;
+        State_of_group.first = State_of_group_feature;
+        State_of_group.second = State_of_group_amount;
+
     }
-    return stat;
+    return state;
 }
 
 void Dean::Check_and_delete_students(){
     for (auto& group : groups) {
         for(auto *student : group->Get_students()) {
             if (student->Calc_aver_mark() < 2.5) {
-                group->Exclusion_student(student->Get_id);
+                group->Exclusion_student(student->Get_id());
             }
         }
     }
@@ -112,25 +119,26 @@ Group* Dean::Search_of_group(string Name_of_group) {
 
 void Dean::Choose_head(string group_name) {
     Group* group = Search_of_group(group_name);
-    group->Election_of_the_head(rand() % group->Get_size());
+    int number = rand() % group->Get_size();
+    group->Election_of_the_head(group->Search_of_student(number));
 }
 
 void Dean::Print_date() {
     for (auto & group : groups) {
         unsigned int size = group->Get_size();
         cout << "Group: " << group->Get_title() << endl;
-        output << "Amount of students: " << size << endl;
-        output << "Average mark: " << group->Calc_aver_mark_in_group() << endl;
-        output << "The head: " << group->Get_head()->Get_id() << ". " << group->Get_head()->Get_fio() << endl;
-        output << "Specialty: " << group->Get_spec()m<< endl;
+        cout << "Amount of students: " << size << endl;
+        cout << "Average mark: " << group->Calc_aver_mark_in_group() << endl;
+        cout << "The head: " << group->Get_head()->Get_id() << ". " << group->Get_head()->Get_fio() << endl;
+        cout << "Specialty: " << group->Get_spec() << endl;
         for (auto* student : group->Get_students()){
-            output << student->Get_id() << "  " << student->Get_fio() << endl;
-            output << '[';
+            cout << student->Get_id() << "  " << student->Get_fio() << endl;
+            cout << '[';
             for (auto mark : student->Get_marks())
-                output << " " << mark << " ";
-            output << ']' << endl;
+                cout << " " << mark << " ";
+            cout << ']' << endl;
         }
-        output << endl;
+        cout << endl;
     }
 
 }
@@ -145,5 +153,26 @@ void Dean::Transfer_of_student(string name, string from, string to){
 
 }
 
+vector<Student*> Dean::Get_students() {
+    return students;
+}
+
+vector<Group*> Dean::Get_groups() {
+    return groups;
+}
+
+void Dean::Update_file(const string filename) {
+    ofstream file(filename);
+    //system("chcp 1251");
+    if (file.is_open()) {
+        while (!file.eof()) {
+            vector<Student*> students = Get_students();
+            for(auto * student : students ) {
+                file << student->Get_fio() << endl;
+            }
+        }
+        file.close();
+    }
+}
 
 
