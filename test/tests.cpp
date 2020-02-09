@@ -12,4 +12,5 @@ TEST(TestStudent, createFromFile) {
     map<string,vector<vector<string>>> dataMap;
     dean->showData(dataMap);
     EXPECT_GT(dataMap.size(), 0);
+    EXPECT_GT(dataMap["ПИ"].size(), 0);
 }
