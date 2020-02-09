@@ -54,3 +54,20 @@ TEST(TestStudent, expelStudent) {
     }
     EXPECT_GT(studentsWere,studentsAfterExpelling);
 }
+
+TEST(TestStudent, migrateStudent) {
+    auto dean = new Dean{};
+    dean->createGroups(deanery_path);
+    dean->createStudents(students_path);
+    dean->migrateStudent("ЮРИСТ",99,"ЭКОНОМ");
+    map<string,vector<vector<string>>> dataMap;
+    dean->showData(dataMap);
+    bool Found = false;
+    for (auto student:dataMap["ЭКОНОМ"]){
+        if (stoi(student[1]) == 99){
+            Found = true;
+            break;
+        }
+    }
+    EXPECT_EQ(Found,true);
+}
