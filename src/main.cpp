@@ -69,6 +69,15 @@ int main() {
         }
         cout<<endl;
     }
+    bool marksAdded = false;
+    for (auto group:dataMap){
+        for (auto student :group.second){
+            if (stoi(student[2]) > 0){
+                marksAdded = true;
+            }
+        }
+    }
+    cout<<marksAdded;
     dataMap.clear();
     dean->saveFiles(deanery_path,groups_path,students_path);
 

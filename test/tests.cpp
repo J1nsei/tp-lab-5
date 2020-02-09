@@ -11,6 +11,25 @@ TEST(TestStudent, createFromFile) {
     dean->createStudents(students_path);
     map<string,vector<vector<string>>> dataMap;
     dean->showData(dataMap);
-    EXPECT_GT(dataMap.size(), 0);
-    EXPECT_GT(dataMap["ПИ"].size(), 0);
+    ASSERT_GT(dataMap.size(), 0);
+    ASSERT_GT(dataMap["ПИ"].size(), 0);
+}
+
+TEST(TestStudent, addGrades {
+    auto dean = new Dean{};
+    dean->createGroups(deanery_path);
+    dean->createStudents(students_path);
+    dean->addGrades(10);
+    map<string,vector<vector<string>>> dataMap;
+    dean->showData(dataMap);
+
+    bool marksAdded = false;
+    for (auto group:dataMap){
+        for (auto student :group.second){
+            if (stoi(student[2]) > 0){
+                marksAdded = true;
+            }
+        }
+    }
+    EXPECT_EQ(marksAdded, true);
 }
