@@ -1,5 +1,4 @@
 #include <iostream>
-#include <windows.h>
 #include <string>
 #include <map>
 #include <vector>
@@ -11,7 +10,6 @@ using namespace std;
 
 
 int main() {
-    SetConsoleOutputCP(CP_UTF8);
     string students_path = "../text/students.txt";
     string generated_students_path = "../text/FIOS.txt";
     string groups_path = "../text/groups.txt";
