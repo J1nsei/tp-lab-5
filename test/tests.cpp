@@ -3,21 +3,5 @@
 #include "Group.h"
 
 TEST(student, student_create) {
-
-}
-
-TEST() {
-
-}
-
-TEST() {
-
-}
-
-TEST() {
-
-}
-
-TEST() {
-	
+	Deanery deanery("title");
 }
