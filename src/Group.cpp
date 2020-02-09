@@ -1,4 +1,5 @@
 #include "Group.h"
+#include <algorithm>
 
 Group::Group(string title) {
 	this->title = title;
