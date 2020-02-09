@@ -71,11 +71,11 @@ TEST(task1, case_4) {
 
     PI_1->excludeStudent(student_1)
 
-    EXPECT_EQ((PI_1->getStudents()).size(), 1);
+    EXPECT_EQ(PI_1->getStudents().size(), 1);
 }
 
 
-TEST(task1, case_5) {
+TEST(task1, case_4) {
     Group* PI_1 = new Group("18PI-1", "Software engineering");
     Student* student_1 = new Student(0, "Mikhail Zhelezin");
     Student* student_2 = new Student(1, "Maria Krylova");
