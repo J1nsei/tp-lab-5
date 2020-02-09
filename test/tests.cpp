@@ -142,6 +142,6 @@ TEST(lab5, test10){
         hse.testStudents();
     hse.clearing(0);
     int numOfStudents = hse.getGroups()[1].getSize();
-    int result = 3;
+    int result = 4;
     EXPECT_EQ(numOfStudents, result);
 }
