@@ -3,6 +3,6 @@
 #include "Group.h"
 #include "Dean.h"
 
-TEST(lab5, test1) 
+TEST(lab5, test1) {
 	EXPECT_EQ(100, 100);
 }
