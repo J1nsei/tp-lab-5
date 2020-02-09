@@ -32,7 +32,7 @@ string filePath(string filename) //filePath("/filname.txt") -> "/home/filname.tx
   pwd.pop_back();
   string cl = "";
   cl = cl + pwd;
-  cl = cl + "/"
+  cl = cl + "/";
   cl = cl + filename;
   return cl;
 }
