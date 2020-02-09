@@ -16,7 +16,7 @@ set(CMAKE_CXX_FLAGS "-g -Wall")
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
 include_directories(${COMMON_INCLUDES})
 file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
-file(GLOB TEST_FILE  ${PROJECT_SOURCE_DIR}/src/test.txt)
+
 set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/Student.cpp
 			  ${PROJECT_SOURCE_DIR}/src/Group.cpp
 			  ${PROJECT_SOURCE_DIR}/src/Deanery.cpp
@@ -55,7 +55,7 @@ if (BUILD_TESTS)
   target_link_libraries(runUnitTests gtest gtest_main)
 
   # Extra linking for the project.
-  #target_link_libraries(runUnitTests task1_lib task2_lib task3_lib)
+  target_link_libraries(runUnitTests task1_lib)
 
   # This is so you can do 'make test' to see all your tests run, instead of
   # manually running the executable runUnitTests to see those specific tests.
