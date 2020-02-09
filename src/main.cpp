@@ -1,5 +1,5 @@
 #include <iostream>
-#include <fstream>
+#include <windows.h>
 #include <string>
 #include <map>
 #include <vector>
@@ -11,6 +11,7 @@ using namespace std;
 
 
 int main() {
+    SetConsoleOutputCP(CP_UTF8);
     string students_path = "../text/students.txt";
     string generated_students_path = "../text/FIOS.txt";
     string groups_path = "../text/groups.txt";
@@ -61,7 +62,17 @@ int main() {
     dean->chooseHeadman();
     dean->migrateStudent("ЮРИСТ",99,"ЭКОНОМ");
     dean->expelStudents();
-    dean->showData();
+    map<string,vector<vector<string>>> dataMap;
+    dean->showData(dataMap);
+    for (auto group:dataMap){
+        cout<<group.first<<endl;
+        for (auto student:group.second){
+            cout<<student[0]<<" "<<student[1]<<" "<<student[2]<<endl;
+        }
+        cout<<endl;
+    }
+    dataMap.clear();
     dean->saveFiles(deanery_path,groups_path,students_path);
+
     return 0;
 }

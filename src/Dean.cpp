@@ -81,16 +81,14 @@ void Dean::chooseHeadman() {
     }
 }
 
-void Dean::showData(){
+void Dean::showData(map<string,vector<vector<string>>>&dataMap){
     for (const auto& group: groupNames){
-        cout<<group.second->title<<endl;
-        if (group.second->head!= nullptr){
-            cout<<"head "<<group.second->head->full_name<<endl;
-        }
         for(auto student:group.second->students){
-            cout<<student->full_name<<" "<<student->id<<" "<<student->get_mean()<<endl;
+            dataMap[group.second->title].push_back(vector <string>{student->full_name,
+                                                                   to_string(student->id),
+                                                                   to_string(student->get_mean())
+            });
         }
-        cout<<endl;
     }
 }
 

@@ -26,7 +26,7 @@ public:
     void expelStudents();
     void saveFiles(const string& dean_path,const string& groups_path, const string& students_path);
     void chooseHeadman();
-    void showData();
+    void showData(map<string,vector<vector<string>>>&dataMap);
 };
 vector<string> split(const string& str, char delim);
 #endif //UNTITLED2_DEANERY_H
