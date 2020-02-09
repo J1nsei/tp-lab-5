@@ -1,5 +1,7 @@
 //#include "pch.h"
 #include "Deanery.h"
+#include "Student.h"
+#inclue "Group.h"
 #include "gtest/gtest.h"
 
 //Student tests
