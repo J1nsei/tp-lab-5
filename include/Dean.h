@@ -23,7 +23,7 @@ public:
     void addGrades(unsigned int n);
     void getStatistics();
     void migrateStudent(const string& group_from,unsigned int id, const string& group_to);
-    void expelStudents();
+    void expelStudents(float minAverage);
     void saveFiles(const string& dean_path,const string& groups_path, const string& students_path);
     void chooseHeadman();
     void showData(map<string,vector<vector<string>>>&dataMap);

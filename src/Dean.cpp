@@ -47,11 +47,11 @@ void Dean::addGrades(unsigned int n) {
     }
 }
 
-void Dean::expelStudents() {
+void Dean::expelStudents(float minAverage) {
     for (auto group:groupNames) {
         vector<unsigned int> toKick;
         for (auto student: group.second->students){
-            if(student->get_mean() < 4){
+            if(student->get_mean() < minAverage){
                 toKick.push_back(student->id);
             }
         }
