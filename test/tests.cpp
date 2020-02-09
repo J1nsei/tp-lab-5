@@ -22,12 +22,12 @@ TEST(task1, case_2) {
     student_2->addMark(10);
 
     student_1->addToGroup(PI_1);
-    student_2->addToGroup(PI_1)
+    student_2->addToGroup(PI_1);
 
     PI_1->addStudent(student_1);
     PI_1->addStudent(student_2);
 
-    EXPECT_EQ((int)PI_1->calcAverageMark(), 8)
+    EXPECT_EQ((int)PI_1->calcAverageMark(), 8);
 }
 
 
@@ -42,7 +42,7 @@ TEST(task1, case_3) {
     student_2->addMark(10);
 
     student_1->addToGroup(PI_1);
-    student_2->addToGroup(PI_1)
+    student_2->addToGroup(PI_1);
 
     PI_1->addStudent(student_1);
     PI_1->addStudent(student_2);
@@ -64,7 +64,7 @@ TEST(task1, case_4) {
     student_2->addMark(10);
 
     student_1->addToGroup(PI_1);
-    student_2->addToGroup(PI_1)
+    student_2->addToGroup(PI_1);
 
     PI_1->addStudent(student_1);
     PI_1->addStudent(student_2);
@@ -91,5 +91,5 @@ TEST(task1, case_5) {
     PI_1->addStudent(student_1);
     PI_1->addStudent(student_2);
 
-    EXPECT_EQ((PI_1->findFio("Maria Krylova"), student_2);
+    EXPECT_EQ(PI_1->findFio("Maria Krylova"), student_2);
 }
