@@ -68,7 +68,16 @@ int Group::eraseStudent(Student* student) {
 	}
 	Student* foundStudent = searchStudent(student->getId());
 	if (foundStudent != NULL) {
-		//students.erase(find(students.begin(), students.end(), foundStudent));  TODO: find workaround
+		int count;
+		for (auto &i_student: students){
+			if (i_student == student){
+				students.erase(students.begin()+count);
+				break;
+			}
+			else{
+				count += 1;
+			}
+		}
 		if (head == student) {
 			head = NULL;
 		}
