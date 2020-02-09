@@ -75,7 +75,7 @@ TEST(task1, case_4) {
 }
 
 
-TEST(task1, case_4) {
+TEST(task1, case_5) {
     Group* PI_1 = new Group("18PI-1", "Software engineering");
     Student* student_1 = new Student(0, "Mikhail Zhelezin");
     Student* student_2 = new Student(1, "Maria Krylova");
