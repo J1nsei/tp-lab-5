@@ -15,7 +15,7 @@ TEST(TestStudent, createFromFile) {
     ASSERT_GT(dataMap["ПИ"].size(), 0);
 }
 
-TEST(TestStudent, addGrades {
+TEST(TestStudent, addGrades) {
     auto dean = new Dean{};
     dean->createGroups(deanery_path);
     dean->createStudents(students_path);
