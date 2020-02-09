@@ -1,11 +1,41 @@
-#include <vector>
-#include <iostream>
-#include <string>
+
 #include "Student.h"
 #include "Group.h"
 #include "Deanery.h"
 
+#include <fstream>
+#include <cstdio>
+#include <iostream>
+#include <memory>
+#include <stdexcept>
+#include <string>
+#include <array>
+
+std::string exec(const char* cmd) {
+    std::array<char, 128> buffer;
+    std::string result;
+    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
+    if (!pipe) {
+        throw std::runtime_error("popen() failed!");
+    }
+    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
+        result += buffer.data();
+    }
+    return result;
+}
+
 using namespace std;
+
+string filePath(string filename) //filePath("/filname.txt") -> "/home/filname.txt"
+{
+  string pwd = exec("pwd");
+  pwd.pop_back();
+  string cl = "";
+  cl = cl + pwd;
+  cl = cl + "/"
+  cl = cl + filename;
+  return cl;
+}
 
 int main() {
 	/*
@@ -29,9 +59,12 @@ int main() {
 	group.eraseStudent(group.searchStudent(12));
 	cout << group.getHead() << endl;
 	*/
-	cout << "START" << endl;
+	cout << "START TESTING" << endl;
+	string testFilePath = filePath("test.txt");
+	ofstream file(testFilePath);
+	file << "Sergey|uoi";
 	Deanery deanery;
-	deanery.extractDataFromFile("C:\\www\\testu.txt");
+	deanery.extractDataFromFile(testFilePath);
 	deanery.electionHead();
 	cout << deanery.searchGroup("rt");
 	cout << deanery.searchGroup("uoi");
