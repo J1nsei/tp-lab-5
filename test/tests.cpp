@@ -40,19 +40,13 @@ TEST(testGroup, group_1) {
 TEST(testDean, dean_1) {
 	Dean* dean = new Dean("IMIKN");
 	Group* group1 = new Group("AMI");
-	Group* group2 = new Group("SE");
 	Student* student1 = new Student("Oscar Wilde", "AMI");
-	Student* student2 = new Student("Jerome Salinger", "SE");
 	group1->addStudent(student1);
-	group2->addStudent(student2);
 	dean->addGroup(group1);
-	dean->addGroup(group2);
 	dean->setHeads();
-	EXPECT_EQ("Oscar Wilde", dean->getGroups()[0]->getHeadName());
-	EXPECT_EQ("Jerome Salinger", dean->getGroups()[1]->getHeadName());
+	string name = dean->getGroups()[0]->getHeadName()
+	EXPECT_EQ("Oscar Wilde", string);
 	delete student1;
-	delete student2;
 	delete group1;
-	delete group2;
 	delete dean;
 }
