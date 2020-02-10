@@ -4,6 +4,8 @@
 #include "Group.h"
 #include "Student.h"
 
+using namespace std;
+
 Group::Group(string title, string spec){
     this->title = title;
     this->spec = spec;
@@ -42,7 +44,7 @@ void Group::Exclusion_student(int id){
             index = i;
         }
     }
-    students.erase(students.cbegin() + index);
+    students.erase(students.begin() + index);
 
 }
 void Group::Exclusion_student(string fio){
@@ -52,7 +54,7 @@ void Group::Exclusion_student(string fio){
             index = i;
         }
     }
-    students.erase(students.cbegin() + index);
+    students.erase(students.begin() + index);
 
 }
 vector<Student*> Group::Get_students() const {
