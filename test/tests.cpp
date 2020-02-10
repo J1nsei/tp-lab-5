@@ -52,7 +52,7 @@ TEST(DeaneryTest, checkingAddingMarks) {
 
 	deanery->AddRandomMarks();
 	std::string s = deanery->GetStatistics();
-	EXPECT_EQ("B:\nLavrentev Miloslav: 2 2 2 4 3 \nBalaban Vsevolod: 2 5 5 4 4 \nBozhkov Emmanuil: 1 4 5 1 4 \nKusakov Zotik: 1 5 5 2 4 \n\nC:\nLubyanovskiy Timur: 2 2 2 4 3 \nMartynov Anaklet: 2 5 5 4 4 \n\nA:\nAlmazov Evfrasiy: 2 2 2 4 3 \nMitropolskiy Gleb: 2 5 5 4 4 \nBerdyaev Yulian: 1 4 5 1 4 \n\nG:\nHanykov Ustin: 2 2 2 4 3 \n\n", s);
+	EXPECT_EQ("B:\nLavrentev Miloslav: 1 2 5 2 5 \nBalaban Vsevolod: 5 3 1 5 2 \nBozhkov Emmanuil: 2 5 3 5 2 \nKusakov Zotik: 4 3 4 4 5 \n\nC:\nLubyanovskiy Timur: 1 2 5 2 5 \nMartynov Anaklet: 5 3 1 5 2 \n\nA:\nAlmazov Evfrasiy: 1 2 5 2 5 \nMitropolskiy Gleb: 5 3 1 5 2 \nBerdyaev Yulian: 2 5 3 5 2 \n\nG:\nHanykov Ustin: 1 2 5 2 5 \n\n", s);
 }
 
 TEST(DeaneryTest, checkingAddingStudentToGroup) {
