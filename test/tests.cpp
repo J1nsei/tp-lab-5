@@ -73,7 +73,7 @@ TEST(StudentTests, groupHead) {
 
 TEST(StudentTests, averageMark) {
 	Dean* dean = new Dean("../file/students.csv");
-	Student* student = group->findStudentById(35);
+	Student* student = dean->findStudentById(35);
 	for (int i = 0; i < 5; i++) {
 		student->addMark(i);
 	}
