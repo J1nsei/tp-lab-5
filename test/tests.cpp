@@ -44,6 +44,8 @@ TEST(testDean, dean_1) {
 	Student* student2 = new Student("Jerome Salinger", "SE");
 	group1->addStudent(student1);
 	group2->addStudent(student2);
+	group1->appointHead();
+	group2->appointHead();
 	group1->setMarks();
 	group2->setMarks();
 	group1->expelStudentsWithBadMarks(5.);
