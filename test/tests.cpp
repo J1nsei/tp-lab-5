@@ -3,6 +3,7 @@
 #include "Deanery.h"
 #include "Group.h"
 #include "Student.h"
+#include <vector>
 #include <string>
 
 TEST(deanery, number_of_students1)
