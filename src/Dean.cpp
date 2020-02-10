@@ -28,6 +28,20 @@ void Dean::Add_students() {
     }
     fin.close();
 }
+void Dean::Add_student(string name, string Name_of_group){
+    students.push_back(new Student(id++, name));
+    for (auto group: groups){
+        if(group->Get_title() == Name_of_group){
+            group->Add_student(students.back());
+            students.back()->Set_group(group->Get_title());
+        }
+    }
+}
+
+void Dean::Add_group(string title, string spec){
+    groups.push_back(new Group(title, spec));
+}
+
 void Dean::Add_groups() {
     ifstream fin("../Groups.txt");
     string input;
@@ -74,6 +88,7 @@ void Dean::Add_marks(string Name_of_group, int count) {
         }
     }
 }
+
 
 vector<pair<vector<string>,pair<int,int>>> Dean::Get_state() {
     vector<pair<vector<string>,pair<int,int>>> state;

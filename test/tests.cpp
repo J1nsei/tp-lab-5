@@ -15,17 +15,22 @@ TEST(task1, task1_2) {
     delete dean;
 }
 TEST(task1, task1_3) {
-    Student student(1, "Козлова Оксана");
-    for (int i = 0; i < 10; i++){
-        student.Add_mark(i);
+    Dean *dean = new Dean();
+    dean->Add_student("Железин Михаил", "18PI1");
+    Group *group = dean->Search_of_group("18PI1");
+    Student *student = group->Search_of_student("Железин Михаил");
+    for (int i = 0; i < 10; i++) {
+        student->Add_mark(i);
     }
     EXPECT_EQ(4.5, student.Calc_aver_mark());
 }
 TEST(task1, task1_4) {
-    Student* student = new Student(1, "Козлова Оксана");
-    Group group("18PMI", "MathProgr");
-    group.Add_student(student);
-    EXPECT_EQ("18PMI", group.Get_title());
+    Dean *dean = new Dean();
+    dean->Add_group("linguistics", "humanities");
+    dean->Add_student("Козлова Оксана", "linguistics");
+    Group *group = dean->Search_of_group("linguistics");
+    Student *student = group->Search_of_student("Козлова Оксана");
+    EXPECT_EQ("linguistics", group.Get_title());
     EXPECT_EQ(1, group.Get_size());
 }
 

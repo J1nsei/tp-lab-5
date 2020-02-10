@@ -12,7 +12,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
 
     //SetConsoleOutputCP(65001);
 
@@ -27,5 +27,5 @@ int main(){
     dean->Print_date();
     delete dean;
 
-}
 
+}

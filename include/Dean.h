@@ -23,6 +23,8 @@ public:
     ~Dean();
     void Add_students();//создание студентов на основе данных из файла
     void Add_groups();//создание групп на основе данных из файла
+    void Add_student(string, string);
+    void Add_group(string, string);
     void Add_marks(string, int);//добавление случайных оценок студентам
     vector<pair<vector<string>,pair<int,int>>> Get_state(); //получение статистики по успеваемости студентов и групп
     void Check_and_delete_students(string);//отчисление студентов за неуспеваемость
