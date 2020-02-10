@@ -17,14 +17,14 @@ TEST(lab5, task2)
 {
 	Student* st = new Student("Ivanov Petr", 1);
 	Group* gr = new Group("18FM-1", "Fund Maths");
-	st.setgroup(gr);
-	EXPECT_EQ("18FM-1", st.getGroup());
+	st->setGroup(gr);
+	EXPECT_EQ("18FM-1", st->getGroup());
 }
 
 TEST(lab5, task3)
 {
 	Student* st1 = new Student("Ivanov Petr", 1);
-	Student* st1 = new Student("Petrov Ivan", 2);
+	Student* st2 = new Student("Petrov Ivan", 2);
 	st1->addMark(5);
 	st1->addMark(7);
 	st2->addMark(3);
@@ -32,14 +32,14 @@ TEST(lab5, task3)
 	Group* gr = new Group("18FM-1", "Fund Maths");
 	gr->addStudent(st1);
 	gr->addStudent(st2);
-	EXPECT_EQ(5, gr.AverageMarkofGroup());
-	EXPECT_EQ(2, gr.getStudents().size());
+	EXPECT_EQ(5, gr->AverageMarkofGroup());
+	EXPECT_EQ(2, gr->getStudents().size());
 }
 
 TEST(lab5, task4)
 {
 	Student* st1 = new Student("Ivanov Petr", 1);
-	Student* st1 = new Student("Petrov Ivan", 2);
+	Student* st2 = new Student("Petrov Ivan", 2);
 	Group* gr1 = new Group("18FM-1", "Fund Maths");
 	Group* gr2 = new Group("18SE-1", "Software Eng");
 	gr1->addStudent(st1);
