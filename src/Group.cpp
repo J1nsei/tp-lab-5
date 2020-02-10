@@ -1,6 +1,6 @@
 #define _CRT_SECURE_NO_WARNINGS
-#include "group.h"
-#include "dean.h"
+#include "Group.h"
+#include "Dean.h"
 #include <ctime>
 #include <iostream>
 
