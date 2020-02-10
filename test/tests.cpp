@@ -4,7 +4,7 @@
 
 TEST(stud, id){
 	Student* stud = new Student("Arakcheev Artem", 0);
-	int id = stud->get_id();
+	int id = stud->getId();
 	EXPECT_EQ(0, id);
 }
 
