@@ -20,15 +20,16 @@ TEST(task1, test2) {
 
 TEST(task1, test3) {
     Deanery* dean = new Deanery();
+int size = dean->groups[7]->getNumberStudents();
     dean->cickStudent("Ланцов Александр Данилевич");
-    EXPECT_EQ(21, dean->groups[7]->getNumberStudents());
+    EXPECT_EQ(size-1, dean->groups[7]->getNumberStudents());
     delete dean;
 }
 
 TEST(task1, test4) {
     Deanery* dean = new Deanery();
-    dean->addStudent("Соловьев Илья Максимович", "19ПМИ-2");
     int size = dean->groups[7]->getNumberStudents();
+    dean->addStudent("Соловьев Илья Максимович", "19ПМИ-2");
     Student *student = dean->findStudent("Соловьев Илья Максимович");
     EXPECT_EQ(size+1, dean->groups[7]->getNumberStudents());
     delete dean;
