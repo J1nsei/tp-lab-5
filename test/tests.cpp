@@ -50,7 +50,7 @@ TEST(testStudent, getFIO)
 	EXPECT_EQ("Sarah Catherine Paulson", student.getFIO());
 }
 
-TEST(testStudent, averageMark) 
+TEST(testStudent, avMark) 
 {
 	Student student(1, "Albus Wulfric Dumbledore");
 
