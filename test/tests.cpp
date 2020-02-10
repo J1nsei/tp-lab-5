@@ -16,8 +16,8 @@ TEST (testStudent, getID)
 TEST (testStudent, addMark)
 {
     Student student(0, "Саратовцев Артем Романович");
-    student.setMarks(5);
-    EXPECT_EQ(5, student.getMean());
+    student.addMark(5);
+    EXPECT_EQ(5, student.calcMean());
 }
 
 TEST (testGroup, enroll)
