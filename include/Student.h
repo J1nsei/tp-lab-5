@@ -18,6 +18,7 @@ public:
     int calcMean() const;
     std::string getFIO() const; 
     unsigned int getID() const;
+    Group* getGroup() const;
     ~Student();
 };
 

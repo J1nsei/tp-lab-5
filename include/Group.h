@@ -10,6 +10,7 @@ private:
     std::string spec;
     std::vector<Student*> students;
     Student* head;
+    double mean;
 public:
     Group(std::string title, std::string spec);
     void addStudent(Student* student);
@@ -19,6 +20,10 @@ public:
     void estimate(unsigned int id);
     int findMean() const;
     void exclude(unsigned int id);
+    std::vector<Student*> getStudents();
+    std::string getTitle() const; 
+    double calcMean();
+    void excludeBadStudents();
     ~Group();
 };
 
