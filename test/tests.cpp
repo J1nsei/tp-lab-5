@@ -72,19 +72,7 @@ TEST(TestStudent, migrateStudent) {
     EXPECT_EQ(Found,true);
 }
 
-TEST(TestStudent, chooseHeadman) {
-    auto dean = new Dean{};
-    dean->createGroups(deanery_path);
-    dean->createStudents(students_path);
-    dean->chooseHeadman();
-    map<string,vector<vector<string>>> dataMap;
-    dean->showData(dataMap);
-    bool allGroupsHaveHeadman = true;
-    for (auto group : dean.)
-    EXPECT_EQ(Found,true);
-}
-
-TEST(TestStudent, chooseHeadman) {
+TEST(TestStudent, saveFunc) {
     auto dean = new Dean{};
     dean->createGroups(deanery_path);
     dean->createStudents(students_path);
