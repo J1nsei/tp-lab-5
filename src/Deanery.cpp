@@ -3,6 +3,7 @@
 #include <string>
 #include <queue>
 #include <fstream>
+#include <sstream>
 #include <iostream>
 #include "Student.h"
 #include "Group.h"
@@ -12,7 +13,7 @@ Deanery::Deanery() // конструктор
 {
 	this->freeID = std::queue<int>();
 	this->biggestID = 0;
-	this->groups = std::vector<Group*> ();
+	this->groups = std::vector<Group*>();
 }
 
 Deanery::~Deanery() // деструктор
@@ -43,7 +44,8 @@ int Deanery::getNewID() // конструктор новых ID
 void Deanery::AddStudentsFromFile(const char* filename) // создание студентов на основе данных из файла
 {
 	//Фамилия Имя Отчество:Номер_Группы
-	FILE *fp;
+	FILE* fp;
+	//std::ifstream input(filename);
 	fp = freopen(filename, "r", stdin);
 	std::string s;
 	while (std::getline(std::cin, s))
@@ -76,10 +78,11 @@ void Deanery::AddStudentsFromFile(const char* filename) // создание студентов на
 
 		if (!flag)
 		{
-			Group *gr = AddGroup(groupName);
+			Group* gr = AddGroup(groupName);
 			target->AddToAgroup(gr);
 		}
 	}
+	//input.close();
 	fclose(fp);
 }
 
@@ -92,13 +95,15 @@ Group* Deanery::AddGroup(std::string title) // Добавить группу
 
 void Deanery::AddGroupsFromFile(const char* filename) // создание групп на основе данных из файла
 {
-	FILE *fp;
+	FILE* fp;
 	fp = freopen(filename, "r", stdin);
+	//std::ifstream input(filename);
 	std::string s;
 	while (std::getline(std::cin, s))
 	{
-		Group *gr = AddGroup(s);
+		Group* gr = AddGroup(s);
 	}
+	//input.close();
 	fclose(fp);
 }
 
@@ -112,7 +117,7 @@ void Deanery::AddRandomMarks(int amount) // добавление случайных оценок студента
 
 std::string Deanery::GetStatistics() // получение статистики по успеваемости студентов и групп
 {
-	std:: string ans = "";
+	std::string ans = "";
 	for (int i = 0; i < groups.size(); i++)
 	{
 		ans += groups[i]->getTitle() + ":\n" + groups[i]->GetStatistics() + '\n';
@@ -149,7 +154,7 @@ void Deanery::printConsole()
 
 void Deanery::saveFile(const char* filename)
 {
-	FILE *fp;
+	FILE* fp;
 	fp = freopen(filename, "w", stdout);
 	std::cout << this->GetStatistics() << '\n';
 	fclose(fp);
