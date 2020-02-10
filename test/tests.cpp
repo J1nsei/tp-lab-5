@@ -1,7 +1,7 @@
 ﻿#include "gtest/gtest.h"
-#include "../include/dean.h"
-#include "../include/group.h"
-#include "../include/student.h"
+#include "../include/Dean.h"
+#include "../include/Group.h"
+#include "../include/Student.h"
 
 TEST(Deanery, dean_1) {
 	Group* group = new Group("18-PMI");
