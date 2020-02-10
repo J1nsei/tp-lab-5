@@ -20,7 +20,7 @@ TEST (testStudent, addMark)
     EXPECT_EQ(5, student.calcMean());
 }
 
-TEST (testGroup, enroll)
+TEST (testStudent, enroll)
 {
     Student student(0, "Саратовцев Артем Романович");
     Group* group = new Group("18PI-1", "Satanizm");
@@ -28,4 +28,20 @@ TEST (testGroup, enroll)
     EXPECT_EQ(group, student.getGroup());
 }
 
+TEST (testGroup, getTitle)
+{
+    Student* student = new Student(0, "Саратовцев Артем Романович");
+    Group* group = new Group("18PI-1", "Satanizm");
+    student->enroll(group);
+    EXPECT_EQ("18PI-1", group->getTitle());
+}
+
+TEST (testGroup, addStudent)
+{
+    Student* student = new Student(0, "Саратовцев Артем Романович");
+    Group* group = new Group("18PI-1", "Satanizm");
+    student->enroll(group);
+    group->addStudent(student);
+    EXPECT_EQ("Саратовцев Артем Романович", group->getStudents()[0]->getFIO());
+}
 
