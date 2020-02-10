@@ -22,7 +22,7 @@ TEST(task1, task1_3) {
     for (int i = 0; i < 10; i++) {
         student->Add_mark(i);
     }
-    EXPECT_EQ(4.5, student.Calc_aver_mark());
+    EXPECT_EQ(4.5, student->Calc_aver_mark());
 }
 TEST(task1, task1_4) {
     Dean *dean = new Dean();
@@ -30,8 +30,8 @@ TEST(task1, task1_4) {
     dean->Add_student("Козлова Оксана", "linguistics");
     Group *group = dean->Search_of_group("linguistics");
     Student *student = group->Search_of_student("Козлова Оксана");
-    EXPECT_EQ("linguistics", group.Get_title());
-    EXPECT_EQ(1, group.Get_size());
+    EXPECT_EQ("linguistics", group->Get_title());
+    EXPECT_EQ(1, group->Get_size());
 }
 
 
