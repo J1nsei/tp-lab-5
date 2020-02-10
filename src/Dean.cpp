@@ -157,9 +157,9 @@ bool Dean::expelStudent(Student* student) {
 }
 
 
-void Dean::addNewStudent(std::string name, Group* group) {
-	studentID++;
+void Dean::addNewStudent(std::string name, Group* group) {	
 	Student* student = new Student(studentID, name);
+	studentID++;
 	student->setGroup(group);
 	group->addStudent(student);
 	data[student->getFIO()] = group->getName();
