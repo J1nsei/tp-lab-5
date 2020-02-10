@@ -30,7 +30,7 @@ TEST(task1, task1_4) {
 }
 
 
-TEST(testDean, transfer) {
+TEST(task1, task1_5) {
     Dean* dean = new Dean();
     Student* student1 = dean->Get_students()[0];
     Group*from = dean->Search_of_group(student1->Get_Group());
