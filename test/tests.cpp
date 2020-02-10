@@ -41,13 +41,3 @@ TEST(task4, avg_group_mark) {
 	EXPECT_EQ(5, group.avg_group_mark());
 
 }
-TEST(task5, moving) {
-	Deanery REALDEANERY("students.txt", "groups.txt");
-
-	REALDEANERY.create_students();
-	REALDEANERY.create_groups();
-	REALDEANERY.move_student("Константинов Николай", "18PMI3");
-	EXPECT_EQ(0, 18PMI1.search_stud(1));
-	EXPECT_EQ(1, 18PMI3.search_stud(1));
-
-}
