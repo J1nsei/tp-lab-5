@@ -1,4 +1,4 @@
-#include "student.h"
+#include "Student.h"
 #include <ctime>
 
 unsigned int new_id = 0;
