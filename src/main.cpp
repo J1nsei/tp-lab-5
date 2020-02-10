@@ -1,4 +1,3 @@
-
 #include "Student.h"
 #include "Group.h"
 #include "Deanery.h"
@@ -10,13 +9,15 @@
 #include <stdexcept>
 #include <string>
 #include <array>
+
 using namespace std;
 
-#define test_in "C://test//test.txt"
-#define test_out "C://test//test_out.txt"
+/*For WINDOWS ONLY!, for linux define it in arguments*/
+char* test_in = (char*)"C://test//test.txt";
+char* test_out = (char*)"C://test//test_out.txt";
 
-int main(int argc, char** argv) { // test1.exe test_in.txt test_out.txt
-	cout << "START TESTING FOR WINDOWS" << endl;
+int main(int argc, char** argv) { // test1.exe test_in.txt test_out.txt 
+	cout << "START TESTING" << endl;
 	char* testFilePath;
 	if (argc == 1) {
 		testFilePath = test_in;
@@ -27,19 +28,18 @@ int main(int argc, char** argv) { // test1.exe test_in.txt test_out.txt
 	Deanery deanery;
 	deanery.extractDataFromFile(testFilePath);
 	deanery.electionHead();
-	cout << deanery.searchGroup("rt");
-	cout << deanery.searchGroup("uoi");
-	cout << deanery.eraseWithBadMarks(2.0);
+	cout << deanery.searchGroup("PI0") << endl;
+	cout << deanery.searchGroup("PI2") << endl;
+	cout << deanery.eraseWithBadMarks(2.0) << endl;
 	deanery.randMarks();
 	deanery.getStatistics();
 	deanery.electionHead();
-	deanery.changeGroup(deanery.searchStudent("Fr")[0], deanery.searchGroup("uoi"));
-	string testOutPath;
+	char* testOutPath;
 	if (argc <= 2) {
 		testOutPath = test_out;
 	}
 	else {
-		testOutPath = (string)argv[2];
+		testOutPath = argv[2];
 	}
 	deanery.saveDataInFile(test_out);
 	return 0;

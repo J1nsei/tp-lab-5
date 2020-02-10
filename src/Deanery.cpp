@@ -2,12 +2,14 @@
 #include <iostream>
 
 Deanery::Deanery() {
+	this->id = 0;
 }
 
-int Deanery::getId() {
-	static int id = 0;
-	return id++;
+int Deanery::getid() {
+	id += 1;
+	return id;
 }
+
 
 string extractName(string line) {
 	return line.substr(0, line.find('|', 0));
@@ -20,11 +22,11 @@ string extractGroup(string line) {
 int Deanery::createStudent(string group, string student) {
 	Group* foundGroup = searchGroup(group);
 	if (foundGroup != NULL) {
-		return foundGroup->addStudent(new Student(getId(), student));
+		return foundGroup->addStudent(new Student(getid(), student));
 	}
 	else {
 		Group* newGroup = new Group(group);
-		int exit_code = newGroup->addStudent(new Student(getId(), student));
+		int exit_code = newGroup->addStudent(new Student(getid(), student));
 		if (exit_code == 0) {
 			groups.push_back(newGroup);
 			return 0;
@@ -134,15 +136,16 @@ void Deanery::electionHead(){
 void Deanery::getStatistics(){
 	int n = groups.size();
 	int t;
+	cout << "STATISTIC:" << endl << endl;
 	for (int i = 0; i < n; i++) {
 		cout <<"title: "<< groups[i]->getTitle() << endl;
 		cout << "how many students: " << groups[i]->getNum() << endl;
 		cout << "head: " << groups[i]->getHead()->getFio() << endl;
 		for (int j = 0; j < groups[i]->getNum(); j++) {
 			Student* student = groups[i]->students[j];
-			cout << student->getId() << " ";
+			cout << "student id: " << student->getId() << " " << "FIO: " << student->getFio() << " marks: ";
 			for (auto &mark: groups[i]->getMarks(student)) {
-				cout << mark << " ";
+				cout << mark << " " << endl;
 			}
 			cout << endl;
 		}

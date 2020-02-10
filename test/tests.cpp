@@ -10,7 +10,7 @@
 #include <stdexcept>
 #include <string>
 #include <array>
-
+using  namespace std;
 
 string exec(const char* cmd) {
 	array<char, 128> buffer;
@@ -37,49 +37,76 @@ string filePath(string filename) //filePath("/filname.txt") -> "/home/filname.tx
 }
 
 
-TEST(student, student_create) {
-	/*
-	Student student(12, "234");
-	cout << student.getId() << " " << student.getFio() << endl;
-	student.addMark(18);
-	cout << student.getAvr() << endl;
-	Group group("23");
-	cout << group.addStudent(&student) << endl;
-	cout << group.addStudent(&student) << endl;
-	cout << group.searchStudent("2").size() << endl;
-	Student student2(13, "234");
-	cout << group.setHead(&student2) << endl;
-	cout << group.eraseStudent(&student2) << endl;
-	group.searchStudent(12)->addMark(5);
-	group.searchStudent(12)->addMark(7);
-	group.searchStudent(12)->addMark(9);
-	cout << group.getAvr() << endl;
-	group.setHead(&student);
-	cout << group.getHead() << endl;
-	group.eraseStudent(group.searchStudent(12));
-	cout << group.getHead() << endl;
-	*/
-}
-
 TEST(deanery, deanery_create) {
 	Deanery deanery; 
 	string testFilePath = filePath("test.txt");
 	ofstream file(testFilePath);
-	file << "Sergey|uoi";
-	EXPECT_EQ(-1,deanery.extractDataFromFile());
+	file << "Sergey|PI2" <<endl;
+	file << "Danilov Sergey|PMI" <<endl;
+	file << "Valeryu Polyakov|PMI" <<endl;
+	EXPECT_EQ(-1,deanery.extractDataFromFile(""));
 	EXPECT_EQ(0, deanery.extractDataFromFile(testFilePath));
-	/*
-	deanery.extractDataFromFile(testFilePath);
-	deanery.electionHead();
-	cout << deanery.searchGroup("rt");
-	cout << deanery.searchGroup("uoi");
-	cout << deanery.eraseWithBadMarks(2.0);
+	EXPECT_EQ(1, deanery.searchStudent("Sergey").size());
+	EXPECT_EQ(1, deanery.searchStudent("Valeryu Polyakov").size());
+	EXPECT_EQ(0, deanery.searchStudent("Valeryu").size());
+	Student* test_student = deanery.searchStudent("Valeryu Polyakov")[0];
+	EXPECT_EQ("PMI", test_student->getGroup()->getTitle());
+}
+
+TEST(deanery, student) {
+	Deanery deanery;
+	string testFilePath = filePath("test.txt");
+	ofstream file(testFilePath);
+	file << "Sergey|PI2" << endl;
+	file << "Danilov Sergey|PMI" << endl;
+	file << "Valeryu Polyakov|PMI"<<endl;
+	EXPECT_EQ(0, deanery.extractDataFromFile(testFilePath));
+	EXPECT_NE(0, deanery.searchStudent("Valeryu Polyakov").size());
+	Student* test_student = deanery.searchStudent("Valeryu Polyakov")[0];
+	EXPECT_EQ("Valeryu Polyakov", test_student->getFio());
+	EXPECT_EQ("PMI", test_student->getGroup()->getTitle());
+	EXPECT_EQ(3, test_student->getId());
+}
+
+TEST(deanery, group) {
+	Deanery deanery;
+	string testFilePath = filePath("test.txt");
+	ofstream file(testFilePath);
+	file << "Sergey|PI2" << endl;
+	file << "Danilov Sergey|PMI" <<endl;
+	file << "Valeryu Polyakov|PMI" << endl;
+	EXPECT_EQ(0, deanery.extractDataFromFile(testFilePath));
+	Group* test_group = deanery.searchGroup("PMI");
+	EXPECT_EQ("PMI", test_group->getTitle());
+	EXPECT_EQ(0, test_group->getAvr());
+}
+
+TEST(deanery, marks) {
+	Deanery deanery;
+	string testFilePath = filePath("test.txt");
+	ofstream file(testFilePath);
+	file << "Sergey|PI2" << endl;
+	file << "Danilov Sergey|PMI" << endl;
+	file << "Valeryu Polyakov|PMI" << endl;
+	EXPECT_EQ(0, deanery.extractDataFromFile(testFilePath));
+	Group* test_group = deanery.searchGroup("PMI");
 	deanery.randMarks();
-	cout << deanery.eraseWithBadMarks(9.0);
-	deanery.getStatistics();
+	deanery.randMarks();
+	deanery.randMarks();
+	EXPECT_NE(0, test_group->getAvr());
+}
+
+TEST(deanery, election) {
+	Deanery deanery;
+	string testFilePath = filePath("test.txt");
+	ofstream file(testFilePath);
+	file << "Sergey|PI2" <<endl;
+	file << "Danilov Sergey|PMI"<<endl;
+	file << "Valeryu Polyakov|PMI"<<endl;
+	EXPECT_EQ(0, deanery.extractDataFromFile(testFilePath));
+	Group* test_group = deanery.searchGroup("PMI");
 	deanery.electionHead();
-	deanery.changeGroup(deanery.searchStudent("Fr")[0], deanery.searchGroup("uoi"));
-	*/
+	ASSERT_NE(test_group->getHead(), nullptr);
 }
 
 

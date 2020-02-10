@@ -10,11 +10,13 @@ class Student;
 
 class Deanery {
 private:
+	int id;
 	vector<Group*> groups;
-	static int getId();
 	int createStudent(string group, string student);
 public:
 	Deanery();
+	int getid();
+	void setid();
 	int extractDataFromFile(string fileName);
 	Group* searchGroup(string groupName);
 	Student* searchStudent(int id);
