@@ -178,10 +178,14 @@ void Deanery::expel(const string& title, const int& id)
 	Group* group = find_group(title);
 	Student* stud = group->find_id(id);
 	group->expel(stud);
-	if (id == group->head->id)
+	if (group->head != nullptr)
 	{
-		group->head = nullptr;
+		if (id == group->head->id)
+		{
+			group->head = nullptr;
+		}
 	}
+	
 }
 
 
