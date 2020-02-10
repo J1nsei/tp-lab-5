@@ -3,7 +3,7 @@
 
 TEST(task1, task1_1) {
 Dean* dean = new Dean();
-EXPECT_EQ(93, dean->Get_students.size());
+EXPECT_EQ(93, dean->Get_students().size());
 delete dean;
 }
 

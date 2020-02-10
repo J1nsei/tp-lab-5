@@ -44,7 +44,7 @@ void Group::Exclusion_student(int id){
     }
     students.erase(students.cbegin() + index);
 
-} //исключение студента из группы
+}
 void Group::Exclusion_student(string fio){
     int index = 0;
     for (int i = 0; i < students.size(); i++){
@@ -54,7 +54,7 @@ void Group::Exclusion_student(string fio){
     }
     students.erase(students.cbegin() + index);
 
-} //исключение студента из группы
+}
 vector<Student*> Group::Get_students() const {
     return students;
 }

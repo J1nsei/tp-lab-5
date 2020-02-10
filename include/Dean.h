@@ -18,11 +18,12 @@ class Group;
 class Student;
 
 
+vector<string> split(const string &, char );
+
 class Dean {
 public:
     Dean();
     ~Dean();
-    vector<string> split (const string &, char);
     //void Add_students();//создание студентов на основе данных из файла
     //void Add_groups();//создание групп на основе данных из файла
     void Add_marks(string, int);//добавление случайных оценок студентам

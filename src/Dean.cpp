@@ -6,7 +6,7 @@
 #include <iostream>
 #include <assert.h>
 #include <Dean.h>
-#include <student.h>
+#include <Student.h>
 using namespace std;
 
 vector<string> split(const string &s, char del){
@@ -31,10 +31,10 @@ void Dean::Add_students() {
     fin.close();
 }
 void Dean::Add_groups() {
-    std::ifstream fin("../Groups.txt");
+    ifstream fin("../Groups.txt");
     string input;
     while(getline(fin, input)){
-        vector<string> inputParts = split(input, ':');
+        vector<string> inputParts = split(input, ' ');
         vector<string> titSpec;
         for(const auto& x: inputParts) {
             titSpec.push_back(x);
