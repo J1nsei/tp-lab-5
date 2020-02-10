@@ -14,7 +14,7 @@ TEST(deanery, changegroup){
 	Group* group2 = hse.createGroup("group2", "spec2");
 	hse.createStudent(0, "Arakcheev Artem", group1);
 	hse.changeGroup("Arakcheev Artem", group1, group2);
-	string name = gr2->getStudents()[0]->getName();
+	string name = group2->getStudents()[0]->getName();
 	EXPECT_EQ("Arakcheev Artem", name);
 }
 
