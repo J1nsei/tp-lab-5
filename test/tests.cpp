@@ -3,7 +3,7 @@
 
 
 TEST(stud, id){
-	Student* stud = new Student(0, "Arakcheev Artem");
+	Student* stud = new Student("Arakcheev Artem", 0);
 	int id = stud->get_id();
 	EXPECT_EQ(0, id);
 }
