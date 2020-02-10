@@ -36,7 +36,7 @@ void Group::electHead() { // избрание старосты
 	head = students[rand() % num_sd_in_group];
 	
 }
-void Group::search_stud(int tmp_ID) {
+bool Group::search_stud(int tmp_ID) {
 	bool found = 0;
 	for (int i = 0; i < num_sd_in_group; i++) {
 		if (students[i]->id == i) {
@@ -47,8 +47,8 @@ void Group::search_stud(int tmp_ID) {
 	if (found == 0) {
 		std::cout << "Студент не найден" << "\n";
 	}
-
-}
+	return found;
+}	
 double Group::avg_group_mark() {
 	double sum = 0;
 	for (int i = 0; i < num_sd_in_group; i++) {
@@ -79,6 +79,7 @@ Deanery::Deanery(std::string students, std::string groups) { // инициализация
 	fileGroup = groups; 
 	fileStud = students;
 }
+
 
 void Deanery::create_students() {
 	std::ifstream file(fileStud);

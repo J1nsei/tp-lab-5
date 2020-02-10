@@ -43,7 +43,7 @@ public:
 	Group(std::string );
 	void addStudent(Student* );
 	void electHead();
-	void search_stud(int );
+	bool search_stud(int );
 	double avg_group_mark();
 	void del_stud(int);
 	
@@ -63,6 +63,8 @@ private:
 public:
 	Deanery(std::string, std::string);
 	void create_students();
+	
+
 	void create_groups();
 	void add_marks();
 	void do_stat();

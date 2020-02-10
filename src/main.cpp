@@ -12,6 +12,9 @@ int main(){
 	REALDEANERY.do_stat();
 	std::cout << "Обновленные списки после отчисления за неуспеваемость" << std::endl;
 	REALDEANERY.print();*/
+	
+
+
 
 }
 
