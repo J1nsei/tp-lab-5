@@ -5,7 +5,6 @@
 #include <fstream>
 #include <iostream>
 #include <Dean.h>
-#include <Student.h>
 using namespace std;
 
 vector<string> split(const string &s, char del){
@@ -174,7 +173,6 @@ vector<Group*> Dean::Get_groups() {
 
 void Dean::Update_file() {
     ofstream file("../Names.txt");
-    //system("chcp 1251");
     if (file.is_open()) {
         while (!file.eof()) {
             vector<Student*> students = Get_students();

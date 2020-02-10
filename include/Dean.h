@@ -14,9 +14,6 @@
 using namespace std;
 
 
-class Group;
-class Student;
-
 
 vector<string> split(const string &, char );
 
@@ -24,8 +21,8 @@ class Dean {
 public:
     Dean();
     ~Dean();
-    //void Add_students();//создание студентов на основе данных из файла
-    //void Add_groups();//создание групп на основе данных из файла
+    void Add_students();//создание студентов на основе данных из файла
+    void Add_groups();//создание групп на основе данных из файла
     void Add_marks(string, int);//добавление случайных оценок студентам
     vector<pair<vector<string>,pair<int,int>>> Get_state(); //получение статистики по успеваемости студентов и групп
     void Check_and_delete_students(string);//отчисление студентов за неуспеваемость
@@ -44,8 +41,6 @@ private:
     vector<Student*> students;
     vector<string> Names_of_students;
     vector<Group*> groups;
-    void Add_students();
-    void Add_groups();
 
 
 
