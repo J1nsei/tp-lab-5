@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-
+#include "mainInc.h"
 
 //basic functions test
 //group creation and group search
