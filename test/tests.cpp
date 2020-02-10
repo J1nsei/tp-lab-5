@@ -66,7 +66,7 @@ TEST(StudentTests, transferStudent) {
 TEST(StudentTests, groupHead) {
 	Dean* dean = new Dean("../file/students.csv");
 	Group* group = dean->findGroupByName("18PMI-1");
-	Student* student = dean->findStudentById(12);
+	Student* student = dean->findStudentById(11);
 	group->setHead(student);
 	EXPECT_EQ(student, group->getHead());
 }
