@@ -58,7 +58,6 @@ TEST(testStudent, avMark)
 	{
 		student.setMarks(i * 2 + 2);
 	}
-	student.setMarks(3);
 
-	EXPECT_EQ(5.5, student.getAvarageMarks());
+	EXPECT_EQ(6, student.getAvarageMarks());
 }
