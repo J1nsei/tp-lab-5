@@ -5,6 +5,8 @@
 
 #define students_path "../text/students.txt"
 #define deanery_path  "../text/deanery.txt"
+#define groups_path  "../text/groups.txt"
+
 TEST(TestStudent, createFromFile) {
     auto dean = new Dean{};
     dean->createGroups(deanery_path);
