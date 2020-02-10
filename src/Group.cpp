@@ -44,7 +44,7 @@ void Group::expelStudent(Student* student) {
 }
 
 void Group::setHead(Student* student) {
-	if (student != 0 && findStudentById(student->getID() != 0)) {
+	if (student != 0 && findStudentById(student->getID()) != 0) {
 		head = student;
 	}
 }
