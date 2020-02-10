@@ -1,5 +1,5 @@
-18Pi1 Programming
-18Pi2 Programming
-17Ph1 Philology
-18Ph1 Philology
-19Ln1 Linguistics
+17Pi
+18Pi1 
+18Pi2 
+19Pi1 
+19Pi2

@@ -71,6 +71,40 @@ void Group::exclude(unsigned int id)
     }
 }   
 
+std::vector<Student*> Group::getStudents()
+{
+    return students;
+}
+
+std::string Group::getTitle() const
+{
+    return this->title;
+}
+
+double Group::calcMean()
+{
+    double res = 0;
+    for (int i=0;i<students.size();i++)
+    {
+        res+=students[i]->calcMean();
+    }
+    res/=students.size();
+    this->mean = res;
+    return res;
+}
+
+void Group::excludeBadStudents()
+{
+    int num = students.size();
+    for (int i = 0; i < num; i++)
+    {
+        if (students[i]->calcMean() < 2.5)
+        {
+            this->exclude(students[i]->getID());
+        }
+    }
+}
+
 Group::~Group()
 {
 }

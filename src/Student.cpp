@@ -38,6 +38,11 @@ unsigned int Student::getID() const
     return id;
 }
 
+Group* Student::getGroup() const
+{
+    return this->group;
+}
+
 Student::~Student()
 {
 }
