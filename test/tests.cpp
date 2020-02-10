@@ -32,14 +32,14 @@ TEST(lab5, task1_4)
 	Student S_1 = Student(0, "Тусик Карпий Андросович");
 	Student S_2 = Student(1, "Лем Оанн Рыбович");
 	Group G = Group("20ПМИ-1");
-	G.add_student(&S_1);
-	G.add_student(&S_2);
+	G.add_student_(&S_1);
+	G.add_student_(&S_2);
 	EXPECT_EQ(1, G.student_in_group(1));
 	EXPECT_EQ(1, G.student_in_group("Лем Оанн Рыбович"));
 }
 TEST(lab5, task1_5)
 {
-	Student S_1 = new Student(0, "Тусик Карпий Андросович");
+	Student S_1 = Student(0, "Тусик Карпий Андросович");
 	Student S_2 = Student(1, "Лем Оанн Рыбович");
 	S_1.set_mark(8);
 	S_1.set_mark(7);
@@ -47,8 +47,8 @@ TEST(lab5, task1_5)
 	S_2.set_mark(5);
 	Group G = Group("20ПМИ-1");
 	EXPECT_EQ("Нету", G.get_head());
-	G.add_student(&S_1);
-	G.add_student(&S_2);
+	G.add_student_(&S_1);
+	G.add_student_(&S_2);
 	G.choose_head();
 	EXPECT_EQ("Тусик Карпий Андросович", G.get_head());
 }
@@ -62,9 +62,9 @@ TEST(lab5, task1_6)
 	Group* G_2 = D->make_group("20-2");
 	D->add_group(G_1);
 	D->add_group(G_2);
-	D->add_student(G_1, S_1);
-	D->add_student(G_1, S_2);
-	D->add_student(G_2, S_3);
+	D->add_student_(G_1, S_1);
+	D->add_student_(G_1, S_2);
+	D->add_student_(G_2, S_3);
 	EXPECT_EQ(1, G_1->student_in_group(1000));
 	EXPECT_EQ(1, D->transmit_student(G_2, 1000));
 	EXPECT_EQ(0, D->transmit_student(G_1, G_2, 1000));
@@ -85,7 +85,7 @@ TEST(lab5, task1_7)
 	D->add_student(G_1, S_2);
 	D->add_student(G_2, S_3);
 
-	EXPECT_EQ(0, get_average_mark_student(1000));
+	EXPECT_EQ(0, D->get_average_mark_student(1000));
 
 	D->add_mark("Тусик Карпий Андросович", 10);
 	D->add_mark(1000, 9);
