@@ -10,7 +10,7 @@ TEST(Deanery, dean_1) {
 }
 
 TEST(Deanery, dean_2) {
-	Student* student = new Student("Ivanov Andrey Romanovich", "18-PMI");
+	Student* student = new Student("Ivano Andrey Romanovich", "18-PMI");
 	student->setMarks();
 	EXPECT_EQ(10, student->getMarks().size());
 	delete student;
