@@ -1,8 +1,7 @@
 #include <iostream>
 #include <vector>
 #include "Deanery.h"
-#include <conio.h>
-#include <string>
+//#include <string>
 
 int main()
 {
@@ -10,7 +9,7 @@ int main()
 
 	Deanery* deanery = new Deanery("students.txt");
 
-	cout << "\n Проверка: " << deanery->small_check() << "\n";
+	//cout << "\n Проверка: " << deanery->small_check() << "\n";
 	deanery->add_marks();
 	deanery->out_data_in_consol();
 
@@ -21,12 +20,12 @@ int main()
 	deanery->transmit_student(deanery->groups[3], 1);
 	deanery->add_marks();
 
-	deanery->out_data_in_consol();
+	//deanery->out_data_in_consol();
 
 	deanery->remove_student();
 	deanery->choose_head_();
 
-	deanery->out_data_in_consol();
+	//deanery->out_data_in_consol();
 	//deanery->out_data_in_consol();
 
 	deanery->save_data("DATA.txt");
