@@ -20,7 +20,7 @@ TEST(Deanery, dean_3) {
 	Student* student_1 = new Student();
 	Student* student_2 = new Student("Ivanov Andrey Romanovich", "18-PMI");
 	EXPECT_EQ(-1, student_1->getId());
-	EXPECT_EQ(1, student_2->getId());
+	EXPECT_EQ(2, student_2->getId());
 	EXPECT_EQ("18-PMI", student_2->getGroup());
 	delete student_1;
 	delete student_2;
@@ -31,7 +31,7 @@ TEST(Deanery, dean_4) {
 	Student* student = new Student("Ivanov Andrey Romanovich", "18-PMI");
 	group->addStudent(*student);
 
-	EXPECT_EQ(1, group->findStudent("Ivanov Andrey Romanovich")->getId());
+	EXPECT_EQ(3, group->findStudent("Ivanov Andrey Romanovich")->getId());
 	delete student;
 	delete group;
 }
