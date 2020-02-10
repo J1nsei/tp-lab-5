@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 2.8)
 
 # Make PROJECT_SOURCE_DIR, PROJECT_BINARY_DIR, and PROJECT_NAME available.
-set(PROJECT_NAME task1) 
+set(PROJECT_NAME Deanery) 
 project(${PROJECT_NAME})
 
 set(CMAKE_CXX_FLAGS "-g -Wall")
@@ -20,14 +20,15 @@ file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 
 set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/dean.cpp
               ${PROJECT_SOURCE_DIR}/src/student.cpp
-              ${PROJECT_SOURCE_DIR}/src/group.cpp)
+              ${PROJECT_SOURCE_DIR}/src/group.cpp
+	      ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
-add_library(task1_lib ${SRC_FILES})
-add_executable(task1 ${PROJECT_SOURCE_DIR}/src/main.cpp)
+add_library(Deanery_lib ${SRC_FILES})
+add_executable(Deanery ${SRC_FILES)
 
-target_link_libraries(task1 task1_lib)
+target_link_libraries(Deanery Deanery_lib)
 
 ################################
 # Testing
@@ -55,7 +56,7 @@ if (BUILD_TESTS)
   target_link_libraries(runUnitTests gtest gtest_main)
 
   # Extra linking for the project.
-  target_link_libraries(runUnitTests task1_lib)
+  target_link_libraries(runUnitTests Deanery_lib)
 
   # This is so you can do 'make test' to see all your tests run, instead of
   # manually running the executable runUnitTests to see those specific tests.
