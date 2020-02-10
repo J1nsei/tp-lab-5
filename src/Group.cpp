@@ -14,7 +14,7 @@ int Group::addStudent(Student* student) {
 	students.push_back(student);
 	student->setGroup(this);
 	num++;
-	return 1;
+	return 0;
 }
 
 int Group::setHead(Student* student) {
@@ -23,7 +23,7 @@ int Group::setHead(Student* student) {
 	}
 	if (searchStudent(student->getId()) == student) {
 		head = student;
-		return 1;
+		return 0;
 	}
 	else {
 		return -1;
@@ -68,7 +68,7 @@ int Group::eraseStudent(Student* student) {
 	}
 	Student* foundStudent = searchStudent(student->getId());
 	if (foundStudent != NULL) {
-		int count;
+		int count = 0;
 		for (auto &i_student: students){
 			if (i_student == student){
 				students.erase(students.begin()+count);
@@ -82,7 +82,7 @@ int Group::eraseStudent(Student* student) {
 			head = NULL;
 		}
 		num--;
-		return 1;
+		return 0;
 	}
 	else
 		return -1;

@@ -19,6 +19,7 @@ private:
 	Student* searchStudent(int id);
 	int eraseStudent(Student* student);
 	vector<int> getMarks(Student*);
+	int getId();
 public:
 	double getAvr();
 	string getTitle();

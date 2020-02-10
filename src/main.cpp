@@ -2,7 +2,7 @@
 #include "Student.h"
 #include "Group.h"
 #include "Deanery.h"
-
+#include <stdio.h>
 #include <fstream>
 #include <cstdio>
 #include <iostream>
@@ -10,59 +10,20 @@
 #include <stdexcept>
 #include <string>
 #include <array>
-
-std::string exec(const char* cmd) {
-    std::array<char, 128> buffer;
-    std::string result;
-    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
-    if (!pipe) {
-        throw std::runtime_error("popen() failed!");
-    }
-    while (fgets(buffer.data(), buffer.size(), pipe.get()) != nullptr) {
-        result += buffer.data();
-    }
-    return result;
-}
-
 using namespace std;
 
-string filePath(string filename) //filePath("/filname.txt") -> "/home/filname.txt"
-{
-  string pwd = exec("pwd");
-  pwd.pop_back();
-  string cl = "";
-  cl = cl + pwd;
-  cl = cl + "/";
-  cl = cl + filename;
-  return cl;
-}
+#define test_in "C://test//test.txt"
+#define test_out "C://test//test_out.txt"
 
-int main() {
-	/*
-	Student student(12, "234");
-	cout << student.getId() << " " << student.getFio() << endl;
-	student.addMark(18);
-	cout << student.getAvr() << endl;
-	Group group("23");
-	cout << group.addStudent(&student) << endl;
-	cout << group.addStudent(&student) << endl;
-	cout << group.searchStudent("2").size() << endl;
-	Student student2(13, "234");
-	cout << group.setHead(&student2) << endl;
-	cout << group.eraseStudent(&student2) << endl;
-	group.searchStudent(12)->addMark(5);
-	group.searchStudent(12)->addMark(7);
-	group.searchStudent(12)->addMark(9);
-	cout << group.getAvr() << endl;
-	group.setHead(&student);
-	cout << group.getHead() << endl;
-	group.eraseStudent(group.searchStudent(12));
-	cout << group.getHead() << endl;
-	*/
-	cout << "START TESTING" << endl;
-	string testFilePath = filePath("test.txt");
-	ofstream file(testFilePath);
-	file << "Sergey|uoi";
+int main(int argc, char** argv) { // test1.exe test_in.txt test_out.txt
+	cout << "START TESTING FOR WINDOWS" << endl;
+	char* testFilePath;
+	if (argc == 1) {
+		testFilePath = test_in;
+	}
+	else {
+		testFilePath = argv[1];
+	}
 	Deanery deanery;
 	deanery.extractDataFromFile(testFilePath);
 	deanery.electionHead();
@@ -70,9 +31,17 @@ int main() {
 	cout << deanery.searchGroup("uoi");
 	cout << deanery.eraseWithBadMarks(2.0);
 	deanery.randMarks();
-	cout << deanery.eraseWithBadMarks(9.0);
 	deanery.getStatistics();
 	deanery.electionHead();
+	deanery.changeGroup(deanery.searchStudent("Fr")[0], deanery.searchGroup("uoi"));
+	string testOutPath;
+	if (argc <= 2) {
+		testOutPath = test_out;
+	}
+	else {
+		testOutPath = (string)argv[2];
+	}
+	deanery.saveDataInFile(test_out);
 	return 0;
 }
 

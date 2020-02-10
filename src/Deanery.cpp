@@ -6,7 +6,7 @@ Deanery::Deanery() {
 
 int Deanery::getId() {
 	static int id = 0;
-	return ++id;
+	return id++;
 }
 
 string extractName(string line) {
@@ -25,15 +25,15 @@ int Deanery::createStudent(string group, string student) {
 	else {
 		Group* newGroup = new Group(group);
 		int exit_code = newGroup->addStudent(new Student(getId(), student));
-		if (exit_code == 1) {
+		if (exit_code == 0) {
 			groups.push_back(newGroup);
-			return 1;
+			return 0;
 		}
 		else {
 			return -1;
 		}
 	}
-	return -1;
+	return 0;
 }
 
 Group* Deanery::searchGroup(string groupName) {
@@ -45,11 +45,11 @@ Group* Deanery::searchGroup(string groupName) {
 	return NULL;
 }
 
-void Deanery::extractDataFromFile(string filename) {
+int Deanery::extractDataFromFile(string filename) {
 	ifstream file(filename);
 	if (!file.is_open()) {
 		cout << "NO FILE" << endl;
-		return;
+		return -1;
 	}
 	string line;
 	int all = 0;
@@ -59,14 +59,36 @@ void Deanery::extractDataFromFile(string filename) {
 			continue;
 		}
 		all += 1;
-		if (createStudent(extractGroup(line), extractName(line)) == 1) {
+		if (createStudent(extractGroup(line), extractName(line)) == 0) {
 			success += 1;
 		}
 	}
-	cout << all << "/" << success << "succesfful" << endl;
+	cout << success << "/" << all << "succesfful" << endl;
 	file.close();
+	return 0;
 }
 
+vector<Student*> Deanery::searchStudent(string fio) {
+	vector<Student*> foundStudents;
+	for (auto &group : groups) {
+		for (auto &student: group->students) {
+			if ((student->getFio() == fio)) {
+				foundStudents.push_back(student);
+			}
+		}
+	}
+	return foundStudents;
+}
+
+Student* Deanery::searchStudent(int id) {
+	for (auto& group : groups) {
+		for (auto& student : group->students) {
+			if ((student->getId() == id)) {
+				return student;
+			}
+		}
+	}
+}
 
 void Deanery::randMarks() {
 	srand(time(NULL));
@@ -77,27 +99,6 @@ void Deanery::randMarks() {
 		}
 	}	
 }
-
-/*
-void Deanery::changeGroup(string st, string newGr)
-{
-	int n = groups.size();
-	int newGrNum = 0;
-	for (int i = 0; i < n; i++) {
-		if (groups[i]->getTitle() == newGr)
-			newGrNum = i;
-	}
-
-	n = students.size();
-	for (int i = 0; i < n; i++) {
-		if (students[i]->getFio() == st) {
-			(students[i]->getGroup())->eraseStudent(st);
-			groups[newGrNum]->addStudent(students[i]);
-			break;
-		}
-	}
-}
-*/
 
 int Deanery::eraseWithBadMarks(double min_mark){
 	if (min_mark < 0 || min_mark > 10) {
@@ -118,7 +119,6 @@ int Deanery::eraseWithBadMarks(double min_mark){
 	}
 	return 0;
 }
-
 
 void Deanery::electionHead(){
 	srand(time(NULL));
@@ -148,4 +148,38 @@ void Deanery::getStatistics(){
 		}
 		cout << endl;
 	}
+}
+
+int Deanery::saveDataInFile(string filename) {
+	ofstream file(filename);
+	if (!file.is_open()) {
+		cout << "NO FILE" << endl;
+		return -1;
+	}
+	string line;
+	int all = 0;
+	int success = 0;
+	for (auto &group : groups) {
+		for (auto& student : group->students) {
+			file << student->getFio() << "|" << group->getTitle() << endl;
+		}
+	}
+	file.close();
+	return 0;
+}
+
+int Deanery::changeGroup(Student* student, Group* group) {
+	if (student == NULL || group == NULL) {
+		return -1;
+	}
+	if (student->getGroup() == group) {
+		return 0;
+	}
+	if (group->searchStudent(student->getId()) != NULL) {
+		return -1; // if a group gets already this student 
+	}
+	student->getGroup()->eraseStudent(student);
+	group->addStudent(student);
+	return 0;
+
 }
