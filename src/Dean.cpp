@@ -1,5 +1,5 @@
-#include "dean.h"
-#include "group.h"
+#include "Dean.h"
+#include "Group.h"
 #include <vector>
 #include <string>
 #include <iostream>
