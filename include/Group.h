@@ -1,7 +1,7 @@
 #pragma once
 #ifndef GROUP_H
 #define GROUP_H
-#include "student.h"
+#include "Student.h"
 
 class Group {
 private:
