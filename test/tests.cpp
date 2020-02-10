@@ -21,7 +21,7 @@ TEST(GroupTests, checkCreatedGroup) {
 
 TEST(GroupTests, findStudentInGroup) {
 	Dean* dean = new Dean("../file/students.csv");
-	Group* group1 = dean->findGroupByName("18PI-2");
+	Group* group = dean->findGroupByName("18PI-2");
 
 	//success
 	Student* findStudent = group->findStudentById(35);
@@ -42,10 +42,10 @@ TEST(StudentTests, studentInfo) {
 
 TEST(StudentTests, addStudent) {
 	Dean* dean = new Dean("../file/students.csv");
-	Group* group2 = dean->findGroupByName("18PMI-1");
+	Group* group = dean->findGroupByName("18PMI-1");
 	dean->addNewStudent("Сидорова Мария Ивановна", group2);
-	Student* newStudent = group2->findStudentByName("Сидорова Мария Ивановна");
-	EXPECT_EQ(100, student->getID());
+	Student* newStudent = group->findStudentByName("Сидорова Мария Ивановна");
+	EXPECT_EQ(100, newStudent->getID());
 }
 
 TEST(StudentTests, expelStudent) {

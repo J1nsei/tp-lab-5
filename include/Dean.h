@@ -27,7 +27,6 @@ public:
 	Dean();
 	Dean(std::string fileName);
 	~Dean();
-	//unsigned int getID();
 	//with students
 	void createStudents();
 	void addMark(Student* student, int mark);
