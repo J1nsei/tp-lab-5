@@ -1,0 +1,67 @@
+Number of students - 47
+
+18PI: 9 people
+Group average score - 4.11111
+Group leader: Lauren Sofia Phillips
+Ian Jacob Green: 3  3 
+Jack Blake Wright: 5  5 
+Jordan Thomas Rodriguez: 5  5 
+Luke Angel Rodriguez: 5  5 
+Lauren Sofia Phillips: 4  4 
+Rachel Jessica Gray: 4  4 
+Rebecca Ariana Scott: 3  3 
+Victoria Maria Morris: 5  5 
+Maria Lily Morgan: 3  3 
+
+18BI: 7 people
+Group average score - 3.42857
+Group leader: Samuel Julian Wilson
+Isabella Vanessa Edwards: 3  3 
+Lillian Sara Lee: 3  3 
+Gavin Diego Peterson: 5  5 
+Xavier Cody Bennett: 3  3 
+Samuel Julian Wilson: 4  4 
+Sean Bryan Edwards: 3  3 
+Colin Daniel Campbell: 3  3 
+
+18PMI: 9 people
+Group average score - 4
+Group leader: Jose Adrian Moore
+Joshua Antonio Peterson: 4  4 
+Ethan Colin Jenkins: 3  3 
+Samuel Adam Turner: 4  4 
+Jose Adrian Moore: 5  5 
+Jeremiah Cameron Ross: 3  3 
+Kimberly Amelia Martin: 3  3 
+Sarah Destiny Turner: 5  5 
+Brooke Katelyn Jones: 5  5 
+Sara Hailey Hayes: 4  4 
+
+18FPL: 12 people
+Group average score - 3.83333
+Group leader: Angelina Gabrielle Jones
+Abigail Irea Kelly: 3  3 
+Danielle Audrey Edwards: 4  4 
+Lauren Leah Price: 4  4 
+Mary Kylie Wilson: 5  5 
+Angelina Gabrielle Jones: 4  4 
+Ariana Marissa Hughes: 4  4 
+Maya Julia Johnson: 3  3 
+Trinity Chloe Jones: 5  5 
+Riley Alyssa SandersCarlos : 3  3 
+Sean Chase Bennett: 3  3 
+Alejandro Jayden Rivera: 3  3 
+Isaiah Alexander Green: 5  5 
+
+18BM: 8 people
+Group average score - 4
+Group leader: Jesus Robert Green
+Brandon Aidan Martin: 4  4 
+Noah Luis Morgan: 5  5 
+Joseph Nathaniel Brown: 4  4 
+Owen Gavin Campbell: 3  3 
+Caleb Aidan Cooper: 4  4 
+Cody Jeremiah James: 3  3 
+Jesus Robert Green: 5  5 
+Luis Jeremiah Ward: 4  4 
+
