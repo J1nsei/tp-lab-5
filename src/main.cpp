@@ -2,7 +2,7 @@
 #include <sstream>
 #include <vector>
 #include <fstream>
-#include "dean.h"
+#include "Dean.h"
 
 int main()
 {
