@@ -7,8 +7,8 @@
 #include <map>
 #include <iomanip>
 #include "Deanery.h"
-#include "Student.h"
-#include "Group.h"
+//#include "Student.h"
+//#include "Group.h"
 using namespace std;
 
 int main() {

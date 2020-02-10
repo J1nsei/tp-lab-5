@@ -1,6 +1,6 @@
 #include "Group.h"
 #include <iostream>
-#include <stdexcept>
+//#include <stdexcept>
 
 Group::Group(std::string _title, std::string _spec) {
 	title = _title;
@@ -10,7 +10,7 @@ Group::Group(std::string _title, std::string _spec) {
 
 Group::~Group() {
 	std::cout << "Группа " << title << " " << spec << " расформирована" << "\n";
-	for (auto student : students) {
+	for (Student* student : students) {
 		delete student;
 	}
 }

@@ -48,7 +48,7 @@ void Deanery::loadStudentsFromFile(std::string _filename) {
 			groups[student_group] = newGroup;
 		}
 		if (groups[student_group]->findStudent(student_id, student_fio) != nullptr)continue;
-		Student* newStudent = new Student(student_id, student_fio, groups[student_group]);
+		Student* newStudent = new Student(student_id, student_fio);
 		for (int i = 4; i < tokens.size(); i++) {
 			int student_mark = stoi(tokens[i]);
 			newStudent->addMark(student_mark);
@@ -128,7 +128,7 @@ void Deanery::saveToFile(std::string _filename) {
 	for (auto temp : groups) {
 		Group* group = temp.second;
 		for (Student* student : group->students) {
-			out << student->id << ";" << student->fio << ";" << student->group << ";" << student->group->spec << ";";
+			out << student->id << ";" << student->fio << ";" << student->group->title << ";" << student->group->spec << ";";
 			for (int mark : student->marks) {
 				out << mark << ";";
 			}
