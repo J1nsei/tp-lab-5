@@ -44,7 +44,7 @@ TEST(testDean, dean_1) {
 	Student* student1 = new Student("Oscar Wilde", "AMI");
 	Student* student2 = new Student("Jerome Salinger", "18-AMI");
 	group1->addStudent(student1);
-	group1->addStudent(student2);
+	group2->addStudent(student2);
 	dean->addGroup(group1);
 	dean->addGroup(group2);
 	dean->setHeads();
