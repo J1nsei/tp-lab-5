@@ -79,7 +79,7 @@ TEST(TestStudent, saveFunc) {
     dean->addGrades(8);
     map<string,vector<vector<string>>> dataMapBefore;
     dean->showData(dataMapBefore);
-    dean->saveFiles();
+    dean->saveFiles(deanery_path,groups_path,students_path);
     delete dean;
 
     auto dean = new Dean{};
