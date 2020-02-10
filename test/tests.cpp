@@ -165,7 +165,7 @@ TEST(DeaneryTest, checkingStudentsDeleting) {
 	deanery->AddRandomMarks(15);
 	deanery->KickStudents();
 	std::string s = deanery->GetStatistics();
-	EXPECT_EQ("B:\nLavrentev Miloslav: 2 2 2 4 3 2 5 5 4 4 1 4 5 1 4 \nBozhkov Emmanuil: 1 4 5 1 3 5 4 4 3 1 2 1 5 2 5 \n\nC:\nLubyanovskiy Timur: 2 2 2 4 3 2 5 5 4 4 1 4 5 1 4 \n\nA:\nAlmazov Evfrasiy: 2 2 2 4 3 2 5 5 4 4 1 4 5 1 4 \nBerdyaev Yulian: 1 4 5 1 3 5 4 4 3 1 2 1 5 2 5 \n\nG:\nHanykov Ustin: 2 2 2 4 3 2 5 5 4 4 1 4 5 1 4 \n\n", s);
+	EXPECT_EQ("B:\nLavrentev Miloslav: 1 2 5 2 5 5 3 1 5 2 2 5 3 5 2 \nBalaban Vsevolod: 4 3 4 4 5 3 4 5 2 4 5 1 2 4 5 \nKusakov Zotik: 2 5 5 3 4 4 2 4 4 3 3 3 5 1 2 \n\nC:\nLubyanovskiy Timur: 1 2 5 2 5 5 3 1 5 2 2 5 3 5 2 \nMartynov Anaklet: 4 3 4 4 5 3 4 5 2 4 5 1 2 4 5 \n\nA:\nAlmazov Evfrasiy: 1 2 5 2 5 5 3 1 5 2 2 5 3 5 2 \nMitropolskiy Gleb: 4 3 4 4 5 3 4 5 2 4 5 1 2 4 5 \n\nG:\nHanykov Ustin: 1 2 5 2 5 5 3 1 5 2 2 5 3 5 2 \n\n", s);
 }
 
 TEST(DeaneryTest, checkingHeadmenElections) {
@@ -201,5 +201,5 @@ TEST(DeaneryTest, checkingHeadmenElections) {
 	deanery->AddRandomMarks(15);
 	deanery->StartHeadmenElections();
 	std::string s = deanery->GetStatistics();
-	EXPECT_EQ("B:\nLavrentev Miloslav: 2 2 2 4 3 2 5 5 4 4 1 4 5 1 4 \nBalaban Vsevolod: 1 5 5 2 4 3 3 1 3 4 1 1 2 3 3 \nBozhkov Emmanuil: 1 4 5 1 3 5 4 4 3 1 2 1 5 2 5 \nKusakov Zotik: 1 4 3 2 1 2 1 3 2 5 1 2 2 5 3 \n\nC:\nLubyanovskiy Timur: 2 2 2 4 3 2 5 5 4 4 1 4 5 1 4 \nMartynov Anaklet: 1 5 5 2 4 3 3 1 3 4 1 1 2 3 3 \n\nA:\nAlmazov Evfrasiy: 2 2 2 4 3 2 5 5 4 4 1 4 5 1 4 \nMitropolskiy Gleb: 1 5 5 2 4 3 3 1 3 4 1 1 2 3 3 \nBerdyaev Yulian: 1 4 5 1 3 5 4 4 3 1 2 1 5 2 5 \n\nG:\nHanykov Ustin: 2 2 2 4 3 2 5 5 4 4 1 4 5 1 4 \n\n", s);
+	EXPECT_EQ("B:\nLavrentev Miloslav: 1 2 5 2 5 5 3 1 5 2 2 5 3 5 2 \nBalaban Vsevolod: 4 3 4 4 5 3 4 5 2 4 5 1 2 4 5 \nBozhkov Emmanuil: 2 1 1 4 3 3 5 5 5 1 3 2 1 5 1 \nKusakov Zotik: 2 5 5 3 4 4 2 4 4 3 3 3 5 1 2 \n\nC:\nLubyanovskiy Timur: 1 2 5 2 5 5 3 1 5 2 2 5 3 5 2 \nMartynov Anaklet: 4 3 4 4 5 3 4 5 2 4 5 1 2 4 5 \n\nA:\nAlmazov Evfrasiy: 1 2 5 2 5 5 3 1 5 2 2 5 3 5 2 \nMitropolskiy Gleb: 4 3 4 4 5 3 4 5 2 4 5 1 2 4 5 \nBerdyaev Yulian: 2 1 1 4 3 3 5 5 5 1 3 2 1 5 1 \n\nG:\nHanykov Ustin: 1 2 5 2 5 5 3 1 5 2 2 5 3 5 2 \n\n", s);
 }
