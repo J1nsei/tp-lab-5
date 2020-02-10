@@ -45,7 +45,7 @@ TEST(testDean, dean_1) {
 	dean->addGroup(group1);
 	dean->setHeads();
 	string name = dean->getGroups()[0]->getHeadName();
-	EXPECT_EQ("Oscar Wilde", string);
+	EXPECT_EQ("Oscar Wilde", name);
 	delete student1;
 	delete group1;
 	delete dean;
