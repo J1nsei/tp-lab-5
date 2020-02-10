@@ -15,6 +15,7 @@ TEST(testStudent, student_2) {
 
 TEST(testStudent, student_3) {
 	Student* student = new Student("Oscar Wilde", "18-AMI");
+	student->setMarks();
 	EXPECT_EQ(10, student->getMarks().size());
 	delete student;
 }
