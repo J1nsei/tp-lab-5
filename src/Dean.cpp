@@ -5,7 +5,7 @@
 #include <fstream>
 #include <iostream>
 #include <assert.h>
-#include <dean.h>
+#include <Dean.h>
 #include <student.h>
 using namespace std;
 
