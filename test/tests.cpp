@@ -38,6 +38,7 @@ TEST(testGroup, group_1) {
 }
 
 TEST(testDean, dean_1) {
+
 	Group* group1 = new Group("AMI");
 	Group* group2 = new Group("SE");
 	Student* student1 = new Student("Oscar Wilde", "AMI");
