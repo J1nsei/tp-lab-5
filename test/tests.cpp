@@ -98,7 +98,7 @@ TEST(TestStudent, saveFunc) {
                 break;
             }
         }
-    }catch{
+    }catch(){
         FAIL() << "SAVEFILE FUNC IS NOT CORRECT";
     }
     EXPECT_EQ(AllEqual, true);
