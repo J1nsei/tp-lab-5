@@ -62,9 +62,9 @@ TEST(lab5, task1_6)
 	Group* G_2 = D->make_group("20-2");
 	D->add_group(G_1);
 	D->add_group(G_2);
-	D->add_student_(G_1, S_1);
-	D->add_student_(G_1, S_2);
-	D->add_student_(G_2, S_3);
+	D->add_student(G_1, S_1);
+	D->add_student(G_1, S_2);
+	D->add_student(G_2, S_3);
 	EXPECT_EQ(1, G_1->student_in_group(1000));
 	EXPECT_EQ(1, D->transmit_student(G_2, 1000));
 	EXPECT_EQ(0, D->transmit_student(G_1, G_2, 1000));
