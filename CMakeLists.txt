@@ -23,7 +23,7 @@ set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/Dean.cpp
               ${PROJECT_SOURCE_DIR}/src/Group.cpp
 	      ${PROJECT_SOURCE_DIR}/src/main.cpp)
 
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 11)
 
 add_library(Deanery_lib ${SRC_FILES})
 add_executable(Deanery ${SRC_FILES)
