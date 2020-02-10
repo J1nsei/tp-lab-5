@@ -16,7 +16,7 @@ TEST(GroupTests, checkCreatedGroup) {
 	//fail
 	std::string groupName2 = "18PI-4";
 	Group* group2 = dean->findGroupByName(groupName2);
-	EXPECT_EQ(0, group2->getName());
+	EXPECT_EQ(0, group2);
 }
 
 TEST(GroupTests, findStudentInGroup) {
