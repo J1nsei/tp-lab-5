@@ -11,28 +11,28 @@ Student::Student(std::string fio, Deanery* deanery)
 	this->id = (*deanery).getNewID();
 }
 
-int Student::getID() // получить ID студента
+int Student::getID()
 {
 	return this->id;
 }
 
-std::string Student::getFio() // получить ФИО студента
+std::string Student::getFio()
 {
 	return this->fio;
 }
 
-void Student::AddToAgroup(Group* target) // зачисление в группу
+void Student::AddToAgroup(Group* target) 
 {
 	target->AddStudent(this);
 	this->group = target;
 }
 
-void Student::AddMark(int mark) // добавление оценок
+void Student::AddMark(int mark)
 {
 	marks.push_back(mark);
 }
 
-double Student::GetAverageMark() //вычисление средней оценки
+double Student::GetAverageMark() 
 {
 	if (marks.size() == 0)
 	{
@@ -46,7 +46,7 @@ double Student::GetAverageMark() //вычисление средней оценки
 	return sum /= marks.size();
 }
 
-std::string Student::getMarks() // получение списка оценок
+std::string Student::getMarks()
 {
 	std::string s = "";
 	for (int i = 0; i < marks.size(); i++)

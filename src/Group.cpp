@@ -7,7 +7,7 @@
 #include <string>
 
 
-Group::Group(std::string title, Deanery* deanery) // создание группы с указанием названия
+Group::Group(std::string title, Deanery* deanery)
 {
 	this->deanery = deanery;
 	this->title = title;
@@ -16,7 +16,7 @@ Group::Group(std::string title, Deanery* deanery) // создание группы с указанием
 	this->head = nullptr;
 }
 
-Group::~Group() // деструктор
+Group::~Group()
 {
 	for (int i = 0; i < students.size(); i++)
 	{
@@ -24,17 +24,17 @@ Group::~Group() // деструктор
 	}
 }
 
-std::string Group::getTitle() // получить название группы
+std::string Group::getTitle()
 {
 	return this->title;
 }
 
-void Group::AddStudent(Student* newbee) // добавление студента
+void Group::AddStudent(Student* newbee) 
 {
 	students.push_back(newbee);
 }
 
-void Group::HeadmanElection(int seed) // избрание старосты
+void Group::HeadmanElection(int seed)
 {
 	if (students.size() == 0)
 	{
@@ -44,7 +44,7 @@ void Group::HeadmanElection(int seed) // избрание старосты
 	this->head = students[rand() % students.size()];
 }
 
-Student* Group::SearchById(int id) // поиск студента по ИД
+Student* Group::SearchById(int id) 
 {
 	for (int i = 0; i < students.size(); i++)
 	{
@@ -56,7 +56,7 @@ Student* Group::SearchById(int id) // поиск студента по ИД
 	return nullptr;
 }
 
-Student* Group::SearchByFio(std::string fio) // поиск студента по ФИО
+Student* Group::SearchByFio(std::string fio) 
 {
 	for (int i = 0; i < students.size(); i++)
 	{
@@ -68,7 +68,7 @@ Student* Group::SearchByFio(std::string fio) // поиск студента по ФИО
 	return nullptr;
 }
 
-double Group::GetAverageMark() //вычисление соеднего балла в группе
+double Group::GetAverageMark() 
 {
 	if (students.size() == 0)
 	{
@@ -82,7 +82,7 @@ double Group::GetAverageMark() //вычисление соеднего балла в группе
 	return sum /= students.size();
 }
 
-void Group::Termnination(int id) //исключение студента из группы
+void Group::Termnination(int id)
 {
 	for (int i = 0; i < students.size(); i++)
 	{
@@ -97,7 +97,7 @@ void Group::Termnination(int id) //исключение студента из группы
 	}
 }
 
-void Group::AddRandomMarks(int amount, int seed) // добавление случайных оценок студентам
+void Group::AddRandomMarks(int amount, int seed)
 {
 	srand(seed);
 	for (int i = 0; i < students.size(); i++)
@@ -109,7 +109,7 @@ void Group::AddRandomMarks(int amount, int seed) // добавление случайных оценок 
 	}
 }
 
-std::string Group::GetStatistics() // получение статистики по успеваемости
+std::string Group::GetStatistics() 
 {
 	std::string statistics = "";
 	for (int i = 0; i < students.size(); i++)
@@ -119,7 +119,7 @@ std::string Group::GetStatistics() // получение статистики по успеваемости
 	return statistics;
 }
 
-void Group::softTermination(Student* student) // удаление без уничтожения экземпляра студента
+void Group::softTermination(Student* student) 
 {
 	for (int i = 0; i < students.size(); i++)
 	{
@@ -131,7 +131,7 @@ void Group::softTermination(Student* student) // удаление без уничтожения экземп
 	}
 }
 
-void Group::KickStudents(double level) // отчисление студентов за неуспеваемость
+void Group::KickStudents(double level) 
 {
 	for (int i = 0; i < students.size(); i++)
 	{

@@ -9,14 +9,14 @@
 #include "Group.h"
 #include "Deanery.h"
 
-Deanery::Deanery() // конструктор
+Deanery::Deanery()
 {
 	this->freeID = std::queue<int>();
 	this->biggestID = 0;
 	this->groups = std::vector<Group*>();
 }
 
-Deanery::~Deanery() // деструктор
+Deanery::~Deanery()
 {
 	for (int i = 0; i < groups.size(); i++)
 	{
@@ -24,12 +24,12 @@ Deanery::~Deanery() // деструктор
 	}
 }
 
-void Deanery::liberateID(int id) // освободить id
+void Deanery::liberateID(int id)
 {
 	this->freeID.push(id);
 }
 
-int Deanery::getNewID() // конструктор новых ID
+int Deanery::getNewID()
 {
 	if (!freeID.empty())
 	{
@@ -41,9 +41,8 @@ int Deanery::getNewID() // конструктор новых ID
 	return biggestID;
 }
 
-void Deanery::AddStudentsFromFile(const char* filename) // создание студентов на основе данных из файла
+void Deanery::AddStudentsFromFile(const char* filename)
 {
-	//Фамилия Имя Отчество:Номер_Группы
 	FILE* fp;
 	//std::ifstream input(filename);
 	fp = freopen(filename, "r", stdin);
@@ -86,14 +85,14 @@ void Deanery::AddStudentsFromFile(const char* filename) // создание студентов на
 	fclose(fp);
 }
 
-Group* Deanery::AddGroup(std::string title) // Добавить группу
+Group* Deanery::AddGroup(std::string title)
 {
 	Group* gr = new Group(title, this);
 	groups.push_back(gr);
 	return gr;
 }
 
-void Deanery::AddGroupsFromFile(const char* filename) // создание групп на основе данных из файла
+void Deanery::AddGroupsFromFile(const char* filename)
 {
 	FILE* fp;
 	fp = freopen(filename, "r", stdin);
@@ -107,7 +106,7 @@ void Deanery::AddGroupsFromFile(const char* filename) // создание групп на основ
 	fclose(fp);
 }
 
-void Deanery::AddRandomMarks(int amount) // добавление случайных оценок студентам
+void Deanery::AddRandomMarks(int amount)
 {
 	for (int i = 0; i < groups.size(); i++)
 	{
@@ -115,7 +114,7 @@ void Deanery::AddRandomMarks(int amount) // добавление случайных оценок студента
 	}
 }
 
-std::string Deanery::GetStatistics() // получение статистики по успеваемости студентов и групп
+std::string Deanery::GetStatistics()
 {
 	std::string ans = "";
 	for (int i = 0; i < groups.size(); i++)
@@ -125,13 +124,13 @@ std::string Deanery::GetStatistics() // получение статистики по успеваемости сту
 	return ans;
 }
 
-void Deanery::StudentsTransfer(Student* student, Group* source, Group* target) // перевод студентов из группы в группу
+void Deanery::StudentsTransfer(Student* student, Group* source, Group* target)
 {
 	source->softTermination(student);
 	target->AddStudent(student);
 }
 
-void Deanery::KickStudents(double level) // отчисление студентов за неуспеваемость ???
+void Deanery::KickStudents(double level)
 {
 	for (int i = 0; i < groups.size(); i++)
 	{
@@ -139,7 +138,7 @@ void Deanery::KickStudents(double level) // отчисление студентов за неуспеваемос
 	}
 }
 
-void Deanery::StartHeadmenElections() // инициация выборов старост в группах 
+void Deanery::StartHeadmenElections()
 {
 	for (int i = 0; i < groups.size(); i++)
 	{
