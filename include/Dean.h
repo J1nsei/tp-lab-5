@@ -2,7 +2,7 @@
 #ifndef DEAN_H
 #define DEAN_H
 #include <sstream>
-#include "group.h"
+#include "Group.h"
 
 class Dean {
 private:
