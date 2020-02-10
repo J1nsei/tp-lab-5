@@ -17,7 +17,7 @@ int main() {
     //SetConsoleOutputCP(65001);
 
 
-    Dean* dean = new Dean();
+    /*Dean* dean = new Dean();
     Group* group = dean->Get_groups()[0];
     cout << group->Get_students().size() << endl;
     dean-> Add_marks(group->Get_title(), 7);
@@ -25,7 +25,7 @@ int main() {
     cout << dean->Get_groups()[0]->Get_students().size() << endl;
     dean->Choose_head("18FM");
     dean->Print_date();
-    delete dean;
+    delete dean;*/
 
 
 }

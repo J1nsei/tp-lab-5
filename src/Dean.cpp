@@ -89,6 +89,16 @@ void Dean::Add_marks(string Name_of_group, int count) {
     }
 }
 
+void Dean::Add_mark_to_student(string name, string Name_of_group, int mark) {
+    Group* group = Search_of_group(Name_of_group);
+    Student* student = group->Search_of_student(name);
+    student->Add_mark(mark);
+}
+double Dean::Get_average_mark_of_student(string name, string Name_of_group) {
+    Group* group = Search_of_group(Name_of_group);
+    Student* student = group->Search_of_student(name);
+    return student->Calc_aver_mark();
+}
 
 vector<pair<vector<string>,pair<int,int>>> Dean::Get_state() {
     vector<pair<vector<string>,pair<int,int>>> state;

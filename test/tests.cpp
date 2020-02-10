@@ -17,12 +17,10 @@ TEST(task1, task1_2) {
 TEST(task1, task1_3) {
     Dean *dean = new Dean();
     dean->Add_student("Железин Михаил", "18PI1");
-    Group *group = dean->Search_of_group("18PI1");
-    Student *student = group->Search_of_student("Железин Михаил");
     for (int i = 0; i < 10; i++) {
-        student->Add_mark(i);
+        dean->Add_mark_to_student("Железин Михаил", "18PI1", i);
     }
-    EXPECT_EQ(4.5, student->Calc_aver_mark());
+    EXPECT_EQ(4.5, dean->Get_average_mark_of_student("Железин Михаил", "18PI1"));
 }
 TEST(task1, task1_4) {
     Dean *dean = new Dean();

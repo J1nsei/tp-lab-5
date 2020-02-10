@@ -26,6 +26,8 @@ public:
     void Add_student(string, string);
     void Add_group(string, string);
     void Add_marks(string, int);//добавление случайных оценок студентам
+    void Add_mark_to_student(string, string, int);
+    double Get_average_mark_of_student(string, string);
     vector<pair<vector<string>,pair<int,int>>> Get_state(); //получение статистики по успеваемости студентов и групп
     void Check_and_delete_students(string);//отчисление студентов за неуспеваемость
     void Choose_head(string);//инициация выборов старост в группах
