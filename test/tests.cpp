@@ -48,10 +48,10 @@ TEST(testDean, dean_1) {
 	group2->appointHead();
 	group1->setMarks();
 	group2->setMarks();
-	group1->expelStudentsWithBadMarks(5.);
-	group2->expelStudentsWithBadMarks(5.);
-	EXPECT_EQ(0, group1->getStudents().size());
-	EXPECT_EQ(0, group2->getStudents().size());
+	group1->expelStudentsWithBadMarks(0.);
+	group2->expelStudentsWithBadMarks(0.);
+	EXPECT_EQ(1, group1->getStudents().size());
+	EXPECT_EQ(1, group2->getStudents().size());
 	delete student1;
 	delete student2;
 	delete group1;
