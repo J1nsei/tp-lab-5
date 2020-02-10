@@ -71,3 +71,45 @@ TEST(TestStudent, migrateStudent) {
     }
     EXPECT_EQ(Found,true);
 }
+
+TEST(TestStudent, chooseHeadman) {
+    auto dean = new Dean{};
+    dean->createGroups(deanery_path);
+    dean->createStudents(students_path);
+    dean->chooseHeadman();
+    map<string,vector<vector<string>>> dataMap;
+    dean->showData(dataMap);
+    bool allGroupsHaveHeadman = true;
+    for (auto group : dean.)
+    EXPECT_EQ(Found,true);
+}
+
+TEST(TestStudent, chooseHeadman) {
+    auto dean = new Dean{};
+    dean->createGroups(deanery_path);
+    dean->createStudents(students_path);
+    dean->addGrades(8);
+    map<string,vector<vector<string>>> dataMapBefore;
+    dean->showData(dataMapBefore);
+    dean->saveFiles();
+    delete dean;
+
+    auto dean = new Dean{};
+    dean->createGroups(deanery_path);
+    dean->createStudents(students_path);
+    map<string,vector<vector<string>>> dataMapAfter;
+    dean->showData(dataMapAfter);
+
+    bool AllEqual = true;
+    try{
+        for (auto & group: dataMapBefore){
+            if (group.second != dataMapAfter[group.first]){
+                AllEqual = false;
+                break;
+            }
+        }
+    }catch{
+        FAIL() << "SAVEFILE FUNC IS NOT CORRECT";
+    }
+    EXPECT_EQ(AllEqual, true);
+}

@@ -3,8 +3,16 @@
 //
 #include "Group.h"
 #include "Student.h"
+#include <iostream>
 Group::Group(const string& group_name){
     this->title = group_name;
+}
+
+Group::~Group() {
+    cout<<"destructing group " + this->title<<endl;
+    for (auto &student : this->students){
+        delete student;
+    }
 }
 void Group::add_student(Student* student) {
     this->students.push_back(student);

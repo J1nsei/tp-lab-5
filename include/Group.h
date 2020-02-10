@@ -21,7 +21,7 @@ private:
     const Student* find_student(unsigned int id);
     float get_average_score();
     friend class Dean;
-
+    ~Group();
 public:
     vector <Student*> students;
 };

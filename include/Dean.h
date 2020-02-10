@@ -18,6 +18,7 @@ private:
     map<string, Group *> groupNames;
 public:
     Dean()= default;
+    ~Dean();
     void createStudents(const string& filename);
     void createGroups(const string& filename);
     void addGrades(unsigned int n);

@@ -80,6 +80,6 @@ int main() {
     cout<<marksAdded;
     dataMap.clear();
     dean->saveFiles(deanery_path,groups_path,students_path);
-
+    delete dean;
     return 0;
 }

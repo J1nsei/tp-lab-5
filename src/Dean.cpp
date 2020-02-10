@@ -3,6 +3,13 @@
 //
 
 #include "Dean.h"
+#include <iostream>
+Dean::~Dean(){
+    cout<<"destructing dean"<<endl;
+    for (auto &groups :this->groupNames){
+        delete groups.second;
+    }
+}
 void Dean::createGroups(const string& filename) {
     ifstream in(filename);
     string groupString;
@@ -135,3 +142,4 @@ vector<string>split(const string& s, char delim)
     }
     return elems;
 }
+void Dean::getStatistics() {}
