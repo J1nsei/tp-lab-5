@@ -35,7 +35,7 @@ TEST(test1, task3)
 }
 
 //changing students group
-TEST(test1, task3)
+TEST(test1, task4)
 {
     Deanery dean;
     dean.createGroup("testGroup", "testSpec");
