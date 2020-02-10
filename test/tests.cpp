@@ -30,7 +30,8 @@ TEST(deanery, number_of_students2)
 	hse.create_group("PI", "");
 	hse.create_student("Vladimir Putin", "PI");
 	hse.create_student("Vladimir Solovyev", "PI");
-	hse.expel("PI", 4);
+	hse.expel("PI", 3);
+
 
 	EXPECT_EQ(3, hse.total_num_of_stud());
 }
