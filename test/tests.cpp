@@ -17,7 +17,7 @@ TEST (testStudent, addMark)
 {
     Student student(0, "Саратовцев Артем Романович");
     student.setMarks(5);
-    EXPECT_EQ(5, student.getAverageMarks());
+    EXPECT_EQ(5, student.getMean());
 }
 
 TEST (testGroup, enroll)
