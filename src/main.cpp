@@ -5,11 +5,9 @@
 
 int main() {
 	Dean* dean = new Dean("../file/students.csv");
-	dean->createGroups();
 	Group* group = dean->findGroupByName("18PI-2");
 	Group* group2 = dean->findGroupByName("18PMI-1");
 	std::cout << group << std::endl;
-	dean->createStudents();
 	if (group != 0) {
 		std::cout <<"Group name "<< group->getName() << std::endl;
 		Student* Igor = group->findStudentById(35);
@@ -53,7 +51,7 @@ int main() {
 			std::cout << "Group new sudent " << newStudent->getGroup()->getName() << std::endl;
 			std::cout << "Name new student " << newStudent->getFIO() << std::endl;
 			std::cout << "ID new student " << newStudent->getID() << std::endl;
-			dean->updateData();
+			//dean->updateData();
 			dean->outputData();
 		}
 	}

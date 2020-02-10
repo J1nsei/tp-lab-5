@@ -8,6 +8,8 @@ Dean::Dean() {
 	studentID = 0;
 	system("chcp 1251");
 	readFile();
+	createGroups();
+	createStudents();
 }
 
 Dean::Dean(std::string data_fileName) {
@@ -15,6 +17,8 @@ Dean::Dean(std::string data_fileName) {
 	studentID = 0;
 	system("chcp 1251");
 	readFile();
+	createGroups();
+	createStudents();
 }
 
 Dean::~Dean() {}
@@ -225,8 +229,3 @@ double Dean::getGroupStatistics(Group* group) {
 		return group->averageMark();
 	}	
 }
-
-/*
-unsigned int Dean::getID() {
-	return studentID;
-}*/
