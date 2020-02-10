@@ -21,7 +21,7 @@ public:
 	unsigned int AverageMark() const;
 	void addMark(unsigned int newMark);
 	string getName() const;
-	string getgroup() const;
+	string getGroup() const;
 	unsigned int getId() const;
 	void setGroup(Group* newGroup); 
 };
