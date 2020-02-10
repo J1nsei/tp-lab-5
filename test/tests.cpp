@@ -82,7 +82,7 @@ TEST(TestStudent, saveFunc) {
     dean->saveFiles(deanery_path,groups_path,students_path);
     delete dean;
 
-    auto dean = new Dean{};
+    dean = new Dean{};
     dean->createGroups(deanery_path);
     dean->createStudents(students_path);
     map<string,vector<vector<string>>> dataMapAfter;
