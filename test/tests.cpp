@@ -43,17 +43,16 @@ TEST(StudentTests, studentInfo) {
 TEST(StudentTests, addStudent) {
 	Dean* dean = new Dean("../file/students.csv");
 	Group* group = dean->findGroupByName("18PMI-1");
-	dean->addNewStudent("Сидорова Мария Ивановна", group2);
+	dean->addNewStudent("Сидорова Мария Ивановна", group);
 	Student* newStudent = group->findStudentByName("Сидорова Мария Ивановна");
 	EXPECT_EQ(100, newStudent->getID());
 }
 
 TEST(StudentTests, expelStudent) {
 	Dean* dean = new Dean("../file/students.csv");
-	Student* Vasilisa = dean->findStudentByName("Хейчеева Василиса Сидоровна");
-	unsigned int VasilisaID = Vasilisa->getID();
+	Student* Vasilisa = dean->findStudentById(80);
 	dean->expelStudent(Vasilisa);
-	EXPECT_EQ(0, dean->findStudentByID(VasilisaID));
+	EXPECT_EQ(0, dean->findStudentById(80));
 }
 
 TEST(StudentTests, transferStudent) {
