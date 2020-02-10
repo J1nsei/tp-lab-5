@@ -17,14 +17,14 @@ void Group::Election_of_the_head(Student* head){
     this->head = head;
 }
 Student* Group::Search_of_student(string fio){
-    for(auto &student : students){
+    for(auto student : students){
         if(student->Get_fio() == fio)
             return student;
     }
     return nullptr;
 } //поиск студента по ФИО или ИД
 Student* Group::Search_of_student(int id){
-    for(auto &student : students){
+    for(auto student : students){
         if(student->Get_id() == id)
             return student;
     }
@@ -32,7 +32,7 @@ Student* Group::Search_of_student(int id){
 }
 double  Group::Calc_aver_mark_in_group(){
     double sum = 0;
-    for (auto & student : students) {
+    for (auto student : students) {
         sum += student->Calc_aver_mark();
     }
     return sum / students.size();

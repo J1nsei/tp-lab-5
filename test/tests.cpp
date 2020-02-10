@@ -1,14 +1,45 @@
 #include "gtest/gtest.h"
 #include <Dean.h>
+#include <Student.h>
+#include <Group.h>
 
 TEST(task1, task1_1) {
-Dean* dean = new Dean();
-EXPECT_EQ(93, dean->Get_students().size());
-delete dean;
+    Dean* dean = new Dean();
+    EXPECT_EQ(93, dean->Get_students().size());
+    delete dean;
 }
 
 TEST(task1, task1_2) {
-Dean* dean = new Dean();
-EXPECT_EQ(5, dean->Get_groups().size());
-delete dean;
+    Dean* dean = new Dean();
+    EXPECT_EQ(5, dean->Get_groups().size());
+    delete dean;
+}
+TEST(task1, task1_3) {
+    Student student(1, "Козлова Оксана");
+    for (int i = 0; i < 10; i++){
+        student.Add_mark(i);
+    }
+    EXPECT_EQ(4.5, student.Calc_aver_mark());
+}
+TEST(task1, task1_4) {
+    Student* student = new Student(1, "Козлова Оксана");
+    Group group("18PMI", "MathProgr");
+    group.Add_student(student);
+    EXPECT_EQ("18PMI", group.Get_title());
+    EXPECT_EQ(1, group.Get_size());
+}
+
+
+TEST(testDean, transfer) {
+    Dean* dean = new Dean();
+    Student* student1 = dean->Get_students()[0];
+    Group*from = dean->Search_of_group(student1->Get_Group());
+    Group* to = dean->Search_of_group("18PI2");
+    string Name_of_student = student1->Get_fio();
+    from->Exclusion_student(Name_of_student);
+    to->Add_student(student1);
+    EXPECT_EQ(nullptr, from->Search_of_student(Name_of_student));
+    EXPECT_NE(nullptr, to->Search_of_student(Name_of_student));
+    delete dean;
+
 }

@@ -28,14 +28,14 @@ public:
     //void Add_groups();//создание групп на основе данных из файла
     void Add_marks(string, int);//добавление случайных оценок студентам
     vector<pair<vector<string>,pair<int,int>>> Get_state(); //получение статистики по успеваемости студентов и групп
-    void Check_and_delete_students();//отчисление студентов за неуспеваемость
+    void Check_and_delete_students(string);//отчисление студентов за неуспеваемость
     void Choose_head(string);//инициация выборов старост в группах
     Group* Search_of_group(string);
     void Print_date();//вывод данных на консоль
     void Transfer_of_student(string, string, string);//перевод студентов из группы в группу
     vector<Student*> Get_students();
     vector<Group*> Get_groups();
-    void Update_file(const string filename); //сохранение обновленных данных в файла
+    void Update_file(); //сохранение обновленных данных в файла
 
 
 private:

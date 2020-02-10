@@ -8,7 +8,6 @@
 #include <string>
 using namespace std;
 
-class Group;
 
 class Student {
 public:
@@ -16,18 +15,17 @@ public:
     Student(unsigned int, string);
     void Add_mark(unsigned int);
     double Calc_aver_mark();
-    void Set_mark(unsigned int);
-    void Set_group(Group*);
+    void Set_group(string);
     string Get_fio() const;
     int Get_id() const;
-    Group* Get_Group() const;
+    string Get_Group() const;
     vector<unsigned int> Get_marks() const;
 
 
 private:
     int id; //идентификационный номер
     string fio; // фамилия и инициалы
-    Group* group; //ссылка на группу (объект Group)
+    string group; //название группы
     vector<unsigned int> marks; //  вектор оценок
 };
 

@@ -13,14 +13,18 @@
 using namespace std;
 
 int main(){
+
+    //SetConsoleOutputCP(65001);
+
+
     Dean* dean = new Dean();
-    cout <<dean->Get_students().size();
     Group* group = dean->Get_groups()[0];
-    vector<Student*>students = group->Get_students();
-    cout << students.size() << endl;
-    group->Exclusion_student(1);
-    students = group->Get_students();
-    cout << students.size() << endl;
+    cout << group->Get_students().size() << endl;
+    dean-> Add_marks(group->Get_title(), 7);
+    dean->Check_and_delete_students("18FM");
+    cout << dean->Get_groups()[0]->Get_students().size() << endl;
+    dean->Choose_head("18FM");
+    dean->Print_date();
     delete dean;
 
 }
