@@ -6,6 +6,18 @@
 
 #IncludeRegexTransform: 
 
+../include/dean.h
+group.h
+../include/group.h
+student.h
+../include/student.h
+iostream
+-
+vector
+-
+string
+-
+
 ../include/group.h
 iostream
 -
@@ -28,15 +40,17 @@ vector
 group.h
 ../include/group.h
 
-C:/Users/Mary/CLionProjects/tp-lab-5/src/group.cpp
+C:/Users/Mary/CLionProjects/tp-lab-5/src/dean.cpp
+dean.h
+C:/Users/Mary/CLionProjects/tp-lab-5/src/dean.h
 iostream
 -
-group.h
+fstream
 -
-windows.h
+string
 -
-
-C:/Users/Mary/CLionProjects/tp-lab-5/src/student.cpp
-student.h
-C:/Users/Mary/CLionProjects/tp-lab-5/src/student.h
+sstream
+-
+algorithm
+-
 

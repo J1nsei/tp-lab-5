@@ -6,7 +6,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <windows.h>
 #include <sstream>
 #include <algorithm>
 
@@ -35,7 +34,6 @@ void Dean::createGroups() {
     }
 }
 void Dean::printStudents(){
-    SetConsoleOutputCP(CP_UTF8);
     for (int i = 0; i < this->groups.size(); i ++){
         this->groups[i]->printStudents();
     }

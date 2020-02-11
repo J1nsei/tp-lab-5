@@ -10,11 +10,6 @@ CMakeFiles/task1_lib.dir/src/group.cpp.obj: ../include/group.h
 CMakeFiles/task1_lib.dir/src/group.cpp.obj: ../include/student.h
 CMakeFiles/task1_lib.dir/src/group.cpp.obj: ../src/group.cpp
 
-CMakeFiles/task1_lib.dir/src/main.cpp.obj: ../include/dean.h
-CMakeFiles/task1_lib.dir/src/main.cpp.obj: ../include/group.h
-CMakeFiles/task1_lib.dir/src/main.cpp.obj: ../include/student.h
-CMakeFiles/task1_lib.dir/src/main.cpp.obj: ../src/main.cpp
-
 CMakeFiles/task1_lib.dir/src/student.cpp.obj: ../include/group.h
 CMakeFiles/task1_lib.dir/src/student.cpp.obj: ../include/student.h
 CMakeFiles/task1_lib.dir/src/student.cpp.obj: ../src/student.cpp

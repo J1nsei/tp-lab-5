@@ -4,7 +4,6 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <windows.h>
 #include <vector>
 #include "dean.h"
 using namespace std;
@@ -26,7 +25,6 @@ int main(){/*
         }
         in.close();
     }*/
-SetConsoleOutputCP(CP_UTF8);
 Dean dean;
 dean.createGroups();
 dean.generateStudents();

@@ -3,7 +3,6 @@
 //
 #include <iostream>
 #include <group.h>
-#include <windows.h>
 
 using namespace std;
 Group::Group(string title, string spec){
@@ -12,7 +11,6 @@ Group::Group(string title, string spec){
 }
 
 void Group::printStudents() {
-    SetConsoleOutputCP(CP_UTF8);
     cout << this->title << endl;
     for (auto student : this->students){
         cout << "---------------\n";

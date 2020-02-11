@@ -10,11 +10,6 @@ CMakeFiles/task1_lib.dir/src/group.cpp.obj
  ../include/group.h
  ../include/student.h
  C:/Users/Mary/CLionProjects/tp-lab-5/src/group.cpp
-CMakeFiles/task1_lib.dir/src/main.cpp.obj
- ../include/dean.h
- ../include/group.h
- ../include/student.h
- C:/Users/Mary/CLionProjects/tp-lab-5/src/main.cpp
 CMakeFiles/task1_lib.dir/src/student.cpp.obj
  ../include/group.h
  ../include/student.h
