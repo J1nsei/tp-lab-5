@@ -38,36 +38,10 @@ TEST (deanery, compareofspecializations) {
 	Group* BI = hse.createGroup("18-BI", "Бизнес-информатика");
 	EXPECT_EQ("Бизнес-информатика",BI->getSpec());
 }
-
 TEST (deanery, chooseofhead) {
 	Deanery hse;
-	ifstream inp("students.txt");
-	int id = 0;
-	char div = ':';
-	while(!inp.eof()){
-		string buf;
-		getline(inp, buf, '\n');
-		vector<string> data;
-		string dat;
-		istringstream str(buf);
-		while (getline(str, dat, div))
-			data.push_back(dat);
-		if (data[1] == "18-PMI"){
-			hse.createStudent(id, data[0], PMI);
-			for (int i = 0; i < 5; i++)
-				hse.addMarks(PMI, data[0], rand() % 10);
-		}
-		if (data[1] == "18-PI"){
-			hse.createStudent(id, data[0], PI);
-			for (int i = 0; i < 5; i++)
-				hse.addMarks(PI, data[0], rand() % 10);
-		}
-		if (data[1] == "18-BI"){
-			hse.createStudent(id, data[0], BI);
-			for (int i = 0; i < 5; i++)
-				hse.addMarks(BI, data[0], rand() % 10);
-		}
-		id++;
-	}
-	EXPECT_NE(NULL,BI->searchStudentName("Казанцев Иннокентий Алексеевич"));
+	Group* FM = hse.createGroup("18-FM", "Фундаментальная математика");
+	hse.createStudent(1,"Данилов Сергей Дмитриевич", FM);
+	FM->chooseHead();
+	EXPECT_EQ("Данилов Сергей Дмитриевич", FM->getHead()->getName());
 }
