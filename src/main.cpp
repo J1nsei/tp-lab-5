@@ -5,12 +5,9 @@
 #include <sstream>
 #include <iostream>
 #include <clocale>
-//#include <Windows.h>
 #include "dean.h"
 #include "group.h"
 #include "student.h"
-
-
 
 using namespace std;
 
@@ -50,12 +47,12 @@ int main(){
 		}
 		id++;
 	}
-	hse.kickForMarks(PMI);
-	hse.kickForMarks(PI);
-	hse.kickForMarks(BI);
-	hse.initializeHead(PMI);
-	hse.initializeHead(PI);
-	hse.initializeHead(BI);
+	hse.deleteForMarks(PMI);
+	hse.deleteForMarks(PI);
+	hse.deleteForMarks(BI);
+	hse.initializeHeadmen(PMI);
+	hse.initializeHeadmen(PI);
+	hse.initializeHeadmen(BI);
 	hse.saveData();
 	hse.printData();
 }
