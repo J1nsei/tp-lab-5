@@ -38,7 +38,7 @@ TEST(group, test2) {
 	economy->addStudent(student1);
 	economy->addStudent(student2);
 	economy->removeStudent(student1);
-	Group* group_name = student->getGroup();
+	Group* group_name = student1->getGroup();
 	EXPECT_EQ(nullptr, group_name);
 	}
 	
@@ -128,7 +128,7 @@ TEST(deanery, test1) {
 	imikn->addGroup(math1);
 	imikn->addGroup(math2);
 	imikn->addGroup(math3);
-	Group* group_name = Deanery->findGroup("18FM-2");
+	Group* group_name = imikn->findGroup("18FM-2");
 	EXPECT_EQ(group_name, math2);
 	}		
 	
@@ -142,7 +142,7 @@ TEST(deanery, test2) {
 	imikn->addGroup(economy);
 	math->addStudent(student1);
 	economy->addStudent(student2);
-	Deanery->transferStudent("Watson Jane Sherilyn", "18ECO-3");
+	imikn->transferStudent("Watson Jane Sherilyn", "18ECO-3");
 	string group_spec = economy->findStudent("Watson Jane Sherilyn")->getGroup()->getGroupSpec();
 	EXPECT_EQ(group_spec, "Economy");
 	EXPECT_EQ(economy->getGroupStudents().size(), 1);
@@ -168,7 +168,7 @@ TEST(deanery, test3) {
 	student3->addMark(2);
 	student4->addMark(4);
 	student4->addMark(1);
-	Deanery->removeStudents(3);
+	imikn->removeStudents(3);
 	int len = math->getGroupStudents().size();
 	EXPECT_EQ(len, 2);
 	}		
