@@ -1,5 +1,5 @@
 ﻿#include <time.h>
-#include "group.h"
+#include "Group.h"
 
 Group::Group(string name, string spec) {
 	this->name = name;
