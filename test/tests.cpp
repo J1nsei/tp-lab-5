@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
-#include "Deanery.h"
-#include "Student.h"
+#include "dean.h"
+#include "student.h"
 #include <string>
 
 TEST(task1, dean_1){
