@@ -1,4 +1,7 @@
 #include "gtest/gtest.h"
+#include "Student.h"
+#include "Group.h"
+#include "Deanery.h"
 
 TEST(lab5, task1){
 	Student Eugene(0, "Eugene Melnikov");
