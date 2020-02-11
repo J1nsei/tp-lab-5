@@ -26,7 +26,6 @@ int main()
 	system("chcp 1251");
 
 	Deanery* deanery = new Deanery();
-	//Deanery hse;
 
 	Group * PMI1 = deanery->make_groups("18PMI-1", "Прикладная математика и информатика");
 	Group * PMI2 = deanery->make_groups("18PMI-2", "Прикладная математика и информатика");
@@ -40,14 +39,14 @@ int main()
 	//deanery->make_students(1, "Колодезев Евсей Эрнестович", PMI1);
 	//deanery->make_students(4, "dfjk sdkjf skfdj", PMI2);
 
-	//ifstream file("students.txt");
-	ifstream file("students_with_groups.txt");
 	//deanery->print_data();
 	//deanery->save_new_data();
 
+	ifstream file("students_with_groups.txt");
+
 	while (!file.eof())
 	{
-		int id = 1,j;
+		int id = 1;
 		string buf;
 		getline(file, buf, '\n');
 		vector<string> data = split(buf, ':');
@@ -139,6 +138,6 @@ int main()
 	
 	deanery->print_data();
 	deanery->save_new_data();
-	//deanery->delete_student_for_poor_grades();
+
 	return 0;
 }

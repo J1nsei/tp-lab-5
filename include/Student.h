@@ -23,7 +23,6 @@ public:
 	void set_mark(int mark);
 	float average_mark();
 	void set_group(Group* group);
-	//void change_group(Group* n_group);
 
 	vector<int> getMarks();
 	Group* getGroup();

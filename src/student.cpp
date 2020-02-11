@@ -37,14 +37,6 @@ void Student::set_group(Group* group)
 	this->group = group;
 }
 
-/*
-void * Student::change_group(Group * n_group)
-{
-group = n_group;
-return group;
-}
-*/
-
 Group* Student::getGroup()
 {
 	return group;

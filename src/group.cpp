@@ -7,12 +7,6 @@ Group::Group(string title, string spec)
 {
 	this->title = title;
 	this->spec = spec;
-	/*head = nullptr;
-	students = {};
-	if (title == "" || title == "")
-	{
-		spec = "";
-	}*/
 }
 
 void Group::add_student(Student* new_student)
@@ -22,8 +16,6 @@ void Group::add_student(Student* new_student)
 
 void Group::choose_head()
 {
-	//students = vector<Student*>();
-	//head = nullptr;
 	int i = rand() % students.size();
 	head = students[i];
 }

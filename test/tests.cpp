@@ -27,8 +27,6 @@ TEST(lab5, task3)
 	group->add_student(student);
 	Student* stud = group->find_student_fio("jhvhbnv");
 	EXPECT_EQ(stud, student);
-	Student* stud = group->find_student_id(0);
-	EXPECT_EQ(stud, student);
 }
 
 TEST(lab5, task4)

@@ -12,7 +12,6 @@ using namespace std;
 class Deanery
 {
 private:
-	//vector<Student*> students;
 	vector<Group*> groups;
 public:
 	Deanery();
@@ -21,7 +20,6 @@ public:
 	void add_mark(Group* group, string student, int mark);
 	float get_average_mark_student(Group* group, string student);
 	float get_average_mark_group(Group* group);
-	//void statistic();
 	void change_group_for_student(string fio, Group* old_group, Group* new_group);
 	void delete_student_for_poor_grades(Group* group);
 	void save_new_data();

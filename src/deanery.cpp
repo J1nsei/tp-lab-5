@@ -6,13 +6,10 @@
 #include <fstream>
 #include <sstream>
 #include <ctime>
-//#include <ifstream>
 #include <random>
 
 Deanery::Deanery()
 {
-	//groups = vector < Group* >() ;
-	//int id = 0;
 }
 
 void Deanery::make_students(int id, string fio, Group* group)
@@ -30,18 +27,6 @@ Group* Deanery::make_groups(string title, string spec)
 
 void Deanery::add_mark(Group* group, string student, int mark)
 {
-	/*void Deanery::add_mark(int mark)
-	srand(time(0));
-	for (auto group : groups)
-	{
-		for (Student* student : group->getStudents())
-		{
-			for (int m = 0; m < mark; m++)
-			{
-				student->set_mark(mark);
-			}
-		}
-	}*/
 	Student* stud = group->find_student_fio(student);
 	stud->set_mark(mark);
 }
@@ -95,8 +80,6 @@ void Deanery::save_new_data()
 		file << "**********************************************" << endl;
 		for (auto student : group->getStudents())
 		{
-			/*string f = student->getFio();
-			int i = student->getId();*/
 			file << "ID: " << student->getId() << "\tÔÈÎ: " << student->getFio() << endl;
 			file << "Ñðåäíèé áàëë: " << student->average_mark() << endl;
 			for (auto mark : student->getMarks())
@@ -133,8 +116,6 @@ void Deanery::print_data()
 		cout << "**********************************************" << endl;
 		for (auto student : group->getStudents())
 		{
-			/*string f = student->getFio();
-			int i = student->getId();*/
 			cout << "ID: " << student->getId() << "\tÔÈÎ: " << student->getFio() << endl;
 			cout << "Ñðåäíèé áàëë: " << student->average_mark() << endl;
 			for (auto mark : student->getMarks())
