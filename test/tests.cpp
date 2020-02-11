@@ -60,7 +60,6 @@ TEST(lab5, task6)
 	testGroup.recieveStudent(second);
 	Student* _tmp;
 	_tmp = testGroup.headChoice();
-	cout << _tmp->getFIO() << endl;
 	EXPECT_EQ("Маша Лисичкина", _tmp->getFIO());
 }
 
