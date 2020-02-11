@@ -3,7 +3,7 @@
 
 
 TEST(stud, id){
-	Student* stud = new Student("Ogurliev Anzor", 0);
+	Student* stud = new Student("Arakcheev Artem", 0);
 	int id = stud->getId();
 	EXPECT_EQ(0, id);
 }
@@ -23,7 +23,7 @@ TEST(deanery, averageforstud){
 	Group* group = hse.createGroup("group", "spec");
 	hse.createStudent(0, "Ogurliev Anzor", group);
 	hse.addMarks(group, "Ogurliev Anzor", 4);
-	hse.addMarks(group, "AOgurliev Anzor", 6);
+	hse.addMarks(group, "Ogurliev Anzor", 6);
 	double mark = hse.getAverageStudent(group, "Ogurliev Anzor");
 	EXPECT_EQ(5, mark);
 }
