@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
-#include "student.h"
-#include "group.h"
-#include "deanery.h"
+#include "Student.h"
+#include "Group.h"
+#include "Deanery.h"
 
 TEST(student, test1) {
 	Student* student = new Student("Goodwin Carol Georgiana", 1);
