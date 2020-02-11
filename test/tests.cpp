@@ -27,6 +27,7 @@ TEST(deanery, averageforstud){
 	double mark = hse.getAverageStudent(group, "Ogurliev Anzor");
 	EXPECT_EQ(5, mark);
 }
+
 TEST (deanery, compareoftitles){
 	Deanery hse;
 	Group* PMI = hse.createGroup("18-PMI", "Прикладная математика и информатика");
@@ -36,4 +37,13 @@ TEST (deanery, compareofspecializations) {
 	Deanery hse;
 	Group* BI = hse.createGroup("18-BI", "Бизнес-информатика");
 	EXPECT_EQ("Бизнес-информатика",BI->getSpec());
+}
+
+TEST (deanery, chooseofhead) {
+	Deanery hse;
+	Group* PI = hse.createGroup("18-PI", "Программная инженерия");
+	hse.createStudent(12,"Данилов Сергей Дмитриевич", PI);
+	PI->chooseHead();
+	EXPECT_NE(NULL, BI->getHead());
+	
 }
