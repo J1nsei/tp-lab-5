@@ -17,7 +17,7 @@ TEST(student_test, mean_check) {
 	st->add_mark(4);
 	st->add_mark(5);
 	st->add_mark(6);
-	EXPECT_EQ(5, st->get_mean());
+	EXPECT_EQ(5, st->mean_marks());
 }
 
 TEST(student_test, head_check) {
