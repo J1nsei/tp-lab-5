@@ -1,6 +1,7 @@
 #include "group.h"
 #include "student.h"
 #include <time.h>  
+#include <iostream>
 
 
 class Student;
@@ -20,10 +21,21 @@ Group::Group(std::string name)
 
 bool Group::addStudent(Student * student)
 {
-	if (std::find(this->students.begin(), this->students.end(), student) != this->students.end()) {
-		return false;   // this student has already been added to the group
+	bool alreadyInGroup = false;
+	for (Student* person : this->students)
+	{
+		if (person == student)
+			alreadyInGroup = true;
 	}
-	else {
+
+	if (alreadyInGroup == true)
+	{
+		std::cout << "This student has already been added to this group" << std::endl;
+		return false;
+	}
+
+	else 
+	{
 		student->addToGroup(this);
 		this->students.push_back(student);
 		return true;

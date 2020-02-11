@@ -3,6 +3,7 @@
 #include "group.h"
 #include <numeric>
 #include <sstream>
+#include <iostream>
 
 
 class group;
@@ -25,16 +26,24 @@ Student::Student(std::string FIO)
 
 bool Student::addToGroup(Group* group)
 {
-	if (std::find(group->students.begin(), group->students.end(), this) != group->students.end())
+	bool alreadyInGroup = false;
+	for (Student* person : group->students)
 	{
+		if (person == this)
+			alreadyInGroup = true;
+	}
+
+	if (alreadyInGroup == true)
+	{
+		std::cout << "This student has already been added to this group" << std::endl;
 		return false;
 	}
-	else
+	else 
 	{
 		this->group = group;
 		group->students.push_back(this);
 		return true;
-	};
+	}
 };
 
 
@@ -51,10 +60,19 @@ void Student::addMark(std::vector<int> mark)
 
 double Student::getAverage()
 {
+	double sum = 0;
+
 	if (this->marks.empty())
 		return 0;
 	else
-		return std::accumulate(this->marks.begin(), this->marks.end(), 0.0)/this->marks.size();
+	{
+		for (int mark : marks) 
+		{
+			sum += mark;
+		}
+
+		return sum / marks.size();
+	}
 };
 
 
