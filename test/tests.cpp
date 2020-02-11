@@ -43,3 +43,18 @@ TEST(lab5, task3){
 	EXPECT_EQ("Ivan", headName);
 	
 }
+
+TEST(lab5, task3){
+	Student stud1(0, "Alex");;
+	Student stud2(1, "Ivan");
+	Student stud3(2, "Max");
+	Group gr("pmi", "app. maths");
+	gr.addStudent(&stud1);
+	gr.addStudent(&stud2);
+	gr.addStudent(&stud3);
+	gr.removeStudent("Alex");
+	gr.removeStudent("Max");
+	int amount = gr.getStudents_p().size();
+	EXPECT_EQ(1, amount);	
+}
+
