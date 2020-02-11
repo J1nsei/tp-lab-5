@@ -173,7 +173,7 @@ Student* Deanery::createStudent(string fio, int id, Group* group)
 {
 
 	Student* s = new Student(id, fio);
-	s->addToGroup(group);
+	//s->addToGroup(group);
 	
 	return s;
 }
