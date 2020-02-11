@@ -1,5 +1,5 @@
 #include "gtest/gtest.h"
-#include "Dean.h"
+#include "dean.h"
 #include <string>
 
 TEST(testDean, init) {
