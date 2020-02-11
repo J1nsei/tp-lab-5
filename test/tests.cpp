@@ -4,18 +4,18 @@
 
 TEST(laba5, test1) 
 {
-  setlocale(LC_ALL, "Russian");
+        setlocale(LC_ALL, "Russian");
 	Student newcomer (91, "Богородицкая Екатерина Дмитриевна");
 	newcomer.AddMark(1);
 	newcomer.AddMark(2);
 	newcomer.AddMark(3);
 	double itog = newcomer.AvrMark();
-	EXPECT_EQ(6.666667, itog);
+	EXPECT_EQ(6.66667, itog);
 }
 
 TEST(laba5, test2) 
 {
-  setlocale(LC_ALL, "Russian");
+        setlocale(LC_ALL, "Russian");
 	Group group("Группа");
 	Student new1 (1, "Золотова Агния Агаповна");
 	Student new2 (2, "Васнецова Марина Мечиславовна");
@@ -24,12 +24,12 @@ TEST(laba5, test2)
 	group.JoinGroup(&new2);
 	group.JoinGroup(&new3);
 	int place = group.Search(2);
-  EXPECT_EQ(1, place);
+        EXPECT_EQ(1, place);
 }
 
 TEST(laba5, test3) 
 {
-  setlocale(LC_ALL, "Russian");
+        setlocale(LC_ALL, "Russian");
 	Group group("Группа");
 	Student new1 (1, "Золотова Агния Агаповна");
 	Student new2 (2, "Васнецова Марина Мечиславовна");
@@ -40,7 +40,7 @@ TEST(laba5, test3)
 	group.JoinGroup(&new1);
 	group.JoinGroup(&new2);
 	double itog = group.AvrMark();
-  EXPECT_EQ(5.000000, itog);
+        EXPECT_EQ(5.000000, itog);
 }
 
 TEST(laba5, test4) 
@@ -50,13 +50,12 @@ TEST(laba5, test4)
 	Student new1(1, "Золотова Агния Агаповна");
 	group.JoinGroup(&new1);
 	group.ChooseLid();
-	printf("%s", group.GetLider().c_str());
-  EXPECT_EQ("Золотова Агния Агаповна", group.GetLider().c_str());
+        EXPECT_EQ("Золотова Агния Агаповна", group.GetLider());
 }
 
 TEST(laba5, test5) 
 {
-  setlocale(LC_ALL, "Russian");
+        setlocale(LC_ALL, "Russian");
 	Group group("Группа");
 	Student new1(1, "Золотова Агния Агаповна");
 	Student new2(2, "Васнецова Марина Мечиславовна");
@@ -67,12 +66,12 @@ TEST(laba5, test5)
 	group.ChooseLid();
 	group.Delete(1);
 	int place = group.Search(2);
-  EXPECT_EQ(0, place);
+        EXPECT_EQ(0, place);
 }
 
 TEST(laba5, test6) 
 {
-  setlocale(LC_ALL, "Russian");
+        setlocale(LC_ALL, "Russian");
 	Deanery Main;
 	std::vector<std::string> fio;
 	fio.push_back("Золотова Агния Агаповна");
@@ -81,6 +80,5 @@ TEST(laba5, test6)
 	Main.CreateSt(fio);
 	std::string fir = "Первая", sec = "Вторая", thi = "Третья";
 	Main.CreateGr(fir, sec, thi);
-	printf("%s", Main.GroupName(1).c_str());
-  EXPECT_EQ("Вторая", Main.GroupName(1).c_str());
+        EXPECT_EQ("Вторая", Main.GroupName(1));
 }
