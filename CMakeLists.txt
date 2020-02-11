@@ -21,7 +21,6 @@ file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/Dean.cpp
               ${PROJECT_SOURCE_DIR}/src/Student.cpp
               ${PROJECT_SOURCE_DIR}/src/Group.cpp)
-@@ -24,51 +8,3 @@ set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/Dean.cpp
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -70,6 +69,6 @@ if (BUILD_TESTS)
 
     SET(CMAKE_CXX_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
     SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
-   #CMAKE_BUILD_TYPE STREQUAL "Coverage"
+  endif() #CMAKE_BUILD_TYPE STREQUAL "Coverage"
 
-endif() 
+endif()
