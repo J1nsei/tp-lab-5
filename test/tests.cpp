@@ -17,7 +17,7 @@ TEST(lab5, task2)
 	string title = group->getTitle();
 	EXPECT_EQ("dsnk", title);
 	string spec = group->getSpec();
-	EXPECT_EQ("jhvhbnv", spec);
+	EXPECT_EQ("jhvhbnvc", spec);
 }
 
 TEST(lab5, task3)
