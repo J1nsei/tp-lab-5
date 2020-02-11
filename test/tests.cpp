@@ -10,7 +10,7 @@ TEST(laba5, test1)
 	newcomer.AddMark(2);
 	newcomer.AddMark(3);
 	double itog = newcomer.AvrMark();
-	EXPECT_EQ(6.66667, itog);
+	EXPECT_EQ(2.000000, itog);
 }
 
 TEST(laba5, test2) 
