@@ -16,16 +16,13 @@ Deanery::Deanery(string studentsFile, string specsFile) {
 vector<string> Deanery::split(string& line) {
 	vector<string> output(2);
 	int dev_count = 0;
-	for (int i = 0; i < size(line); i++) {
+	for (int i = 0; i < line.size(); i++) {
 		if (line[i] == '|') {
 			dev_count++;
 			continue;
 		}
 		else {
 			output[dev_count] += line[i];
-		}
-		if (line[i] == '/n') {
-			break;
 		}
 	}
 	return output;
