@@ -19,5 +19,6 @@ public:
 	void AddMark();
 	double AvMark();
 	int MarkSize();
-
+	string GetFio();
+	int GetId();
 };

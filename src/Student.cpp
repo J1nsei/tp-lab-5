@@ -1,12 +1,7 @@
 #include "Student.h"
 #include <iostream>
 using namespace std;
-Student::Student(int id, string fio, Group* group) {
-	this->fio = fio;
-	this->id = id;
-	this->group = group;
-}
-#include "Student.h"
+
 
 #include <vector>
 
@@ -30,4 +25,10 @@ double Student::AvMark() {
 }
 int Student::MarkSize() {
 	return marks.size();
+}
+string Student::GetFio() {
+	return fio;
+}
+int Student::GetId() {
+	return id;
 }
