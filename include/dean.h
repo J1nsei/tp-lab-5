@@ -14,6 +14,7 @@ private:
     int last_id;
 public:
     Deanery();
+    ~Deanery();
     void createGroup(string, string);
     void addRandomMarks(int);
     void fullStatistics();

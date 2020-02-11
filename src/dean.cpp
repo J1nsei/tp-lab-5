@@ -18,6 +18,16 @@ Deanery::Deanery(){
     last_id = 0;
 }
 
+
+Deanery::~Deanery(){
+    for(auto group : groups){
+        for(auto student : group->getStudents()){
+            delete student;
+        }
+        delete group;
+    }
+}
+
 void Deanery::createGroup(string students_filename, string groups_spec_filename) {
     std::ifstream fin;
     fin.open(groups_spec_filename, std::ifstream::in);

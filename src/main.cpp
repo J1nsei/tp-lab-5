@@ -13,24 +13,17 @@ using std::endl;
 
 int main()
 {
-    //SetConsoleOutputCP(CP_UTF8);
-    //SetConsoleCP(CP_UTF8);
-    //system("chcp 65001");
-
     Deanery* hse_deanery = new Deanery();
     hse_deanery->createGroup("students4.txt", "groups_spec.txt");
     hse_deanery->addRandomMarks(5);
-    //hse_deanery->printData();
+    hse_deanery->printData();
     hse_deanery->fullStatistics();
-    //hse_deanery->changeGroup("Jessie Petty", "18PI-1", "18FM");
-    //hse_deanery->fullStatistics();
-    cout << "****************************************************" << endl;
+    hse_deanery->changeGroup("Jessie Petty", "18PI-1", "18FM");
+    hse_deanery->fullStatistics();
     hse_deanery->excludeStudents();
-    //hse_deanery->fullStatistics();
+    hse_deanery->fullStatistics();
     hse_deanery->chooseHeads();
     hse_deanery->fullStatistics();
-    //->printData();
-    //hse_deanery->saveData("saved_data.txt", "saved_groups.txt");
-    cout << "aaa";
+    hse_deanery->saveData("saved_data.txt", "saved_groups.txt");
     return 0;
 }
