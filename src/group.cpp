@@ -26,9 +26,8 @@ Student * Group::find_student_fio(string fio)
 	{
 		if (student->getFio() == fio)
 			return student;
-		else
-			return 0;
 	}
+	return 0;
 }
 
 Student * Group::find_student_id(int id)
@@ -37,9 +36,8 @@ Student * Group::find_student_id(int id)
 	{
 		if (student->getId() == id)
 			return student;
-		else
-			return 0;
 	}
+	return 0;
 }
 
 float Group::average_mark()

@@ -82,10 +82,11 @@ void Deanery::save_new_data()
 		{
 			file << "ID: " << student->getId() << "\tФИО: " << student->getFio() << endl;
 			file << "Средний балл: " << student->average_mark() << endl;
+			cout << "Список оценок: ";
 			for (auto mark : student->getMarks())
 			{
 				
-				file << "Список оценок: " << mark << " " << endl;
+				file << mark << " & " ;
 			}
 			file << endl;
 		}
@@ -118,11 +119,13 @@ void Deanery::print_data()
 		{
 			cout << "ID: " << student->getId() << "\tФИО: " << student->getFio() << endl;
 			cout << "Средний балл: " << student->average_mark() << endl;
+			cout << "Список оценок: ";
 			for (auto mark : student->getMarks())
 			{
-				cout << "Список оценок: " << mark << " " << endl;
+				cout << mark << " & " ;
 			}
 			cout << endl;
 		}
+		cout << endl;
 	}
 }

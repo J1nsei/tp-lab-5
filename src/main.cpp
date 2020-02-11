@@ -8,6 +8,7 @@
 #include <vector>
 #include <sstream>
 #include <random>
+//#include <conio.h>
 
 using namespace std;
 
@@ -43,12 +44,12 @@ int main()
 	//deanery->save_new_data();
 
 	ifstream file("students_with_groups.txt");
+	string buf;
+	int id = 1;
 
-	while (!file.eof())
+	while (getline(file, buf, '\n'))
 	{
-		int id = 1;
-		string buf;
-		getline(file, buf, '\n');
+		//getline(file, buf, '\n');
 		vector<string> data = split(buf, ':');
 		if (data[1] == "18PMI-1")
 		{
@@ -139,5 +140,6 @@ int main()
 	deanery->print_data();
 	deanery->save_new_data();
 
+	//_getch();
 	return 0;
 }
