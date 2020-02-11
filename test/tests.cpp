@@ -145,7 +145,7 @@ TEST(deanery, test2) {
 	imikn->transferStudent("Watson Jane Sherilyn", "18ECO-3");
 	string group_spec = economy->findStudent("Watson Jane Sherilyn")->getGroup()->getGroupSpec();
 	EXPECT_EQ(group_spec, "Economy");
-	EXPECT_EQ(economy->getGroupStudents().size(), 1);
+	EXPECT_EQ(math->getGroupStudents().size(), 0);
 	}		
 		
 TEST(deanery, test3) {
