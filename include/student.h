@@ -23,4 +23,5 @@ public:
 	void add_mark(int);
 	float average();
 	void get_marks();
+	int get_id();
 };

@@ -34,3 +34,8 @@ void Student::get_marks()
 	}
 	std::cout << std::endl;
 }
+
+int Student::get_id()
+{
+	return this->id;
+}

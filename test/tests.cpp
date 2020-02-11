@@ -1,13 +1,11 @@
 #include "gtest/gtest.h"
-#include "dean.h"
+#include "student.h"
 #include <string>
 
-TEST(testDean, init) {
-	std::string s;
-	Dean *dean = new Dean();
-	dean->create_group("ing.txt");
-	dean->create_student("ins.txt");
-	dean->add_marks(11);
-	s=dean->get_G(1)->get_name();
-	EXPECT_EQ("gr2", s);
+TEST(testStudent, init) 
+{
+	Student *s = new Student(5,"Vasya Petrov");
+	int id;
+	id = s->get_id();
+	EXPECT_EQ(5, id);
 }
