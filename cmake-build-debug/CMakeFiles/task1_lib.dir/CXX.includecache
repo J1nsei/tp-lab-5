@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/group.h
+iostream
+-
+string
+-
+vector
+-
+random
+-
+student.h
+../include/student.h
+
+../include/student.h
+iostream
+-
+string
+-
+vector
+-
+group.h
+../include/group.h
+
+C:/Users/Mary/CLionProjects/tp-lab-5/src/group.cpp
+iostream
+-
+group.h
+-
+windows.h
+-
+
+C:/Users/Mary/CLionProjects/tp-lab-5/src/student.cpp
+student.h
+C:/Users/Mary/CLionProjects/tp-lab-5/src/student.h
+
