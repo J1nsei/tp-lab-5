@@ -41,9 +41,9 @@ TEST (deanery, compareofspecializations) {
 
 TEST (deanery, chooseofhead) {
 	Deanery hse;
-	Group* PI = hse.createGroup("18-PI", "Программная инженерия");
-	hse.createStudent(1,"Данилов Сергей Дмитриевич", PI);
-	PI->chooseHead();
-	EXPECT_NE("Данилов Сергей Дмитриевич", PI->getHead());
+	Group* FM = hse.createGroup("18-FM", "Фундаментальная математика");
+	hse.createStudent(1,"Данилов Сергей Дмитриевич", FM);
+	FM->chooseHead();
+	EXPECT_NE("Данилов Сергей Дмитриевич", FM->getHead());
 	
 }
