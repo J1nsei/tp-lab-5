@@ -32,3 +32,8 @@ TEST (deanery, compareoftitles){
 	Group* PMI = hse.createGroup("18-PMI", "Прикладная математика и информатика");
 	EXPECT_EQ("18-PMI",PMI->getTitle());
 }
+TEST (deanery, compareofspecializations) {
+	Deanery hse;
+	Group* PI = hse.createGroup("18-BI", "Бизнес-информатика");
+	EXPECT_EQ("Бизнес-информатика",BI->getSpec());
+}
