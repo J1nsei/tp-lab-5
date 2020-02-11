@@ -6,7 +6,7 @@
 TEST(task1, dean_1){
     Student* student = new Student(1, "Бычков Илья Сергеевич");
     EXPECT_EQ("Бычков Илья Сергеевич", student->getFio());
-    EXPECT_EQ(1, student->getId())
+    EXPECT_EQ(1, student->getId());
     delete student;
 }
 TEST(task1, dean_2){

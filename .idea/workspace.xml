@@ -12,8 +12,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="81d7c84f-8c95-4aa5-84cd-84d9181fdcf4" name="Default Changelist" comment="delete windows.h">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="81d7c84f-8c95-4aa5-84cd-84d9181fdcf4" name="Default Changelist" comment="replace .h files">
       <change beforePath="$PROJECT_DIR$/test/tests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/test/tests.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -119,8 +118,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/tests.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="136">
+              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -264,7 +263,7 @@
       <workItem from="1579677011270" duration="2135000" />
       <workItem from="1580234009984" duration="5672000" />
       <workItem from="1580832998512" duration="16120000" />
-      <workItem from="1581439374361" duration="6888000" />
+      <workItem from="1581439374361" duration="7157000" />
     </task>
     <task id="LOCAL-00001" summary="commit changes">
       <created>1581444031680</created>
@@ -284,7 +283,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34456000" />
+    <option name="totallyTimeSpent" value="34725000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1320" height="784" extended-state="6" />
@@ -465,8 +464,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/tests.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="136">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
         </state>
       </provider>
     </entry>
