@@ -56,7 +56,7 @@ TEST(task1, case_5) {
     Group* group = new Group("18PI-1");
     Student* student = new Student("Polina Demochkina");
 
-    student1->addToGroup(group);
+    student->addToGroup(group);
 
     EXPECT_EQ(student->getGroup(), group);
 }
@@ -70,7 +70,7 @@ TEST(task1, case_6) {
 
 
 TEST(task1, case_7) {
-    Student* student = new Student("Polina Demochkina");
+    Student* student = new Student("Mikhail Zhelezin");
 
     student->addMark(8);
     student->addMark(1);
