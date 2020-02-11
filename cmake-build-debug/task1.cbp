@@ -126,15 +126,6 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Mary/CLionProjects/tp-lab-5/include/dean.h">
-			<Option target="task1_lib"/>
-		</Unit>
-		<Unit filename="C:/Users/Mary/CLionProjects/tp-lab-5/include/group.h">
-			<Option target="task1_lib"/>
-		</Unit>
-		<Unit filename="C:/Users/Mary/CLionProjects/tp-lab-5/include/student.h">
-			<Option target="task1_lib"/>
-		</Unit>
 		<Unit filename="C:/Users/Mary/CLionProjects/tp-lab-5/src/dean.cpp">
 			<Option target="task1_lib"/>
 		</Unit>
@@ -143,7 +134,6 @@
 		</Unit>
 		<Unit filename="C:/Users/Mary/CLionProjects/tp-lab-5/src/main.cpp">
 			<Option target="task1"/>
-			<Option target="task1_lib"/>
 		</Unit>
 		<Unit filename="C:/Users/Mary/CLionProjects/tp-lab-5/src/student.cpp">
 			<Option target="task1_lib"/>

@@ -98,26 +98,11 @@ CMakeFiles/task1_lib.dir/src/group.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task1_lib.dir/src/group.cpp.s"
 	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Mary\CLionProjects\tp-lab-5\src\group.cpp -o CMakeFiles\task1_lib.dir\src\group.cpp.s
 
-CMakeFiles/task1_lib.dir/src/main.cpp.obj: CMakeFiles/task1_lib.dir/flags.make
-CMakeFiles/task1_lib.dir/src/main.cpp.obj: CMakeFiles/task1_lib.dir/includes_CXX.rsp
-CMakeFiles/task1_lib.dir/src/main.cpp.obj: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\Mary\CLionProjects\tp-lab-5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/task1_lib.dir/src/main.cpp.obj"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\task1_lib.dir\src\main.cpp.obj -c C:\Users\Mary\CLionProjects\tp-lab-5\src\main.cpp
-
-CMakeFiles/task1_lib.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/task1_lib.dir/src/main.cpp.i"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\Mary\CLionProjects\tp-lab-5\src\main.cpp > CMakeFiles\task1_lib.dir\src\main.cpp.i
-
-CMakeFiles/task1_lib.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/task1_lib.dir/src/main.cpp.s"
-	C:\PROGRA~2\CODEBL~1\MinGW\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\Mary\CLionProjects\tp-lab-5\src\main.cpp -o CMakeFiles\task1_lib.dir\src\main.cpp.s
-
 # Object files for target task1_lib
 task1_lib_OBJECTS = \
 "CMakeFiles/task1_lib.dir/src/dean.cpp.obj" \
 "CMakeFiles/task1_lib.dir/src/student.cpp.obj" \
-"CMakeFiles/task1_lib.dir/src/group.cpp.obj" \
-"CMakeFiles/task1_lib.dir/src/main.cpp.obj"
+"CMakeFiles/task1_lib.dir/src/group.cpp.obj"
 
 # External object files for target task1_lib
 task1_lib_EXTERNAL_OBJECTS =
@@ -125,10 +110,9 @@ task1_lib_EXTERNAL_OBJECTS =
 libtask1_lib.a: CMakeFiles/task1_lib.dir/src/dean.cpp.obj
 libtask1_lib.a: CMakeFiles/task1_lib.dir/src/student.cpp.obj
 libtask1_lib.a: CMakeFiles/task1_lib.dir/src/group.cpp.obj
-libtask1_lib.a: CMakeFiles/task1_lib.dir/src/main.cpp.obj
 libtask1_lib.a: CMakeFiles/task1_lib.dir/build.make
 libtask1_lib.a: CMakeFiles/task1_lib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Mary\CLionProjects\tp-lab-5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libtask1_lib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\Mary\CLionProjects\tp-lab-5\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libtask1_lib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles\task1_lib.dir\cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\task1_lib.dir\link.txt --verbose=$(VERBOSE)
 

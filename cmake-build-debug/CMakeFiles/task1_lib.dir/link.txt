@@ -1,2 +1,2 @@
-C:\PROGRA~2\CODEBL~1\MinGW\bin\ar.exe qc libtask1_lib.a  CMakeFiles/task1_lib.dir/src/dean.cpp.obj CMakeFiles/task1_lib.dir/src/student.cpp.obj CMakeFiles/task1_lib.dir/src/group.cpp.obj CMakeFiles/task1_lib.dir/src/main.cpp.obj
+C:\PROGRA~2\CODEBL~1\MinGW\bin\ar.exe qc libtask1_lib.a  CMakeFiles/task1_lib.dir/src/dean.cpp.obj CMakeFiles/task1_lib.dir/src/student.cpp.obj CMakeFiles/task1_lib.dir/src/group.cpp.obj
 C:\PROGRA~2\CODEBL~1\MinGW\bin\ranlib.exe libtask1_lib.a

@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/Mary/CLionProjects/tp-lab-5/src/dean.cpp" "C:/Users/Mary/CLionProjects/tp-lab-5/cmake-build-debug/CMakeFiles/task1_lib.dir/src/dean.cpp.obj"
   "C:/Users/Mary/CLionProjects/tp-lab-5/src/group.cpp" "C:/Users/Mary/CLionProjects/tp-lab-5/cmake-build-debug/CMakeFiles/task1_lib.dir/src/group.cpp.obj"
-  "C:/Users/Mary/CLionProjects/tp-lab-5/src/main.cpp" "C:/Users/Mary/CLionProjects/tp-lab-5/cmake-build-debug/CMakeFiles/task1_lib.dir/src/main.cpp.obj"
   "C:/Users/Mary/CLionProjects/tp-lab-5/src/student.cpp" "C:/Users/Mary/CLionProjects/tp-lab-5/cmake-build-debug/CMakeFiles/task1_lib.dir/src/student.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
