@@ -20,7 +20,7 @@ TEST(student, test2) {
 	student->addMark(3);
 	student->addMark(4);
 	double avrg = student->averageMark();
-	EXPECT_EQ(4 avrg);
+	EXPECT_EQ(4, avrg);
 	}
 	
 TEST(group, test1) {
