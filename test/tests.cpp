@@ -27,4 +27,8 @@ TEST(deanery, averageforstud){
 	double mark = hse.getAverageStudent(group, "Ogurliev Anzor");
 	EXPECT_EQ(5, mark);
 }
-	
+TEST (deanery, compareoftitles){
+	Deanery hse;
+	Group* PMI = hse.createGroup("18-PMI", "Прикладная математика и информатика");
+	EXPECT_EQ("18-PMI",PMI->getTitle());
+}
