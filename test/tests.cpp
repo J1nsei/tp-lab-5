@@ -44,6 +44,6 @@ TEST (deanery, chooseofhead) {
 	Group* PI = hse.createGroup("18-PI", "Программная инженерия");
 	hse.createStudent(12,"Данилов Сергей Дмитриевич", PI);
 	PI->chooseHead();
-	EXPECT_NE(NULL, BI->getHead());
+	EXPECT_NE(NULL, PI->getHead());
 	
 }
