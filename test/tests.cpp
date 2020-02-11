@@ -27,9 +27,9 @@ TEST(testGroup, middle_mark)
 	student1->AddMark(3);
 	student1->AddMark(4);
 	student2->AddMark(1);
-	student3->AddMark(2);
-	student4->AddMark(3);
-	student5->AddMark(4);
+	student2->AddMark(2);
+	student2->AddMark(3);
+	student2->AddMark(4);
 	group1->AddStudent(student1);
 	group1->AddStudent(student2);
 
