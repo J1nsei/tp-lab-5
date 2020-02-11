@@ -87,7 +87,7 @@ void Deanery::transferStudent(string fio, string to) {
 		if (student != nullptr) break;
 	}
 	if (student == nullptr) {
-		cout << "У нас нет такого студента!" << endl;
+		cout << "There are no students with this FIO" << endl;
 		return;
 	}
 	Group* from_group = student->getGroup();
@@ -101,10 +101,10 @@ void Deanery::getStatistics() {
 	double avrMark;
 	for (auto gr : groups) {
 		avrMark = gr->averageGroupMark();
-		cout << "Группа: " << gr->getGroupName() << ", специальность: " << gr->getGroupSpec() << endl;
-		cout << "Число студентов: " << gr->getGroupStudents().size() << endl;
-		cout << "ФИО старосты: " << gr->getGroupHead()->getName() << endl;
-		cout << "Средняя оценка: " << avrMark << endl;
+		cout << "Group: " << gr->getGroupName() << ", specialization: " << gr->getGroupSpec() << endl;
+		cout << "Number of students: " << gr->getGroupStudents().size() << endl;
+		cout << "Head FIO: " << gr->getGroupHead()->getName() << endl;
+		cout << "Average mark: " << avrMark << endl;
 		Student* best = nullptr;
 		Student* worst = nullptr;
 		double best_mark = 0, worst_mark = 5;
@@ -119,8 +119,8 @@ void Deanery::getStatistics() {
 					worst_mark = student->averageMark();
 				}
 		}
-		cout << "Лучший студент группы: " << best->getName() << " со средним баллом " << best_mark << endl;
-		cout << "Худший студент группы: " << worst->getName() << " со средним баллом " << worst_mark << endl << endl;
+		cout << "Best student of the group: " << best->getName() << " with average mark " << best_mark << endl;
+		cout << "Worst student of the group: " << worst->getName() << " with average mark " << worst_mark << endl << endl;
 	}
 }
 
@@ -131,13 +131,13 @@ void Deanery::saveData() {
 	vector<int> marks;
 	for (auto gr : groups) {
 		students = gr->getGroupStudents();
-		fout << "Группа: " << gr->getGroupName() << ", специальность: " << gr->getGroupSpec() << endl;
-		fout << "Средняя оценка: " << gr->averageGroupMark() << endl;
-		fout << "Староста: " << gr->getGroupHead()->getName() << endl << endl;
+		fout << "Group: " << gr->getGroupName() << ", specialization: " << gr->getGroupSpec() << endl;
+		fout << "Average mark: " << gr->averageGroupMark() << endl;
+		fout << "Head: " << gr->getGroupHead()->getName() << endl << endl;
 		for (auto student : students) {
 			fout << student->getName() << endl;
 			marks = student->getMarks();
-			fout << "Оценки: ";
+			fout << "Marks: ";
 			for (int i = 0; i < marks.size(); i++)
 				fout << marks[i] << ' ';
 			fout << endl << endl;
