@@ -9,14 +9,6 @@ Deanery::~Deanery()
 {
 }
 
-// string Deanery::readFIO(ifstream f)
-//{
-//	string fio = "";
-//	f >> fio;
-//	string buf = "";
-//	f >> buf;
-//	return fio + buf;
-//}
 
 void Deanery::createGroups()
 {
@@ -160,6 +152,12 @@ Student* Deanery::findStudent(int id)
 }
 
 
+
+returns Deanery::addGroup(Group* group)
+{
+	groups.push_back(group);
+	return OK;
+}
 
 void Deanery::printGroups()
 {

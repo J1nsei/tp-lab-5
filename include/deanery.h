@@ -5,6 +5,8 @@
 #include "group.h"
 
 
+
+
 class Deanery
 {
 public:
@@ -12,6 +14,7 @@ public:
 	~Deanery();
 	void createGroups();
 
+	returns addGroup(Group* group);
 	void printGroups();
 
 	void setRandMarks();
@@ -35,6 +38,5 @@ public:
 private:
 	vector<Group*> groups;
 	Student* createStudent(string fio, int id, Group* group);
-	//string readFIO(ifstream f);
 };
 
