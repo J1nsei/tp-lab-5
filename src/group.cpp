@@ -13,6 +13,7 @@ Group::~Group()
 
  void Group::addStudent(Student* student)
 {
+	student->addToGroup(this);
 	students.push_back(student);
 }
 

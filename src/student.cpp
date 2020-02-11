@@ -15,6 +15,7 @@ Student::~Student()
  void Student::addToGroup(Group* group)
 {
 	this->group = group;
+	group->addStudent(this);
 }
 
 void Student::addMark(int mark)
