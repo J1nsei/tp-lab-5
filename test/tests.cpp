@@ -34,6 +34,6 @@ TEST (deanery, compareoftitles){
 }
 TEST (deanery, compareofspecializations) {
 	Deanery hse;
-	Group* PI = hse.createGroup("18-BI", "Бизнес-информатика");
+	Group* BI = hse.createGroup("18-BI", "Бизнес-информатика");
 	EXPECT_EQ("Бизнес-информатика",BI->getSpec());
 }
