@@ -3,8 +3,9 @@
 //
 #include <iostream>
 #include <vector>
-#include "dean.h"
 #include "student.h"
+#include "group.h"
+#include "dean.h"
 
 using namespace std;
 
@@ -61,7 +62,7 @@ int main()
     cout << "Переизбрание старост..." << endl;
     dean->ChangeHeads();
 
-    
+
     cout << "**********************************************************" << endl;
     cout << "Полная статистика:" << endl;
     dean->ShowStatistics();
