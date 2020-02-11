@@ -1,6 +1,6 @@
-#include "student.h"
-#include "group.h"
-#include "deanery.h"
+#include "Student.h"
+#include "Group.h"
+#include "Deanery.h"
 #include <Windows.h>
 
 int main() {
