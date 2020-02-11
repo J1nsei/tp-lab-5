@@ -1,5 +1,5 @@
 #pragma once
-#include "group.h"
+#include "Group.h"
 
 class Deanery {
 private:
