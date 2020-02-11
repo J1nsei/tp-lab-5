@@ -1,13 +1,8 @@
 #include "Student.h"
 #include "Group.h"
 #include "Deanery.h"
-#include <Windows.h>
 
 int main() {
-	setlocale(LC_ALL, "RUS");
-	SetConsoleCP(1251);
-	SetConsoleOutputCP(1251);
-
 	Deanery deanery = Deanery();
 	deanery.createGroups("groups.txt");
 	deanery.createStudents("students.txt");
