@@ -76,7 +76,7 @@ Dean::Dean(std::string path)
 
 void Dean::AddRandomMarksToStudents()
 {
-    srand(time(NULL));
+    //srand(time(NULL));
 
     for (auto group : this->groups)
         for (auto student : group->students)
@@ -107,15 +107,15 @@ bool Dean::ChangeGroupOfStudent(Group *from, Group *in, int ID)
 
 void Dean::CheckForKick()
 {
-    for (auto group : this->groups)
-        for (auto student : group->students)
+    for(Group* group : groups){
+        for(auto i = group->students.begin(); i != group->students.end(); i++)
         {
-            if (student->GetAverageMark() < 4)
-            {
-                group->KickStudent(student);
-                delete student;
+            if ((*i)->GetAverageMark() < 4){
+                group->KickStudent(*i);
+                i--;
             }
         }
+    }
 }
 
 void Dean::ShowStatistics()
