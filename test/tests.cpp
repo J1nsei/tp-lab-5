@@ -16,7 +16,7 @@ TEST(lab5, test1)
     EXPECT_EQ(student->GetAverageMark(), 2);
 }
 
-TEST(lab5, test2)
+/*TEST(lab5, test2)
 {
     Dean* dean = new Dean("students.txt");
     EXPECT_EQ(dean->GetGroup("18ПИ-1")->FindStudent(1), dean->ChangeGroupOfStudent(dean->GetGroup("18ПИ-1"), dean->GetGroup("18ПИ-2"), 1));
@@ -32,6 +32,6 @@ TEST(lab5, test4)
 {
     Dean* dean = new Dean("students.txt");
     EXPECT_EQ(dean->GetGroup("18ПИ-2")->FindStudent(3), dean->ChangeGroupOfStudent(dean->GetGroup("18ПИ-2"), dean->GetGroup("18ПИ-1"), 3));
-}
+}*/
 
 
