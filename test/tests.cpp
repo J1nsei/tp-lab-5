@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "Deanery.h"
+#include <string>
 
 TEST(task1, dean_1){
     Group* group = new Group("18PI-1")
