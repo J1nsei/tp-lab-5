@@ -4,7 +4,7 @@
 
 TEST(task1, dean_1){
     Group* group = new Group("18PI-1");
-    EXPECT_STREQ("18PI-1", group->getTitle());
+    EXPECT_EQ("18PI-1", group->getTitle());
     delete group;
 }
 
