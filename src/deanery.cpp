@@ -313,7 +313,7 @@ std::vector<int> Deanery::readMarks(std::string Marks)
 			str >> mark;
 			marks.push_back(mark);
 		}
-		str = std::stringstream();
+		str.str(std::string());
 	}
 	return marks;
 }
