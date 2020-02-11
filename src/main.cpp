@@ -3,7 +3,6 @@
 #include <vector>
 #include <sstream>
 #include <fstream>
-#include <conio.h>
 #include "class.h"
 
 std::vector<std::string> split(const std::string& s, char delimiter)
@@ -31,10 +30,10 @@ void main()
 	}
 
 	FILE *allstudents;
-	allstudents = fopen("allstudents.txt", "w"); //здесь будет обновленный список
+	allstudents = fopen("allstudents.txt", "w"); //Г§Г¤ГҐГ±Гј ГЎГіГ¤ГҐГІ Г®ГЎГ­Г®ГўГ«ГҐГ­Г­Г»Г© Г±ГЇГЁГ±Г®ГЄ
 
 	FILE *list;
-	list = fopen("list.txt", "w"); //здесь будет список со статистикой
+	list = fopen("list.txt", "w"); //Г§Г¤ГҐГ±Гј ГЎГіГ¤ГҐГІ Г±ГЇГЁГ±Г®ГЄ Г±Г® Г±ГІГ ГІГЁГ±ГІГЁГЄГ®Г©
 
 	Deanery HSE;
 	HSE.CreateSt(data);
@@ -48,15 +47,14 @@ void main()
 
 	HSE.ChooseLid();
 
-	HSE.DeleteSt(18); // Удалили старосту, вместо нее выбрали новую
+	HSE.DeleteSt(18); // Г“Г¤Г Г«ГЁГ«ГЁ Г±ГІГ Г°Г®Г±ГІГі, ГўГ¬ГҐГ±ГІГ® Г­ГҐГҐ ГўГ»ГЎГ°Г Г«ГЁ Г­Г®ГўГіГѕ
 
-	HSE.ChangeGr(70, second); //из 3 группы перевели во 2
+	HSE.ChangeGr(70, second); //ГЁГ§ 3 ГЈГ°ГіГЇГЇГ» ГЇГҐГ°ГҐГўГҐГ«ГЁ ГўГ® 2
 
 	HSE.about();
 	HSE.Statictic(list);
 	HSE.SaveData(allstudents);
 
-	getch();
 }
 
 */
