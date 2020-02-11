@@ -62,7 +62,7 @@ WHENCE_STREAM, WHENCE_QUEUE = range(2)
 
 
 class Token(object):
-    """Data container to represent a C++ token.
+    """data container to represent a C++ token.
 
     Tokens can be identifiers, syntax char(s), constants, or
     pre-processor directives.
