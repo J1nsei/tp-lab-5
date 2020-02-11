@@ -118,7 +118,7 @@ void Deanery::save_data(std::string file_name) {
     for (std::pair<std::string, Group*> pair : groups) {
         std::vector<Student*> students = pair.second->get_students();
         for (Student* st : students) {
-            buf = std::to_string(st->get_id()) + " " + st->get_last_name() + " " + st->get_first_name() + " " + st->get_secong_name() + ";" + pair.first + "\n";
+            buf = std::to_string(st->get_id()) + " " + st->get_last_name() + " " + st->get_first_name() + " " + st->get_second_name() + ";" + pair.first + "\n";
             file_to_save << buf;
         }
     }

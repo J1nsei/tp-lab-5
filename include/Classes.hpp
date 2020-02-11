@@ -40,7 +40,7 @@ public:
 	id_t get_id() {return id;}
 	std::string get_last_name() {return last_name;}
 	std::string get_first_name() {return first_name;}
-	std::string get_secong_name() {return second_name;}
+	std::string get_second_name() {return second_name;}
 	void set_as_head() {is_head = true;}
     void print_st_data_short();
     void print_fio();

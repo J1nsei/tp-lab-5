@@ -137,7 +137,7 @@ Student* Group::search_student(id_t id) {
 Student* Group::search_student(std::string fio) {
     std::vector<std::string> arr = split(fio, " ");
     for (Student* st : students) {
-        if (_check_fio(arr, {st->get_first_name(), st->get_secong_name(), st->get_last_name()})) {
+        if (_check_fio(arr, {st->get_first_name(), st->get_second_name(), st->get_last_name()})) {
             return st;
         }
     }

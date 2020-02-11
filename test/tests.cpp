@@ -61,7 +61,7 @@ TEST(group_test, search_test) {
 	gr->add_student(st2);
 	gr->add_student(st3);
 	EXPECT_EQ(st1, gr->search_student(1));
-	EXPECT_EQ(st2, gr->search_student("B1 B2 B3", NULL));
+	EXPECT_EQ(st2, gr->search_student("B1 B2 B3"));
 }
 
 
