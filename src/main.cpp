@@ -6,12 +6,10 @@
 #include <string>
 #include "Deanery.h"
 #include <time.h>
-#include <windows.h>
 using namespace std;
 
 int main(){
     srand(time(0));
-    SetConsoleOutputCP(CP_UTF8);
     Deanery* new_dean = new Deanery();
     cout<<"----------------"<<endl;
     new_dean->getStatistics();
