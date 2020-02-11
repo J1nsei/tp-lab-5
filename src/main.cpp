@@ -15,7 +15,7 @@ std::vector<std::string> split(const std::string& s, char delimiter)
 	return tokens;
 }
 
-void main()
+int main()
 {
 	setlocale(LC_ALL, "Russian");
 	std::ifstream file("students.txt");
@@ -54,7 +54,7 @@ void main()
 	HSE.about();
 	HSE.Statictic(list);
 	HSE.SaveData(allstudents);
-
+	return 0;
 }
 
 
