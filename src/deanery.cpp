@@ -82,7 +82,7 @@ void Deanery::save_new_data()
 		{
 			file << "ID: " << student->getId() << "\tФИО: " << student->getFio() << endl;
 			file << "Средний балл: " << student->average_mark() << endl;
-			cout << "Список оценок: ";
+			file << "Список оценок: ";
 			for (auto mark : student->getMarks())
 			{
 				
