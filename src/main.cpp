@@ -47,26 +47,21 @@ int main() {
 	system("chcp 1251");
 
 	Deanery dean;
+	cout << "Initialising groups and students:" << endl;
 	dean.createGroups();
 	dean.createStudents();
+
+	cout << endl << "Chosing Heads in each group:" << endl;
 	dean.initiateHeadChoice();
+
+	cout << endl << "Deleting student: 1 group (18AI), id:1" << endl;
 	dean.studentDismissal(0, 1);
+
+	cout << "Transfer student: from 1 group (18AI), id:2 ---> to 2 group (18BI)" << endl << endl;
 	dean.studentTransfer(0, 2, 1);
+
+	cout << "Dismiss all students with average mark < 4.5 / print and save final statistics" << endl;
 	dean.studentDismissalProgressless();
 	dean.statistics();
-
-	/*Group testGroup("testGroup");
-	Student* first = new Student("Паша Зайцев");
-	Student* second = new Student("Маша Лисичкина");
-	first->addMark(5);
-	first->addMark(6);
-	second->addMark(7);
-	second->addMark(8);
-	
-	testGroup.recieveStudent(first);
-	testGroup.recieveStudent(second);
-	testGroup.addRandomMarks();
-
-	cout << testGroup.averageGroupMark() << endl;*/
 	
 }
