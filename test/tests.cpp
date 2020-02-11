@@ -44,7 +44,7 @@ TEST(lab5, task3){
 	
 }
 
-TEST(lab5, task3){
+TEST(lab5, task4){
 	Student stud1(0, "Alex");;
 	Student stud2(1, "Ivan");
 	Student stud3(2, "Max");
