@@ -1,0 +1,4 @@
+18PMI-1|Applied Mathematics
+18PMI-2|Applied Mathematics
+18BI-1|Business Computer Science
+18BI-2|Business Computer Science
