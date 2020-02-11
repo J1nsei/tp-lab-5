@@ -3,7 +3,7 @@
 #include "Group.h"
 #include "Deanery.h"
 
-TEST(student, test1) {
+TEST(students, test1) {
 	Student* student = new Student("Goodwin Carol Georgiana", 1);
 	student->addMark(2);
 	student->addMark(4);
@@ -14,7 +14,7 @@ TEST(student, test1) {
 	EXPECT_EQ(5, len);
 	}
 
-TEST(student, test2) {
+TEST(students, test2) {
 	Student* student = new Student("Goodwin Carol Georgiana", 1);
 	student->addMark(5);
 	student->addMark(3);
@@ -74,7 +74,7 @@ TEST(group, test4) {
 	economy->addStudent(student2);
 	economy->addStudent(student3);
 	economy->addStudent(student4);
-	head* head_name = economy->chooseHead();
+	Student* head_name = economy->chooseHead();
 	EXPECT_EQ(head_name->getName(), economy->getGroupHead()->getName());
 	}
 	
