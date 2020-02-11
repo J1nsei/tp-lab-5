@@ -8,6 +8,21 @@ TEST(lab5, first_check) {
 	EXPECT_EQ(234, student->getID());
 }
 
+TEST(lab5, group_check){
+	Group *group = new Group("G1");
+	EXPECT_EQ("G1",group->getTitle());
+	group->setSpec("IT");
+	EXPECT_EQ("IT",group->getSpec());
+	Student *s = new Student(123,"Fedor H");
+	s->addToGroup(group);
+	group->addStudent(s);
+	EXPECT_EQ(group,s->getGroup());
+	group->setHead(s);
+	EXPECT_EQ(s,group->getHead());
+}
+
+
+
 
 
 
