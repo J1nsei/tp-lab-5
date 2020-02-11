@@ -48,7 +48,7 @@ TEST(task1, case_4) {
 
     student->addToGroup(group);
 
-    EXPECT_EQ(group->search("Dmitry Tereshin"), student);
+    EXPECT_EQ(group->search("Polina Demochkina"), student);
 }
 
 
