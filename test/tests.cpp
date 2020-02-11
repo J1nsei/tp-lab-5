@@ -2,11 +2,11 @@
 #include "Deanery.h"
 #include <string>
 
-/*TEST(task1, dean_1){
-    Group* group = new Group("18PI-1")
+TEST(task1, dean_1){
+    Group* group = new Group("18PI-1");
     EXPECT_STREQ("18PI-1", group->getTitle());
     delete group;
-}*/
+}
 
 TEST(task1, dean_2){
     Student* student = new Student("Андрей Кленков Дмитриевич");
