@@ -9,7 +9,7 @@ TEST(lab5, test1)
 {
     /*Dean* dean = new Dean("students.txt");
     EXPECT_EQ(dean->GetGroup("18ПИ-1")->FindStudent(0), dean->ChangeGroupOfStudent(dean->GetGroup("18ПИ-1"), dean->GetGroup("18ПИ-2"), 0));*/
-    Student* student = new Student();
+    Student* student = new Student("Baranov Egor");
     student->AddMark(1);
     student->AddMark(2);
     student->AddMark(3);
