@@ -16,7 +16,6 @@ TEST(lab5, test1)
     EXPECT_EQ(student->GetAverageMark(), 2);
 }
 
-/*
 TEST(lab5, test2)
 {
     Dean* dean = new Dean("students.txt");
@@ -36,4 +35,3 @@ TEST(lab5, test4)
 }
 
 
-*/
