@@ -27,6 +27,8 @@ TEST(lab5, dean_check){
 	Group *G2 = new Group("G2");
 	Student *s = new Student(1,"A A");
 	G1->addStudent(s);
+	d.addGroup(G1);
+	d.addGroup(G2);
 	s = new	Student(2,"B B");
 	G1->addStudent(s);
 	s = new Student(3,"F F");
