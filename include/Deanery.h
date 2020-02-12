@@ -8,7 +8,7 @@
 class Deanery {
 private:
     vector<Group*> groups;
-    int stringToInt(const string& word);
+    int stringToInt(tring word);
 
 public:
     Deanery();
