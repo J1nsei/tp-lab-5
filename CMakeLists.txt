@@ -71,4 +71,4 @@ if (BUILD_TESTS)
     SET(CMAKE_C_FLAGS "-g -O0 -fprofile-arcs -ftest-coverage")
   endif() #CMAKE_BUILD_TYPE STREQUAL "Coverage"
 
-endif()
+endif() 
