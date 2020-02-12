@@ -24,6 +24,8 @@ void Student::addMark(int mark) {
 }
 double Student::getAverageMark() {
     double sum = 0;
+    if (this->marks.empty())
+        return 0;
     for (auto i = 0; i < this->marks.size(); i ++){
         sum += marks[i];
     }

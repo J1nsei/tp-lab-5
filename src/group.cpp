@@ -53,10 +53,12 @@ string Group::getTitle() {
 
 double Group::getAverageMark() {
     double sum = 0;
+    if (this->students.size() == 0)
+        return 0;
     for (auto i = 0; i < this->students.size(); i ++){
         sum += this->students[i]->getAverageMark();
     }
-    return (sum / this->students.size());
+    return sum/students.size();
 }
 
 void Group::fireStudent(Student *student) {
