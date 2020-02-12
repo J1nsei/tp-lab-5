@@ -4,7 +4,7 @@
 
 TEST(lab5, task1){
 Group* group = new Group("19БИ-2");
-EXPECT_EQ("19БИ-2", group->getTitle());
+EXPECT_EQ("19БИ-2", group->GetTitle());
 delete group;
 }
 
@@ -12,13 +12,13 @@ TEST(lab5, task2){
 Student* student = new Student("Ювелева Екатерина Леонидовна");
 student->addMark(4);
 student->addMark(6);
-EXPECT_EQ(5,student->getAverageMark());
+EXPECT_EQ(5,student->GetAverageMark());
 delete student;
 }
 
 TEST(lab5, task3){
 Student* student = new Student("Ювелева Екатерина Леонидовна");
-EXPECT_EQ("Ювелева Екатерина Леонидовна", student->getFio());
+EXPECT_EQ("Ювелева Екатерина Леонидовна", student->GetFio());
 delete student;
 }
 
