@@ -27,8 +27,8 @@ TEST(testGroup, test2) {
     student2->addMark(4);
     student2->addMark(4);
     student2->addMark(3);
-    group1->AddStudent(student1);
-    group1->AddStudent(student2);
+    group1->addStudent(student1);
+    group1->addStudent(student2);
 
     EXPECT_EQ(4, group1->averageMark());
 
