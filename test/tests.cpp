@@ -30,6 +30,6 @@ TEST(testGroup, test2) {
     group1->addStudent(student1);
     group1->addStudent(student2);
 
-    EXPECT_EQ(4, group1->averageMark());
+    EXPECT_EQ(3.5, group1->averageMark());
 
 }
