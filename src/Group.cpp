@@ -1,5 +1,5 @@
 #include "Group.h"
-#include "student.h"
+#include "Student.h"
 #include <cstdlib>
 #include <ctime>
 #include <algorithm>
