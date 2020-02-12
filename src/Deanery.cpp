@@ -150,18 +150,18 @@ void Deanery::printData() {
     }
 }
 
-int Deanery::stringToInt(const string& word) {
+int Deanery::stringToInt(string word) {
     int i;
-    try{
-        i = stoi(word);
-        //cout<<"   strToInt="<<i<<"   ";
-    }
-    catch (std::invalid_argument const &e) {
-        cout<<"Wrong!!! Invalid input";
-    }
-    catch (std::out_of_range const &e) {
-        cout<<"Wrong!!! Overflow";
-    }
+
+    i = stoi(word);
+    //cout<<"   strToInt="<<i<<"   ";
+
+
+
+
+
+
+
 
     return i;
 }
