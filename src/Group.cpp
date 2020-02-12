@@ -68,6 +68,9 @@ int Group::getMidMark(){
 void Group::deleteStudent(Student* st){
     vector<Student*>::iterator it = this->students.begin();
     while(*it != st){
+        if(it == this->students.end()){
+            return;
+        }
         ++it;
     }
     if(*it == st){
