@@ -12,18 +12,19 @@ class Student {
 private:
     int id;
     string fio;
-    Group g;
+    Group* g;
     vector<int> marks;
 
 public:
     Student(int id, string fio);
     ~Student();
 
-    void setGroup(Group g);
+    void setGroup(Group* g);
     void setMarks(vector<int> &marks);
     double averageMark();
     int getId();
     string getFio();
+    void addMark(int mark);
 
 };
 

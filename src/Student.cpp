@@ -9,7 +9,7 @@ Student::~Student() {
 
 }
 
-void Student::setGroup(Group g) {
+void Student::setGroup(Group* g) {
     this->g = g;
 }
 
@@ -32,6 +32,16 @@ double Student::averageMark() {
     for (auto i:marks){
         average += i;
     }
-    return average/marks.size();
+    if (marks.size() < 1){
+        return 0;
+    }
+    else{
+        return average/marks.size();
+    }
 }
+
+void Student::addMark(int mark) {
+    marks.push_back(mark);
+}
+
 

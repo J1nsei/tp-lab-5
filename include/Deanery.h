@@ -3,22 +3,24 @@
 
 
 #include "Group.h"
+#include "Student.h"
 
 class Deanery {
 private:
-    Group groups;
+    vector<Group*> groups;
+    int stringToInt(const string& word);
 
 public:
-    void importStudents(string name, auto g = 0);
-    void importGroup(string name, string groupName);
-    void addRandomMark();
+    Deanery();
+    void importFile(string name, string group="", string groupSpec="");
+    void addGroup(Group* g);
+    void addRandomMarks();
     void getStatistic();
-    void transfer(int id, string tq, string t2);
+    void transfer(int id, string gTitle1, string gTitle2);
     void exclude();
     void exportData(string name="example.txt");
     void takeHeaders();
     void printData();
-    int stringToInt(string word);
 
 };
 

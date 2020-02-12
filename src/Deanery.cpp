@@ -1,57 +1,77 @@
 #include "Deanery.h"
 #include "Group.h"
+#include "Student.h"
 #include <ctime>
 #include <iostream>
 #include <fstream>
 
 using namespace std;
 
-void Deanery::importStudents(string name, auto g) {
+Deanery::Deanery() {
+    Group* g = new Group("Unknown Group","Unknown Spec");
+    groups = vector<Group*>();
+    groups.push_back(g);
+}
+
+void Deanery::addGroup(Group* g) {
+    groups.push_back(g);
+}
+
+void Deanery::importFile(string name, string groupName, string groupSpec) {
     int id = 0;
+    Group* g = nullptr;
     string fio;
     ifstream myfile(name);
+
+    if(groupName!="" && groupSpec!=""){
+        g = new Group(groupName, groupSpec);
+        groups.push_back(g);
+    }
+
     if (myfile.is_open())
     {
         while (! myfile.eof() ) {
             string line;
             getline(myfile, line);
             string delimiter = " ";
-            int pos = 0;
-            while ((pos = line.find(" ") != std::string::npos)) {
+            int pos = 0, pos1 = 0;
+            while ((pos = line.find(' ') != std::string::npos)) {
                 string word = line.substr(0, pos);
-                cout<<word;
-                line.erase(0, pos + delimiter.length());
+                line.erase(0, 1);
+                if (word == " ")
+                    continue;
+                //cout<<line<<endl;
                 if(id == 0) {
                     id = stringToInt(word);
-                    id++;
                 }
                 else {
                     fio += word;
                 }
             }
             fio += line;
-            cout<<line;
-            groups[0].addStudent(id, fio);
+            cout<<id<<endl;
+            cout<<fio<<endl;
+
+            Student* student = new Student(id, fio);
+            if(g!= nullptr){
+                g->addStudent(student);
+                student->setGroup(g);
+            }
+            else{
+                groups[0]->addStudent(student);
+            }
         }
         myfile.close();
     }
     else cout << "Unable to open file";
 }
 
-void Deanery::importGroup(string name, string groupName) {
-    for(auto i:groups) {
-        if(i.getTitle == groupName) {
-            importStudents(name, i);
-        }
-    }
-}
-
-void Deanery::addRandomMark() {
+void Deanery::addRandomMarks() {
     srand(static_cast<unsigned int>(time(0)));
     for(auto i:groups){
-        for(auto j:i.students) {
-            for(auto k:j.marks) {
-                k.addMark(1 + rand() % 5)
+        for(auto j:i->getStudents()) {
+            for(int i=0;i<20;i++) {
+                j->addMark(1 + rand() % 5);
             }
         }
     }
@@ -59,71 +79,82 @@ void Deanery::addRandomMark() {
 
 void Deanery::getStatistic() {
     for(auto i:groups) {
-        std::cout << i.averageMark();
+        std::cout << i->averageMark()<<"   ";
     }
     for(auto i:groups) {
-        for (auto j:i.getStudents) {
-            std::cout<<j.averageMark();
+        for (auto j:i->getStudents()) {
+            std::cout<<j->averageMark()<<"   ";
         }
+        cout<<endl;
     }
 }
 
-void Deanery::transfer(int id, string t1, string t2) {
-    Group g1("", ""), g2("","");
+void Deanery::transfer(int id, string gTitle1, string gTitle2) {
+    Group *g1 = nullptr, *g2 = nullptr;
     for(auto i:groups) {
-        if(i.getTitle() == t1) {
-            Group g1 = i;
+        if(i->getTitle() == gTitle1) {
+            g1 = i;
         }
-        if(i.getTitle() == t2) {
-            Group g2 = i;
+        if(i->getTitle() == gTitle2) {
+            g2 = i;
         }
     }
-    g2.addStudent(g1.searchStudent(id));
-    g1.exclude(id);
+    if (g1 != nullptr && g2 != nullptr) {
+        cout<<"_1_";
+        Student *s = g1->searchStudent(id);
+        if (s != nullptr) {
+            cout<<"_2_";
+            g2->addStudent(s);
+            g1->exclude(id);
+        }
+    }
 }
 
 void Deanery::exclude() {
     for(auto i:groups) {
-        for(auto j:i.students) {
-            if(j.averageMark() <= 2) {
-                i.exclude(j);
+        for(auto j:i->getStudents()) {
+            if(j->averageMark() <= 2) {
+                i->exclude(j->getId());
             }
         }
     }
 }
 
-
 void Deanery::exportData(string name) {
     ofstream myfile;
     myfile.open(name);
-    for(auto i:groups) {
-        myfile<<i.getTitle()<<"   "<<i.getSpec<<"   "<<i.getHead().getFio()<<endl;
-        for(auto j:i.getStudents) {
-            myfile<<j.getId<<"   "<<j.getFio<<endl;
+    if (myfile.is_open()) {
+        for (auto i:groups) {
+            myfile << i->getTitle() << "   " << i->getSpec() << "\n head:" << i->getHead()->getFio() << endl;
+            for (auto j:i->getStudents()) {
+                myfile << "  " << j->getId() << "   " << j->getFio() << endl;
+            }
         }
+        myfile.close();
     }
-    myfile.close();
+    else cout << "Unable to open file";
 }
 
 void Deanery::takeHeaders() {
     for(auto i:groups) {
-        i.takeHead();
+        i->takeHead();
     }
 }
 
 void Deanery::printData() {
     for(auto i:groups) {
-        std::cout<<i.getTitle()<<"   "<<i.getSpec<<"   "<<i.getHead().getFio()<<endl;
-        for(auto j:i.getStudents) {
-            std::cout<<j.getId<<"   "<<j.getFio<<endl;
+        std::cout<<i->getTitle()<<"   "<<i->getSpec()<<endl;
+        for(auto j:i->getStudents()) {
+            std::cout<<"  "<<j->getId()<<"   "<<j->getFio()<<endl;
         }
     }
 }
 
-int Deanery::stringToInt(string word) {
+int Deanery::stringToInt(const string& word) {
+    int i;
     try{
-        int i = stoi(word);
-        cout<<"   strToInt="<<i<<"   ";
+        i = stoi(word);
+        //cout<<"   strToInt="<<i<<"   ";
     }
     catch (std::invalid_argument const &e) {
         cout<<"Wrong!!! Invalid input";
@@ -132,5 +163,8 @@ int Deanery::stringToInt(string word) {
         cout<<"Wrong!!! Overflow";
     }
 
-    return 0;
+    return i;
 }
+
+
+
