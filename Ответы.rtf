@@ -1,0 +1,60 @@
+{\rtf1\ansi\ansicpg1251\deff0\deflang1049{\fonttbl{\f0\fnil\fcharset204 Calibri;}{\f1\fnil\fcharset0 Calibri;}}
+{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\sa200\sl276\slmult1\b\f0\fs22\'c2\'ee\'ef\'f0\'ee\'f1\'fb:\lang1033\b0\f1\par
+1) \lang1049\f0\'ca\'e0\'ea \'c4\'e5\'ea\'e0\'ed\'e0\'f2 \'e2\'fb\'f7\'e8\'f1\'eb\'ff\'e5\'f2 \'f1\'f0\'e5\'e4\'ed\'e8\'e9 \'e1\'e0\'eb\'eb \'ef\'ee \'c3\'f0\'f3\'ef\'ef\'e0\'ec?\par
+\lang1033\f1 2) \lang1049\f0\'ca\'e0\'ea \'ef\'f0\'e0\'e2\'e8\'eb\'fc\'ed\'ee \'ef\'f0\'ee\'f2\'e5\'f1\'f2\'e8\'f0\'ee\'e2\'e0\'f2\'fc \'f0\'e0\'e1\'ee\'f2\'f3 \'c4\'e5\'ea\'e0\'ed\'e0\'f2\'e0?\par
+\lang1033\f1 3) \lang1049\f0\'c5\'f1\'f2\'fc \'eb\'e8 \'e2 \'ea\'eb\'e0\'f1\'f1\'e5 \'c4\'e5\'ea\'e0\'ed\'e0\'f2 \'f4\'f3\'ed\'ea\'f6\'e8\'e8, \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'fe\'f9\'e8\'e5 \'e4\'e0\'ed\'ed\'fb\'e5? \'cf\'ee\'f7\'e5\'ec\'f3?\par
+\lang1033\f1 4) \lang1049\f0\'ca\'e0\'ea \'ef\'f0\'ee\'e8\'f1\'f5\'ee\'e4\'ff\'f2 \'e2\'fb\'e1\'ee\'f0\'fb \'f1\'f2\'e0\'f0\'ee\'f1\'f2\'fb \'e2 \'c3\'f0\'f3\'ef\'ef\'e0\'f5?\par
+\lang1033\f1 5) \lang1049\f0\'c2 \'f7\'e5\'ec \'f0\'e0\'e7\'ed\'e8\'f6\'e0 \'ec\'e5\'e6\'e4\'f3 \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e5\'ed\'e8\'e5\'ec \'e8\'e7 \'f4\'f3\'ed\'ea\'f6\'e8\'e8 const string& \'e8 string&\lang1033\f1 ?\par
+\par
+\lang1049\b\f0\'ce\'f2\'e2\'e5\'f2\'fb:\lang1033\b0\f1\par
+\ul 1)\lang1049\ulnone\f0  \'ca \'ea\'e0\'e6\'e4\'ee\'ec\'f3 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'f3 \'e8\'e7 \'e2\'e5\'ea\'f2\'ee\'f0\'e0 \lang1033\b\f1 students\b0  \lang1049\f0\'f2\'e8\'ef\'e0 \lang1033\b\f1 Student*\lang1049\f0  \b0 (\'ea\'ee\'f2\'ee\'f0\'fb\'e9 \'ff\'e2\'eb\'ff\'e5\'f2\'f1\'ff \'ef\'ee\'eb\'e5\'ec \'ea\'eb\'e0\'f1\'f1\'e0 \lang1033\f1 Dean\lang1049\f0 )\lang1033\f1  \lang1049\f0\'ef\'f0\'e8\'ec\'e5\'ed\'ff\'e5\'f2\'f1\'ff \'ec\'e5\'f2\'ee\'e4 \lang1033\b\f1 unsigned long Student::getAverageMarks() \lang1049\b0\f0\'ea\'eb\'e0\'f1\'f1\'e0 \lang1033\b\f1 Student\lang1049\b0\f0 . \'cd\'e0 \'e2\'fb\'f5\'ee\'e4\'e5 \'ef\'ee\'eb\'f3\'f7\'e0\'e5\'ec \'f1\'f0\'e5\'e4\'ed\'fe\'fe \'ee\'f6\'e5\'ed\'ea\'f3 \'f2\'e8\'ef\'e0 \lang1033\b\f1 unsigned long.\par
+\lang1049\f0\'d0\'e5\'eb\'e8\'e7\'e0\'f6\'e8\'ff:\b0\par
+\i unsigned long Student::getAverageMarks()\par
+\{\par
+    unsigned long marksSum = 0;\par
+    for (int mark : marks)\par
+    \{\par
+        marksSum += mark;\par
+    \}\par
+    return marksSum / marks.size();\par
+\}\lang1033\b\f1\par
+\i0\par
+\ul\b0 2\lang1049\ulnone\f0 ) \'c4\'eb\'ff \'ef\'f0\'e0\'e2\'e8\'eb\'fc\'ed\'ee\'e3\'ee \'f2\'e5\'f1\'f2\'e8\'f0\'ee\'e2\'e0\'ed\'e8\'ff \'f0\'e0\'e1\'ee\'f2\'fb \'c4\'e5\'ea\'e0\'ed\'e0\'f2\'e0 \'ed\'f3\'e6\'ed\'ee\lang1033\f1 :\lang1049\f0  \par
+-\'d1\'ee\'e7\'e4\'e0\'f2\'fc \'f1\'e0\'ec \'e4\'e5\'ea\'e0\'ed\'e0\'f2 (\i Deanery deanery("../students.txt", "../groups.txt");\i0 )\lang1033\f1\par
+\lang1049\f0 -\'d1\'ee\'e7\'e4\'e0\'f2\'fc \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'ee\'e2 \'e8\'e7 \'f4\'e0\'e9\'eb\'e0 (\i deanery.addStudents();\i0 )\par
+-\'d1\'ee\'e7\'e4\'e0\'f2\'fc \'e3\'f0\'f3\'ef\'ef\'fb \'e8 \'e7\'e0\'ea\'e8\'ed\'f3\'f2\'fc \'e2 \'ed\'e8\'f5 \'f1\'ee\'e7\'e4\'e0\'ed\'ed\'fb\'f5 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'ee\'e2(\i deanery.addGroups();)\i0\par
+-\'c8\'e7\'e1\'f0\'e0\'f2\'fc \'f1\'f2\'e0\'f0\'ee\'f1\'f2 \'e4\'eb\'ff \'e3\'f0\'f3\'ef\'ef (\i deanery.electHeadmans();)\i0\par
+-\'d1\'e3\'e5\'ed\'e5\'f0\'e8\'f0\'ee\'e2\'e0\'f2\'fc \'ee\'f6\'e5\'ed\'ea\'e8 \'e4\'eb\'ff \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'ee\'e2 (\i deanery.setMarks();)\i0\par
+-\'c2\'fb\'e2\'e5\'f1\'f2\'e8 \'e4\'e0\'ed\'ed\'fb\'e5 \'e2 \'f4\'e0\'e9\'eb \'e8 \'ed\'e0 \'ea\'ee\'ed\'f1\'ee\'eb\'fc (\i deanery.getStatistics(); deanery.updateData("statistics.txt"); deanery.printConsole();\i0 ), \'ef\'ee\'f1\'ec\'ee\'f2\'f0\'e5\'f2\'fc, \'f1\'f3\'f9\'e5\'f1\'f2\'e2\'f3\'fe\'f2 \'eb\'e8 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'fb, \'e3\'f0\'f3\'ef\'ef\'fb, \'e8\'f5 \'f1\'f2\'e0\'f0\'ee\'f1\'f2\'fb, \'ea\'ee\'f0\'f0\'e5\'ea\'f2\'ed\'ee \'eb\'e8 \'ee\'f2\'ee\'e1\'f0\'e0\'e6\'e0\'fe\'f2\'f1\'ff \'e4\'e0\'ed\'ed\'fb\'e5, \'ef\'f0\'ee\'e7\'e2\'e5\'e4\'e5\'ed\'e0 \'eb\'e8 \'e7\'e0\'ef\'e8\'f1\'fc \'e2 \'f4\'e0\'e9\'eb, \'f1\'f0\'e0\'e2\'ed\'e8\'f2\'fc \'e4\'e0\'ed\'ed\'fb\'e5 \'e2 \'f4\'e0\'e9\'eb\'e5 \'f1 \'ee\'e6\'e8\'e4\'e0\'e5\'ec\'fb\'ec\'e8 \'e7\'ed\'e0\'f7\'e5\'ed\'e8\'ff\'ec\'e8 \'e8\'f1\'ef\'ee\'eb\'fc\'e7\'f3\'ff \'ec\'e0\'ea\'f0\'ee\'f1 \'f2\'e5\'f1\'f2\'e8\'f0\'ee\'e2\'e0\'ed\'e8\'ff \b EXPECT_EQ\b0 .\par
+-\'c8\'f1\'ea\'eb\'fe\'f7\'e8\'f2\'fc \'ed\'e5\'f3\'f1\'ef\'e5\'e2\'e0\'fe\'f9\'e8\'f5 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'ee\'e2 (\lang1033\i\f1 d\lang1049\f0 eanery\lang1033\f1 .\lang1049\f0 removeStudents()\lang1033\f1 ;\i0 ) \par
+-\lang1049\f0\'d1\'ed\'ee\'e2\'e0 \'e2\'fb\'e2\'e5\'f1\'f2\'e8 \'e4\'e0\'ed\'ed\'fb\'e5 \'e2 \'f4\'e0\'e9\'eb \'e8 \'ed\'e0 \'ea\'ee\'ed\'f1\'ee\'eb\'fc, \'ef\'f0\'ee\'e2\'e5\'f1\'f2\'e8 \'e0\'ed\'e0\'eb\'ee\'e3\'e8\'f7\'ed\'fb\'e5 \'ef\'f0\'ee\'e2\'e5\'f0\'ea\'e8 \'ef\'eb\'fe\'f1 \'f1\'f0\'e0\'e2\'ed\'e8\'f2\'fc \'f1 \'e4\'e0\'ed\'ed\'fb\'ec\'e8 \'e4\'ee \'e8\'f1\'ea\'eb\'fe\'f7\'e5\'ed\'e8\'ff \'ed\'e5\'f3\'f1\'ef\'e5\'e2\'e0\'fe\'f9\'e8\'f5 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'ee\'e2, \'f3\'e1\'e5\'e4\'e8\'f2\'fc\'f1\'ff, \'f7\'f2\'ee \'e8\'f1\'ea\'eb\'fe\'f7\'e5\'ed\'fb \'f2\'ee\'eb\'fc\'ea\'ee \'ed\'f3\'e6\'ed\'fb\'e5 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'fb.\par
+-\'cf\'e5\'f0\'e5\'e2\'e5\'f1\'f2\'e8 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'e0 \'e8\'e7 \'ee\'e4\'ed\'ee\'e9 \'e3\'f0\'f3\'ef\'ef\'fb \'e2 \'e4\'f0\'f3\'e3\'f3\'fe \lang1033\f1 (\i deanery.\lang1049\f0 changeGroup(Student *student, const std::string& groupTitle\lang1033\i0\f1 )\par
+-\lang1049\f0\'c2 \'ee\'f7\'e5\'f0\'e5\'e4\'ed\'ee\'e9 \'f0\'e0\'e7 \'e2\'fb\'e2\'e5\'f1\'f2\'e8 \'e4\'e0\'ed\'ed\'fb\'e5 \'e2 \'f4\'e0\'e9\'eb \'e8 \'ed\'e0 \'ea\'ee\'ed\'f1\'ee\'eb\'fc, \'ef\'f0\'ee\'e2\'e5\'f1\'f2\'e8 \'e0\'ed\'e0\'eb\'ee\'e3\'e8\'f7\'ed\'fb\'e5 \'ef\'f0\'ee\'e2\'e5\'f0\'ea\'e8.\lang1033\i\f1\par
+\ul\i0 3)\lang1049\ulnone\f0  \'c2 \'ea\'eb\'e0\'f1\'f1\'e5 \'e4\'e5\'ea\'e0\'ed\'e0\'f2 \'ef\'f0\'e8\'f1\'f3\'f2\'f1\'f2\'e2\'f3\'e5\'f2 \'f4\'f3\'ed\'ea\'f6\'e8\'ff\b  int getStudentsAmount() \b0\'ea\'ee\'f2\'ee\'f0\'e0\'ff \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'e5\'f2 \'f0\'e0\'e7\'ec\'e5\'f0 \'e2\'e5\'ea\'f2\'ee\'f0\'e0 \lang1033\b\f1 students\b0  \lang1049\f0\'e8 \'f1\'eb\'f3\'e6\'e8\'f2 \'f4\'f3\'ed\'ea\'f6\'e8\'e5\'e9 \'e4\'ee\'f1\'f2\'f3\'ef\'e0 (\'e3\'e5\'f2\'f2\'e5\'f0\'ee\'ec) \'ea \'f0\'e0\'e7\'ec\'e5\'f0\'f3 \'e2\'e5\'ea\'f2\'ee\'f0\'e0 \lang1033\b\f1 students.\lang1049\f0  \lang1033\b0\f1\par
+\lang1049\b\f0\'d0\'e5\'e0\'eb\'e8\'e7\'e0\'f6\'e8\'ff\lang1033\f1 :\par
+\b0\i int Deanery::getStudentsAmount()\par
+\{\par
+    return students.size();\par
+\}\par
+\b\par
+\ul\b0\i0 4)\lang1049\ulnone\f0  \'d1\'f2\'e0\'f0\'ee\'f1\'f2\'e0 \'e3\'f0\'f3\'ef\'ef\'fb \'e2\'fb\'e1\'e8\'f0\'e0\'e5\'f2\'f1\'ff \'f1\'eb\'f3\'f7\'e0\'e9\'ed\'fb\'ec \'ee\'e1\'f0\'e0\'e7\'ee\'ec \'e2\'fb\'e7\'ee\'e2\'ee\'ec \'ec\'e5\'f2\'ee\'e4\'e0\b\i  \lang1033\i0\f1 electHeadman()\lang1049\f0  \b0\'ea\'eb\'e0\'f1\'f1\'e0 \lang1033\b\f1 Group\b0  \lang1049\f0\'e8 \lang1033\f1 "\lang1049\f0\'ff\'e2\'eb\'ff\'e5\'f2\'f1\'ff\lang1033\f1 " \lang1049\f0\'f2\'e8\'ef\'ee\'ec \lang1033\b\f1 Student*. \lang1049\b0\f0\'d1\'ed\'e0\'f7\'e0\'eb\'e0 \'ef\'f0\'ee\'e8\'f1\'f5\'ee\'e4\'e8\'f2 \'ef\'f0\'ee\'e2\'e5\'f0\'ea\'e0 \'ef\'f3\'f1\'f2\'ee\'e9 \'eb\'e8 \'e2\'e5\'ea\'f2\'ee\'f0 \lang1033\b\f1 students\b0  (\lang1049\f0\'e5\'f1\'f2\'fc \'eb\'e8 \'f3 \'ed\'e0\'f1 \'e2\'ee\'ee\'e1\'f9\'e5 \'f1\'f2\'f3\'e4\'e5\'ed\'f2\'fb), \'e7\'e0\'f2\'e5\'ec \'ef\'f0\'ee\'e2\'e5\'f0\'ff\'e5\'f2\'f1\'ff \'f0\'e0\'e7\'ec\'e5\'f0 \'fd\'f2\'ee\'e3\'ee \'e2\'e5\'ea\'f2\'ee\'f0\'e0. \'c5\'f1\'eb\'e8 \'ee\'ed \'f0\'e0\'e2\'e5\'ed \'e5\'e4\'e8\'ed\'e8\'f6\'e5 - \'f2\'ee \'f1\'f2\'e0\'f0\'ee\'f1\'f2\'ee\'e9 \'ed\'e0\'e7\'ed\'e0\'f7\'e0\'e5\'f2\'f1\'ff \'ed\'f3\'eb\'e5\'e2\'ee\'e9 \'fd\'eb\'e5\'ec\'e5\'ed\'f2 \'e2\'e5\'ea\'f2\'ee\'f0\'e0 \lang1033\b\f1 students \b0 (\lang1049\f0\'e5\'e4\'e8\'ed\'f1\'f2\'e2\'e5\'ed\'ed\'fb\'e9 \'f1\'f2\'f3\'e4\'e5\'ed\'f2 \'e2 \'e3\'f0\'f3\'ef\'ef\'e5), \'e5\'f1\'eb\'e8 \'e1\'ee\'eb\'fc\'f8\'e5 \'e5\'e4\'e8\'ed\'e8\'f6\'fb - \'e3\'e5\'ed\'e5\'f0\'e8\'f0\'f3\'e5\'f2\'f1\'ff (\'ef\'f1\'e5\'e2\'e4\'ee)\'f1\'eb\'f3\'f7\'e0\'e9\'ed\'ee\'e5 \'f7\'e8\'f1\'eb\'ee \lang1033\b\f1 headman\lang1049\f0  \b0\'f2\'e8\'ef\'e0 \lang1033\b\f1 int\b0 . \lang1049\f0\'c2 \'e8\'f2\'ee\'e3\'e5 \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'e5\'f2\'f1\'ff \lang1033\b\f1 head\b0  \lang1049\f0\'f2\'e8\'ef\'e0 \lang1033\b\f1 Student*\lang1049\b0\f0 , \'ea\'ee\'f2\'ee\'f0\'fb\'e9 \'ff\'e2\'eb\'ff\'e5\'f2\'f1\'ff \'fd\'eb\'e5\'ec\'e5\'ed\'f2\'ee\'ec \'e2\'e5\'ea\'f2\'ee\'f0\'e0 \lang1033\b\f1 students\b0  \lang1049\f0\'f1 \'e8\'ed\'e4\'e5\'ea\'f1\'ee\'ec\b  \lang1033\f1 headman\b0 .\b\par
+\lang1049\f0\'d0\'e5\'e0\'eb\'e8\'e7\'e0\'f6\'e8\'ff\lang1033\f1 : \par
+\b0\i Student* Group::electHeadman()\par
+\{\par
+    if (!students.empty())\par
+    \{\par
+        if (students.size() > 1)\par
+        \{\par
+            int headman = rand() % students.size();\par
+            head = students[headman];\par
+            return head;\par
+        \}\par
+        else head = students[0];\par
+        return head;\par
+    \}\par
+    else return nullptr;\par
+\}\b\i0\par
+\b0\par
+\ul 5)\lang1049\ulnone\f0  \'c5\'f1\'eb\'e8 \'e8\'e7 \'f4\'f3\'ed\'ea\'f6\'e8\'e8 \'e2\'ee\'e7\'e2\'f0\'e0\'f9\'e0\'e5\'f2\'f1\'ff  \b const string& \b0 (\'f1\'f1\'fb\'eb\'ea\'e0 \'ed\'e0 \'ea\'ee\'ed\'f1\'f2\'e0\'ed\'f2\'ed\'fb\'e9 \'ee\'e1\'fa\'e5\'ea\'f2)\b , \b0\'f2\'ee \'e4\'e0\'ed\'ed\'f3\'fe \'f1\'f2\'f0\'ee\'ea\'f3 \'ed\'e5\'eb\'fc\'e7\'ff \'e1\'f3\'e4\'e5\'f2 \'e8\'e7\'ec\'e5\'ed\'ff\'f2\'fc \'e2 \'e4\'e0\'eb\'fc\'ed\'e5\'e9\'f8\'e5\'ec (\'e0 \'ef\'f0\'e8 \'ef\'ee\'ef\'fb\'f2\'ea\'e5 \'fd\'f2\'ee \'f1\'e4\'e5\'eb\'e0\'f2\'fc \'ea\'ee\'ec\'ef\'e8\'eb\'ff\'f2\'ee\'f0 \'e2\'fb\'e1\'f0\'ee\'f1\'e8\'f2 \'ee\'f8\'e8\'e1\'ea\'f3). \'c2 \'f1\'eb\'f3\'f7\'e0\'e5 \'e6\'e5 \'e2\'ee\'e7\'e2\'f0\'e0\'f2\'e0 \b string& \b0\'fd\'f2\'f3 \'f1\'f2\'f0\'ee\'f7\'ea\'f3 \'ec\'ee\'e6\'ed\'ee \'e1\'f3\'e4\'e5\'f2 \'e8\'e7\'ec\'e5\'ed\'ff\'f2\'fc \'e2 \'ef\'ee\'f1\'eb\'e5\'e4\'f3\'fe\'f9\'e8\'f5 \'f4\'f3\'ed\'ea\'f6\'e8\'ff\'f5. \lang9\b\f1\par
+}
+ 
