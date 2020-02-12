@@ -34,6 +34,19 @@ TEST(test1, task3)
     EXPECT_EQ(nullptr, dean.findGroup("testGroup")->findStudent(0));
 }
 
+//deleting non-existent student
+TEST(test1, task3_1)
+{
+    Deanery dean;
+    dean.createGroup("testGroup", "testSpec");
+    Group* temp = dean.findGroup("testGroup");
+    temp->addStudent(new Student("testStudent", 0));
+    temp->deleteStudent(temp->findStudent(0));  
+    temp->deleteStudent(temp->findStudent(0));
+
+    EXPECT_EQ(nullptr, dean.findGroup("testGroup")->findStudent(0));
+}
+
 //changing students group
 TEST(test1, task4)
 {
