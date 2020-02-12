@@ -16,7 +16,7 @@ TEST(testStudent, test1) {
 }
 
 TEST(testGroup, test2) {
-    Group* group1 = new Group("1");
+    Group* group1 = new Group("18Pi", "Se");
     Student* student1 = new Student(2, "Maxim Maximov");
     Student* student2 = new Student(3, "Ivan Ivanov");
 
