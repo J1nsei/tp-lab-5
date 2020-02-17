@@ -3,7 +3,7 @@
 #include <string>
 
 TEST(testStudent, init) {
-	student student1(0, "Henry Ford");
+	student student1("Henry Ford", 0);
 	EXPECT_EQ(0, student1.getId());
 	EXPECT_EQ("Henry Ford", student1.getFio());
 }
