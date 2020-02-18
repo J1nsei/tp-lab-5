@@ -52,10 +52,10 @@ void Decan::addGroup()
 void Decan::setMarks()
 {
 	int mark;
-	for (auto& student : student)
+	for (auto& temp : student)
 	{
 		mark = std::rand() % 10 + 1;
-		student->setMarks(mark);
+		temp->setMarks(mark);
 	}
 }
 
@@ -67,11 +67,11 @@ void Decan::changeGroup(Student* student, const std::string& groupName)
 		if (curGroup->groupName == groupName)
 		{
 			std::string thisGroup = student->group;
-			for (auto& group : group)
+			for (auto& temp : group)
 			{
-				if (group->groupName == thisGroup)
+				if (temp->groupName == thisGroup)
 				{
-					group->kickStudent(student->ID);
+					temp->kickStudent(student->ID);
 				}
 			}
 			student->add(curGroup->groupName);
