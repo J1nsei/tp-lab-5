@@ -1,7 +1,7 @@
 #include "gtest/gtest.h"
-#include "../decan/decan.h"
-#include "../decan/group.h"
-#include "../decan/student.h"
+#include "decan.h"
+#include "group.h"
+#include "student.h"
 #include <string>
 
 TEST (testStudent, getName) 
