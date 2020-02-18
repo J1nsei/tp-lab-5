@@ -80,6 +80,48 @@ void Decan::changeGroup(Student* student, const std::string& groupName)
 	}
 }
 
+void Decan::update(const std::string& fileName)
+{
+	std::ofstream file;
+	file.open(fileName);
+
+	if (file.is_open())
+	{
+		file << "Total students = " << student.size() << std::endl;
+		for (auto& temp : group)
+		{
+			file << "Group specification is - " << temp->groupName << std::endl;
+			file << "Students in group -" << student.size() << std::endl;
+			file << "Group head is - " << temp->head << std::endl;
+			file << "Average group score is - " << temp->getAverage() << std::endl<<std::endl;
+
+			for (auto& person : temp->student)
+			{
+				file << person->name << std::endl;
+				file << "Marks : " << std::endl;
+				for (auto& mark : person->marks)
+				{
+					file << mark << ", ";
+				}
+				file << "Average score is - " << person->getAverage() << std::endl;
+			}
+		}
+
+		file << "Average student marks: " << std::endl;
+		for (auto& temp : studentsMMark)
+		{
+			file << temp.first << " " << temp.second << std::endl;
+		}
+
+		file << std::endl << "Average group marks: " << std::endl;
+		for (auto& temp : groupMMark)
+		{
+			file << temp.first << " " << temp.second << std::endl;
+		}
+	}
+	file.close();
+
+}
 
 void Decan::kickStudent()
 {
@@ -104,22 +146,22 @@ void Decan::kickStudent()
 
 void Decan::setHead()
 {
-	for (auto& group : group)
+	for (auto& iter : group)
 	{
-		group->setHead();
+		iter->setHead();
 	}
 }
 
 
 void Decan::printGroup()
 {
-	for (auto& group : group)
+	for (auto& iter : group)
 	{
-		std::cout << "Group name -" << group->groupName << std::endl;
-		std::cout << "Students in group" << group->student.size() << std::endl;
-		std::cout << "Group headmaster - " << group->head->name << std::endl<<std::endl;
+		std::cout << "Group name -" << iter->groupName << std::endl;
+		std::cout << "Students in group" << iter->student.size() << std::endl;
+		std::cout << "Group headmaster - " << iter->head->name << std::endl<<std::endl;
 
-		for (auto& student : group->student)
+		for (auto& student : iter->student)
 		{
 			std::cout << student->name << " "; 
 			for (int mark : student->marks)
@@ -127,18 +169,18 @@ void Decan::printGroup()
 				std::cout << mark << ",";
 			}
 			std::cout << std::endl;
-			std::cout << "Average is - " << student->getAverage << " "<<std::endl;
+			std::cout << "Average is - " << student->getAverage() << " "<<std::endl;
 		}
 		std::cout << std::endl << std::endl;
 	}
 
-	std::cout << "Average students mark - ";
+	std::cout << "Average students mark - " << std::endl;
 	for (auto& pair : studentsMMark)
 	{
 		std::cout << pair.second << " " << pair.first << std::endl;
 	}
 
-	std::cout << "Average groups mark - ";
+	std::cout << "Average groups mark - " << std::endl;
 	for (auto& pair : groupMMark)
 	{
 		std::cout << pair.second << " " << pair.first << std::endl;

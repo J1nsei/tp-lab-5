@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <vector>
 #include "student.h"
@@ -5,7 +6,7 @@
 
 
 class Group
- {
+ {   
 public:
 	friend class Decan;
 	explicit Group(std::string name);

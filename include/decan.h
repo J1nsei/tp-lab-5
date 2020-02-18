@@ -16,7 +16,8 @@ public:
 	void addGroup();
 	void setMarks();
 	void changeGroup(Student* student, const std::string& group);
-	void setHead();
+	void update(const std::string& fileName);
+	void setHead();	
 	void kickStudent();
 	void printGroup();
 	int countStudents();

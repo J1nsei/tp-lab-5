@@ -33,7 +33,7 @@ Student* Group::findStudent(int ID)
 {
 	for (auto& student : this->student)
 	{
-		if (student->getID == ID)
+		if (student->getID() == ID)
 			return student;
 	}
 	return nullptr;
@@ -42,9 +42,9 @@ Student* Group::findStudent(int ID)
 double Group::getAverage()
 {
 	double marks = 0;
-	for (auto& student : student)
+	for (auto& iter : student)
 	{
-		marks += student->getAverage();
+		marks += iter->getAverage();
 
 	}
 	int sum = marks / student.size();
