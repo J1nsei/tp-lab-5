@@ -1,4 +1,3 @@
-#include "pch.h"
 #include "gtest/gtest.h"
 #include "../decan/decan.h"
 #include "../decan/group.h"
@@ -7,20 +6,20 @@
 
 TEST (testStudent, getName) 
 {
-	Student student("A A A", 0);
-  EXPECT_EQ("A A A", student.getName());
+	Student student("Андрей Андреевич Андреев", 0);
+  EXPECT_EQ("Андрей Андреевич Андреев", student.getName());
 }
 
 TEST(testStudent, getID)
 {
-	Student student("A A A", 0);
+	Student student("Андрей Андреевич Андреев", 0);
 	EXPECT_EQ(0, student.getID());
 }
 
 TEST(testGroup, getSize)
 {
-	Student student("A A A", 0);
-	Group group("A");
+	Student student("Андрей Андреевич Андреев", 0);
+	Group group("Group");
 	group.addStudent(&student);
 	EXPECT_EQ(1, group.getSize());
 }
