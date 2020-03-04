@@ -11,7 +11,7 @@ Dean::Dean(std::string name)
 
 Group* Dean::search_group_name(std::string group_name)
 {
-	for (Group group : groups)
+	for (auto group : groups)
 		if (group->title == group_name)
 			return group;
 	return nullptr;
