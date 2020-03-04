@@ -48,9 +48,9 @@ void Dean::move_students(int id, std::string group1, std::string group2)
 {
 	Group* grp1 = search_group_name(group1);
 	Group* grp2 = search_group_name(group2);
-	Student* student = grp1->search_student_id(id);
-	grp1->kick_from_group(*student);
-	grp2->addstudent(*student);
+	Student student = grp1->search_student_name(name);
+	grp1->kick_from_group(student);
+	grp2->addstudent(student);
 	return student;
 }
 

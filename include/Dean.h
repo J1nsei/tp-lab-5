@@ -12,7 +12,7 @@ public:
 	void add_student_to_group(std::string fio, std::string group_name);
 	void create_group(std::string, std::string);
 	void add_mark_to_student(std::string group_name, std::string name, int mark);
-	void move_students(int id, std::string group1, std::string group2);
+	Student move_students(std::string name, std::string group1, std::string group2);
 	void kick_student(Student);
 	void update_data(std::string);
 	void init_head(std::string);
