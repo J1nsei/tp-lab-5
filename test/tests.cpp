@@ -24,13 +24,13 @@ TEST(student_test, testFIO) {
  TEST(group_test, testMove) {
  	Deanery* deanery = new Deanery();
  	Group* group1 = new Group("18ПИ1", "Программирование");
- 	deanery->groups.push_back(group1);
+ 	deanery->updateGroups(group1);
  	Student* student = new Student(101, "Мартынюк Олеся Олеговна");
  	student->addToGroup(group1);
  	group1->addStudent(student);
  	EXPECT_EQ("18ПИ1", student->getGroup()->getTitle());
  	Group* group2 = new Group("18ПИ2", "Программирование");
- 	deanery->groups.push_back(group2);
+ 	deanery->updateGroups(group2);
  	deanery->moveStudent("Мартынюк Олеся Олеговна", "18ПИ2");
  	EXPECT_EQ("18ПИ2", student->getGroup()->getTitle());;
  }
@@ -39,7 +39,7 @@ TEST(student_test, testFIO) {
  TEST(group_test, testHead) {
  	Deanery* deanery = new Deanery();
  	Group* group = new Group("18ПИ2", "Программирование");
- 	deanery->groups.push_back(group);
+ 	deanery->updateGroups(group);
  	Student* student = new Student(101, "Мартынюк Олеся Олеговна");
  	student->addToGroup(group);
  	group->addStudent(student);

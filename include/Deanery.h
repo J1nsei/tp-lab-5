@@ -25,6 +25,8 @@ public:
     void showData(); // вывод данных на консоль
     void saveData(); // сохравнение данных в файл
     std::vector<Group*> getGroups();
+    void setGroups();
+    void updateGroups(Group* group);
 };
 
 #endif /* Deanery_h */

@@ -7,7 +7,9 @@
 #define MINAVG 3.5
 using namespace std;
 
-Deanery::Deanery(){};
+Deanery::Deanery(){
+    setGroups();
+}
 
 vector<string> parseString(string s, char delimiter){
     size_t pos = 0;
@@ -28,7 +30,7 @@ void Deanery::setDataGroups(){
     while(getline(fileGroups, s)){
         vector<string>data = parseString(s, ';');
         Group* group = new Group(data[0], data[1]);
-        groups.push_back(group);
+        updateGroups(group);
     }
     fileGroups.close();
 }
@@ -145,4 +147,12 @@ void Deanery::saveData() {
 
 vector<Group*> Deanery::getGroups() {
     return this->groups;
+}
+
+void Deanery::setGroups() {
+    this->groups = {};
+}
+
+void Deanery::updateGroups(Group* group){
+    this->groups.push_back(group);
 }
