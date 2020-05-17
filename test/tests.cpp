@@ -38,8 +38,8 @@ TEST(student_test, testFIO) {
 
  TEST(group_test, testHead) {
  	Deanery* deanery = new Deanery();
- 	deanery->groups.push_back(group);
  	Group* group = new Group("18ПИ2", "Программирование");
+ 	deanery->groups.push_back(group);
  	Student* student = new Student(101, "Мартынюк Олеся Олеговна");
  	student->addToGroup(group);
  	group->addStudent(student);
