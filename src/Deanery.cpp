@@ -28,7 +28,7 @@ void Deanery::setDataGroups(){
     while(getline(fileGroups, s)){
         vector<string>data = parseString(s, ';');
         Group* group = new Group(data[0], data[1]);
-        this->groups.push_back(group);
+        groups.push_back(group);
     }
     fileGroups.close();
 }

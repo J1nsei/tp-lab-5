@@ -44,7 +44,7 @@ TEST(student_test, testFIO) {
  	student->addToGroup(group);
  	group->addStudent(student);
  	deanery->electHead();
- 	EXPECT_EQ(101, deanry->getGroup()->getHead()->getID());
+ 	EXPECT_EQ(101, deanery->getGroups()[0]->getHead()->getID());
  }
 
 

@@ -14,7 +14,7 @@ class Deanery{
 private:
     string filenameStudents = "Students.txt";
     string filenameGroups = "Groups.txt";
-    vector<Group*> groups = {};
+    vector<Group*> groups;
 public:
     Deanery();
     void setDataGroups(); // создание групп на основе данных из файла

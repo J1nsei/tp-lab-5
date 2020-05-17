@@ -14,7 +14,7 @@ private:
     int id;
     string fio;
     Group* group;
-    vector<int> marks = {};
+    vector<int> marks;
 public:
     Student(int id, string fio);
     void addToGroup(Group* group);

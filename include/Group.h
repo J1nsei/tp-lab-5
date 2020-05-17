@@ -13,7 +13,7 @@ class Group {
 private:
     string title; // название группы
     string spec; // специальность
-    vector<Student*> students = {}; // вектор ссылок на студентов
+    vector<Student*> students; // вектор ссылок на студентов
     Student* head; // ссылка на старосту (из членов группы)
 public:
     Group(string title, string spec); // создание группы с указанием названия
