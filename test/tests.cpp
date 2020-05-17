@@ -1,5 +1,6 @@
 #include "gtest/gtest.h"
 #include "Student.h"
+#include "Deanery.h"
 #include "Group.h"
 
 TEST(student_test, testFIO) {
