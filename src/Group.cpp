@@ -1,7 +1,7 @@
 #include "Group.h"
 #include <numeric>
 
-Group::Group(string title, string spec){ // создание группы с указанием названия
+Group::Group(std::string title, std::string spec){ // создание группы с указанием названия
     this->title = title;
     this->spec = spec;
 }
@@ -23,7 +23,7 @@ Student* Group::findStudentByID(int id){ // поиск студента по И�
     return nullptr;
 }
 
-Student* Group::findStudentByName(string fio){ // поиск студента по имени
+Student* Group::findStudentByName(std::string fio){ // поиск студента по имени
     for (Student* student: this->students){
         if (student->getFIO() == fio){
             return student;
@@ -50,15 +50,15 @@ void Group::deleteStudent(int id) { // исключение студента и�
     }
 }
 
-string Group::getTitle() {
+std::string Group::getTitle() {
     return this->title;
 }
 
-string Group::getSpec() {
+std::string Group::getSpec() {
     return this->spec;
 }
 
-vector<Student*> Group::getStudents() {
+std::vector<Student*> Group::getStudents() {
     return this->students;
 }
 

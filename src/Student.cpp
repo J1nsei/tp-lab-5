@@ -1,6 +1,6 @@
 #include "Student.h"
 
-Student::Student(int id, string fio){
+Student::Student(int id, std::string fio){
     this->id = id;
     this->fio = fio;
 }
@@ -25,7 +25,7 @@ int Student::getID(){
     return this->id;
 }
 
-string Student::getFIO(){
+std::string Student::getFIO(){
     return this->fio;
 }
 
@@ -33,6 +33,6 @@ Group* Student::getGroup(){
     return this->group;
 }
 
-vector<int> Student::getMarks(){
+std::vector<int> Student::getMarks(){
     return this->marks;
 }
