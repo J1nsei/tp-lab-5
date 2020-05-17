@@ -34,12 +34,12 @@ void Deanery::setDataGroups(){
 }
 
 void Deanery::setDataStudents(){
-    string s; int i = 0;
+    string s;
     ifstream fileStudents(this->filenameStudents);
     while(getline(fileStudents, s)){
         vector<string>data = parseString(s, ';');
         Student* student = new Student(stoi(data[0]), data[1]);
-        for (Group* group: this->groups){
+        for (Group* group: this->getGroups()){
             if (group->getTitle() == data[2]){
                 group->addStudent(student);
                 student->addToGroup(group);
@@ -51,7 +51,7 @@ void Deanery::setDataStudents(){
 
 void Deanery::addRandomMarks(){
     srand(static_cast<unsigned int>(time(nullptr)));
-    for (Group* group: this->groups) {
+    for (Group* group: this->getGroups()) {
         for (Student* student: group->getStudents()){
             for (int i = 0; i < 3; i++) {
                 int randMark = rand() % 10 + 1;
@@ -62,7 +62,7 @@ void Deanery::addRandomMarks(){
 }
 
 void Deanery::getStatistics(){
-    for (Group* group: this->groups) {
+    for (Group* group: this->getGroups()) {
         cout << "===========================================" << endl << endl;
         cout << " >>> Статистика по группе " << group->getTitle() << " " << group->getSpec() << endl;
         cout << "Средняя оценка в группе = " << group->getAverageMark() << endl << endl;
@@ -78,10 +78,10 @@ void Deanery::getStatistics(){
 void Deanery::moveStudent(string fio, string groupTitle) {
     bool flag = false;
     Group* toGroup = nullptr; Student* student = nullptr;
-    for (Group* group: this->groups) {
+    for (Group* group: this->getGroups()) {
         if (group->getTitle() == groupTitle) {
             toGroup = group;
-            for (Group* group: this->groups) {
+            for (Group* group: this->getGroups()) {
                 student = group->findStudentByName(fio);
                 if (student != nullptr) {
                     student->addToGroup(toGroup);
@@ -97,7 +97,7 @@ void Deanery::moveStudent(string fio, string groupTitle) {
 }
 
 void Deanery::dropStudents() {
-    for (Group* group: this->groups) {
+    for (Group* group: this->getGroups()) {
         for (Student* student: group->getStudents()){
             if (student->getAverageMark() < MINAVG) {
                 while (group->getHead()->getID() == student->getID()){
@@ -112,14 +112,14 @@ void Deanery::dropStudents() {
 
 void Deanery::electHead() {
     srand(static_cast<unsigned int>(time(nullptr)));
-    for (Group* group: this-> groups) {
+    for (Group* group: this->getGroups()) {
         Student* head = group->getStudents()[rand() % group->getStudents().size()];
         group->changeHead(head);
     }
 }
 
 void Deanery::showData() {
-    for (Group* group: this->groups) {
+    for (Group* group: this->getGroups()) {
         cout << "Группа: " << group->getTitle() << " | Специальность: " << group->getSpec() << endl;
         cout << "Староста: " << group->getHead()->getFIO() << endl << endl;
         for (Student* student: group->getStudents()) {
@@ -135,10 +135,14 @@ void Deanery::showData() {
 
 void Deanery::saveData() {
     std::ofstream out(filenameStudents);
-    for (Group *group: this->groups) {
+    for (Group *group: this->getGroups()) {
         for (Student *student: group->getStudents()) {
             out << student->getID() << ";" << student->getFIO() << ";" << group->getTitle() <<"\n";
         }
     }
     out.close();
+}
+
+vector<Group*> Deanery::getGroups() {
+    return this->groups;
 }

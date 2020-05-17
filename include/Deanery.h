@@ -14,7 +14,7 @@ class Deanery{
 private:
     string filenameStudents = "Students.txt";
     string filenameGroups = "Groups.txt";
-    vector<Group*> groups;
+    vector<Group*> groups = {};
 public:
     Deanery();
     void setDataGroups(); // создание групп на основе данных из файла
@@ -26,6 +26,7 @@ public:
     void electHead(); // инициация выборов старост в группах
     void showData(); // вывод данных на консоль
     void saveData(); // сохравнение данных в файл
+    vector<Group*> getGroups();
 };
 
 #endif /* Deanery_h */
