@@ -1,0 +1,78 @@
+The name of the group:19PMI1
+The number of students:9
+The head of the group:Alexander Marjory Sheena
+The midle mark of the group:2.80556
+The best student is:Alexander Marjory Sheena
+The worst student is:Tucker Clementine Rebecca
+Jenkins Robert Steven
+Medium ball:3   Marks:3 1 5 3 
+Lawson Jacob Jeremy
+Medium ball:3.5   Marks:1 4 4 5 
+Crawford Clifton Nigel
+Medium ball:1.5   Marks:0 4 0 2 
+Tucker Clementine Rebecca
+Medium ball:0.25   Marks:1 0 0 0 
+Little Lorin Iris
+Medium ball:2.5   Marks:3 2 5 0 
+Alexander Marjory Sheena
+Medium ball:4   Marks:5 5 2 4 
+Lester Judithó Stephany
+Medium ball:2.75   Marks:0 3 5 3 
+Carson Erin Clare
+Medium ball:3.75   Marks:5 0 5 5 
+Floyd Lora Camilla
+Medium ball:4   Marks:4 4 3 5 
+The name of the group:19PMI2
+The number of students:9
+The head of the group:Potter Emily Roberta
+The midle mark of the group:2.97222
+The best student is:Potter Emily Roberta
+The worst student is:Rich Sydney Roger
+Hancock Charles Phillip
+Medium ball:2.25   Marks:1 0 5 3 
+Heath Jacob Stuart
+Medium ball:2.5   Marks:2 3 3 2 
+Wheeler David Erik
+Medium ball:3.5   Marks:5 2 4 3 
+Rich Sydney Roger
+Medium ball:1.5   Marks:2 0 0 4 
+Harper Kenneth Archibald
+Medium ball:3.25   Marks:3 2 3 5 
+Baker Wilfrid Dwight
+Medium ball:3.75   Marks:4 2 5 4 
+Gilmore Alexandra Lilian
+Medium ball:2.75   Marks:5 4 2 0 
+Potter Emily Roberta
+Medium ball:4   Marks:3 4 5 4 
+Shepherd Adela Patricia
+Medium ball:3.25   Marks:2 4 3 4 
+The name of the group:19PMI3
+The number of students:12
+The head of the group:Ramsey Robert Milton
+The midle mark of the group:2.75
+The best student is:Blake Susan Susan
+The worst student is:Hampton Mariah Beryl
+Gaines Donald Jack
+Medium ball:2.5   Marks:5 0 5 0 
+Gallagher Joshua Richard
+Medium ball:3.25   Marks:3 4 5 1 
+Ramsey Robert Milton
+Medium ball:3.25   Marks:3 1 5 4 
+Dean John Leonard
+Medium ball:3.5   Marks:4 2 4 4 
+Wells Steven James
+Medium ball:2.5   Marks:2 3 2 3 
+Robinson Joshua Jack
+Medium ball:2.25   Marks:4 2 0 3 
+Hampton Mariah Beryl
+Medium ball:1.5   Marks:0 3 2 1 
+Blake Susan Susan
+Medium ball:4   Marks:3 5 3 5 
+Flowers Amelia Jasmin
+Medium ball:1.75   Marks:3 0 4 0 
+Montgomery Gloria Ruthó
+Medium ball:2.5   Marks:1 3 1 5 
+Eaton Doris Caroline
+Medium ball:4   Marks:3 3 5 5 
+White Sophia Sophie
+Medium ball:2   Marks:1 2 5 0 
