@@ -6,7 +6,7 @@ env:
     - LINUX_DIST=trusty
     - DEPS_DIR=${TRAVIS_BUILD_DIR}/deps
     # Global build options and C++ flags
-    - CXX_FLAGS="-Wall -pedantic -Werror -Wno-variadic-macros -Wno-long-long -Wno-shadow"
+    - CXX_FLAGS="-Wall -pedantic -Wno-variadic-macros -Wno-shadow"
     # Misc
     - RUN_TESTS=true
     - COVERAGE=false
@@ -23,8 +23,6 @@ matrix:
            - gcc-4.8
            - g++-4.8
            #- gcov-4.9
-           - clang-3.7
-           - valgrind
            # Misc
            - python-yaml
            - lcov
@@ -63,7 +61,6 @@ script:
      - cd build
      - cmake ${CMAKE_OPTIONS} -DCMAKE_CXX_FLAGS=${CXX_FLAGS} -DCMAKE_BUILD_TYPE=Coverage -DBUILD_TESTS=ON .. 
      - make
-     - make task1_coverage
      - ctest
 
 
