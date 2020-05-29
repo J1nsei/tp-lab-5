@@ -8,7 +8,7 @@ env:
     # Global build options and C++ flags
     - CXX_FLAGS="-Wall -pedantic -Werror -Wno-variadic-macros -Wno-long-long -Wno-shadow"
     # Misc
-    - RUN_TESTS=true
+    - RUN_TESTS=false
     - COVERAGE=false
 
 matrix:

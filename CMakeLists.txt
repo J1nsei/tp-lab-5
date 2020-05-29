@@ -15,7 +15,7 @@ set(CMAKE_CXX_FLAGS "-g -Wall")
 #----------------------------------------------------------------------------
 set(COMMON_INCLUDES ${PROJECT_SOURCE_DIR}/include)
 include_directories(${COMMON_INCLUDES})
-#file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
+file(GLOB TEST_SRC_FILES ${PROJECT_SOURCE_DIR}/test/*.cpp)
 
 
 set(SRC_FILES ${PROJECT_SOURCE_DIR}/src/Deanery.cpp
@@ -49,17 +49,17 @@ if (BUILD_TESTS)
   ##############
   # Unit Tests
   ##############
-  #add_executable(runUnitTests ${TEST_SRC_FILES})
+  add_executable(runUnitTests ${TEST_SRC_FILES})
 
   # Standard linking to gtest stuff.
-  #target_link_libraries(runUnitTests gtest gtest_main)
+  target_link_libraries(runUnitTests gtest gtest_main)
 
   # Extra linking for the project.
-  #target_link_libraries(runUnitTests task1_lib)
+  target_link_libraries(runUnitTests task1_lib)
 
   # This is so you can do 'make test' to see all your tests run, instead of
   # manually running the executable runUnitTests to see those specific tests.
-  $add_test(UnitTests runUnitTests)
+  add_test(UnitTests runUnitTests)
 
   set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/.travis/cmake)
 
