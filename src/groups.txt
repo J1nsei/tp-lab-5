@@ -1,0 +1,4 @@
+18AMI - 1:Applied Mathematics and Informatics
+18AMI - 2:Applied Mathematics and Informatics
+18SE - 1:Software Engeneering
+18SE - 2:Software Engeneering
