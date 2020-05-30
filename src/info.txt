@@ -1,0 +1,37 @@
+PMI gr1, average: 3.47107
+	1 Vasya Pupkin, average: 3.72727
+	7 Jake Perry, average: 3.54545
+	10 Samir Patterson, average: 2.63636
+	11 Braxton Long, average: 3.63636
+	16 Xaviell Robinson, average: 4.54545
+	19 Austin Sanchez, average: 3.54545
+	20 Diego Watson, average: 2.36364
+	25 Andres Campbell, average: 2.54545
+	26 Qadry Henderson, average: 4.45455
+	29 Yitzchak Phillips, average: 3.63636
+	32 Ubaldo Robinson, average: 3.54545
+PMI gr2, average: 3.47727
+	3 Petya Ivanov, average: 3.54545
+	4 Masha Zaitseva, average: 3.18182
+	5 Virginius Mitchell, average: 4.72727
+	8 Zeke Sanchez, average: 4.36364
+	13 Liam Robinson, average: 3.45455
+	14 Quinton Long, average: 2.09091
+	18 Jonah Barnes, average: 2.72727
+	21 Gerardo Butler, average: 2.45455
+	23 Wiley Parker, average: 3.36364
+	27 Urias Barnes, average: 4.72727
+	31 Osiris Williams, average: 3.36364
+	33 Kieran Rodriguez, average: 3.72727
+PMI gr3, average: 3.73554
+	2 Tanya Petrova, average: 4.54545
+	6 Harlan Lopez, average: 3.36364
+	9 Paolo Hernandez, average: 4.36364
+	12 Joshua Mitchell, average: 4.45455
+	15 Zack Hall, average: 2.27273
+	17 Quinnton Bryant, average: 4.45455
+	22 Luis Lewis, average: 3.45455
+	24 Zachery Cooper, average: 3.63636
+	28 Cannon Murphy, average: 3.45455
+	30 Uthman Bailey, average: 4.36364
+	34 Thatcher Sanchez, average: 2.72727
