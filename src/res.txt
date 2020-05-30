@@ -1,0 +1,293 @@
+Group: 17Pi
+ID: 0
+Student: Степанов Дмитрий Созонович
+Main Mark: 4
+
+ID: 10
+Student: Орлов Ибрагил Улебович
+Main Mark: 3
+
+ID: 20
+Student: Козлов Тихон Филатович
+Main Mark: 4
+
+ID: 30
+Student: Сидоров Витольд Арсеньевич
+Main Mark: 2
+
+ID: 35
+Student: Новиков Зиновий Геласьевич
+Main Mark: 3
+
+ID: 40
+Student: Громов Пантелеймон Тарасович
+Main Mark: 5
+
+ID: 50
+Student: Муравьёва Аврора Платоновна
+Main Mark: 3
+
+ID: 55
+Student: Рожкова Лея Лукьевна
+Main Mark: 3
+
+ID: 65
+Student: Князева Зарина Алексеевна
+Main Mark: 5
+
+ID: 70
+Student: Власова Береслава Федосеевна
+Main Mark: 4
+
+ID: 80
+Student: Никитина Лира Яковлевна
+Main Mark: 1
+
+ID: 90
+Student: Артемьева Триана Васильевна
+Main Mark: 3
+
+Group: 18Pi1
+ID: 6
+Student: Белов Лука Сергеевич
+Main Mark: 4
+
+ID: 11
+Student: Князев Аввакум Созонович
+Main Mark: 3
+
+ID: 16
+Student: Фадеев Климент Давидович
+Main Mark: 5
+
+ID: 21
+Student: Рогов Григорий Лукьянович
+Main Mark: 3
+
+ID: 31
+Student: Блохин Степан Пётрович
+Main Mark: 3
+
+ID: 36
+Student: Авдеев Виталий Оскарович
+Main Mark: 4
+
+ID: 41
+Student: Анисимов Альфред Куприянович
+Main Mark: 3
+
+ID: 51
+Student: Якушева Мариша Константиновна
+Main Mark: 5
+
+ID: 56
+Student: Брагина Ралина Артёмовна
+Main Mark: 3
+
+ID: 61
+Student: Одинцова Тереза Эльдаровна
+Main Mark: 3
+
+ID: 66
+Student: Пестова Алина Игоревна
+Main Mark: 4
+
+ID: 71
+Student: Носова Карина Дамировна
+Main Mark: 5
+
+ID: 76
+Student: Бирюкова Божена Мартыновна
+Main Mark: 3
+
+ID: 81
+Student: Филатова Святослава Демьяновна
+Main Mark: 4
+
+ID: 91
+Student: Денисова Милена Ростиславовна
+Main Mark: 2
+
+ID: 96
+Student: Дмитриева Илена Мироновна
+Main Mark: 3
+
+Group: 18Pi2
+ID: 2
+Student: Одинцов Ярослав Робертович
+Main Mark: 5
+
+ID: 7
+Student: Медведев Аввакум Лукьянович
+Main Mark: 4
+
+ID: 17
+Student: Цветков Аристарх Артёмович
+Main Mark: 5
+
+ID: 22
+Student: Архипов Ибрагил Михайлович
+Main Mark: 5
+
+ID: 27
+Student: Зайцев Евгений Мартынович
+Main Mark: 3
+
+ID: 32
+Student: Веселов Марк Владимирович
+Main Mark: 4
+
+ID: 37
+Student: Фокин Гаянэ Иосифович
+Main Mark: 5
+
+ID: 47
+Student: Абрамов Ростислав Филатович
+Main Mark: 1
+
+ID: 52
+Student: Агафонова Каторина Мэлоровна
+Main Mark: 4
+
+ID: 62
+Student: Медведева Виоланта Вадимовна
+Main Mark: 2
+
+ID: 72
+Student: Уварова Жасмин Эдуардовна
+Main Mark: 2
+
+ID: 77
+Student: Соколова Юна Авдеевна
+Main Mark: 4
+
+ID: 82
+Student: Шашкова Илзе Федотовна
+Main Mark: 3
+
+ID: 92
+Student: Голубева Розалина Феликсовна
+Main Mark: 2
+
+Group: 19Pi1
+ID: 8
+Student: Павлов Августин Фролович
+Main Mark: 1
+
+ID: 13
+Student: Лобанов Варлам Константинович
+Main Mark: 5
+
+ID: 18
+Student: Кулаков Ибрагил Эльдарович
+Main Mark: 3
+
+ID: 28
+Student: Аксёнов Оскар Макарович
+Main Mark: 1
+
+ID: 38
+Student: Тихонов Севастьян Григорьевич
+Main Mark: 5
+
+ID: 43
+Student: Мышкин Адольф Мартынович
+Main Mark: 4
+
+ID: 48
+Student: Савельев Геннадий Ильяович
+Main Mark: 3
+
+ID: 53
+Student: Белякова Жаклин Матвеевна
+Main Mark: 5
+
+ID: 63
+Student: Коновалова Аврора Серапионовна
+Main Mark: 3
+
+ID: 73
+Student: Калашникова Беатриса Руслановна
+Main Mark: 5
+
+ID: 78
+Student: Исаева Полианна Витальевна
+Main Mark: 3
+
+ID: 83
+Student: Попова Олеся Филатовна
+Main Mark: 5
+
+ID: 88
+Student: Кабанова Диша Петровна
+Main Mark: 5
+
+ID: 93
+Student: Кулакова Гелана Лукьевна
+Main Mark: 4
+
+Group: 19Pi2
+ID: 4
+Student: Антонов Игнатий Тарасович
+Main Mark: 3
+
+ID: 9
+Student: Логинов Алан Феликсович
+Main Mark: 4
+
+ID: 19
+Student: Васильев Самуил Улебович
+Main Mark: 4
+
+ID: 24
+Student: Фёдоров Виталий Вячеславович
+Main Mark: 4
+
+ID: 29
+Student: Уваров Ибрагил Миронович
+Main Mark: 5
+
+ID: 34
+Student: Копылов Альберт Станиславович
+Main Mark: 4
+
+ID: 44
+Student: Самойлов Ибрагил Александрович
+Main Mark: 5
+
+ID: 49
+Student: Нестеров Августин Богуславович
+Main Mark: 5
+
+ID: 54
+Student: Ильина Таисия Пётровна
+Main Mark: 3
+
+ID: 64
+Student: Соловьёва Патрисия Эльдаровна
+Main Mark: 2
+
+ID: 69
+Student: Сидорова Силика Ивановна
+Main Mark: 4
+
+ID: 74
+Student: Мухина Магдалина Артемовна
+Main Mark: 5
+
+ID: 79
+Student: Егорова Лейла Кирилловна
+Main Mark: 3
+
+ID: 89
+Student: Соболева Габриэлла Дмитрьевна
+Main Mark: 2
+
+ID: 94
+Student: Волкова Симона Павловна
+Main Mark: 5
+
+ID: 99
+Student: Денисова Ульна Алексеевна
+Main Mark: 5
+
