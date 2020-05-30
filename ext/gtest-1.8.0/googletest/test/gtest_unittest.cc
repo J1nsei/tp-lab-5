@@ -5121,8 +5121,8 @@ TEST(AssertionResultTest, StreamingWorks) {
 
 TEST(AssertionResultTest, CanStreamOstreamManipulators) {
   AssertionResult r = AssertionSuccess();
-  r << "Data" << std::endl << std::flush << std::ends << "Will be visible";
-  EXPECT_STREQ("Data\n\\0Will be visible", r.message());
+  r << "data" << std::endl << std::flush << std::ends << "Will be visible";
+  EXPECT_STREQ("data\n\\0Will be visible", r.message());
 }
 
 // The next test uses explicit conversion operators -- a C++11 feature.

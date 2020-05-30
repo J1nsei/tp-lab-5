@@ -53,7 +53,7 @@ class Widget {
   void GetCharPtrValue(char* buffer, size_t max_size) const;
 
  private:
-  // Data members
+  // data members
   float number_;
   std::string name_;
 };
