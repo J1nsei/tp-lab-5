@@ -1,0 +1,4 @@
+18PMI-1:Applied Mathematics and Informatics
+18PMI-2:Applied Mathematics and Informatics
+18PI-1:Software Engineering
+18PI-2:Software Engineering
