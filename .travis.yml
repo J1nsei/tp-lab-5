@@ -8,7 +8,7 @@ env:
     # Global build options and C++ flags
     - CXX_FLAGS="-Wall -pedantic -Werror -Wno-variadic-macros -Wno-long-long -Wno-shadow"
     # Misc
-    - RUN_TESTS=false
+    - RUN_TESTS=true
     - COVERAGE=false
 
 matrix:
@@ -62,9 +62,9 @@ script:
      - mkdir -p build
      - cd build
      - cmake ${CMAKE_OPTIONS} -DCMAKE_CXX_FLAGS=${CXX_FLAGS} -DCMAKE_BUILD_TYPE=Coverage -DBUILD_TESTS=ON .. 
-     - make || true
-     - make task1_coverage || true
-     - ctest || true
+     - make
+     - make task1_coverage
+     - ctest
 
 
 after_success:
