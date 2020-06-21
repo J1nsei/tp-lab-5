@@ -22,7 +22,7 @@ TEST(group, test1)
 {
 	Student stud(113, "Testing Qwerty Prog");
 	Group grp("title", "spec");
-	grp.addStudent(stud);
+	grp.addStudent(&stud);
 	int st_id = 113;
 	EXPECT_EQ(st_id, grp.searchStudentFIO("Testing Qwerty Prog")->getId());
 }
@@ -31,7 +31,7 @@ TEST(group, test2)
 {
 	Student stud(113, "Testing Qwerty Prog");
 	Group grp("title", "spec");
-	grp.addStudent(stud);
-	str = "title spec";
+	grp.addStudent(&stud);
+	string str = "title spec";
 	EXPECT_EQ(str,grp.info());
 }
