@@ -1,3 +1,4 @@
+#pragma once
 #include <vector>
 #include "group.h"
 #include <string>

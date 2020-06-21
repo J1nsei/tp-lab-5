@@ -1,37 +1,37 @@
 #include "gtest/gtest.h"
-#include "stdntent.h"
+#include "student.h"
 #include "group.h"
 #include "dean.h"
 #include <string>
 
-TEST(stdntent,test1)
+TEST(student,test1)
 {
-	stdntent stdnt(113,"Testing Qwerty Prog");
+	Student stud(113,"Testing Qwerty Prog");
 	string st_name = "Testing Qwerty Prog";
-	EXPECT_EQ(st_name, stdnt.getFio());
+	EXPECT_EQ(st_name, stud.getFio());
 }
 
-TEST(stdntent, test2)
+TEST(student, test2)
 {
-	stdntent stdnt(113, "Testing Qwerty Prog");
+	Student stud(113, "Testing Qwerty Prog");
 	int st_id = 113;
-	EXPECT_EQ(st_id, stdnt.getId());
+	EXPECT_EQ(st_id, stud.getId());
 }
 
 TEST(group, test1)
 {
-	stdntent stdnt(113, "Testing Qwerty Prog");
+	Student stud(113, "Testing Qwerty Prog");
 	Group grp("title", "spec");
-	grp.addstdntent(&stdnt);
+	grp.addStudent(&stud);
 	int st_id = 113;
-	EXPECT_EQ(st_id, grp.searchstdntentFIO("Testing Qwerty Prog")->getId());
+	EXPECT_EQ(st_id, grp.searchStudentFIO("Testing Qwerty Prog")->getId());
 }
 
 TEST(group, test2)
 {
-	stdntent stdnt(113, "Testing Qwerty Prog");
+	Student stud(113, "Testing Qwerty Prog");
 	Group grp("title", "spec");
-	grp.addstdntent(&stdnt);
+	grp.addStudent(&stud);
 	string str = "title spec";
 	EXPECT_EQ(str,grp.info());
 }
