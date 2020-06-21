@@ -8,14 +8,14 @@ TEST(student,test1)
 {
 	Student stud(113,"Testing Qwerty Prog");
 	string st_name = "Testing Qwerty Prog";
-	EXPECT_EQ(st_name, stud->getFio());
+	EXPECT_EQ(st_name, stud.getFio());
 }
 
 TEST(student, test2)
 {
 	Student stud(113, "Testing Qwerty Prog");
 	int st_id = 113;
-	EXPECT_EQ(st_id, stud->getId());
+	EXPECT_EQ(st_id, stud.getId());
 }
 
 TEST(group, test1)
@@ -24,7 +24,7 @@ TEST(group, test1)
 	Group grp("title", "spec");
 	grp.addStudent(stud);
 	int st_id = 113;
-	EXPECT_EQ(st_id, grp->searchStudentFIO("Testing Qwerty Prog")->getId());
+	EXPECT_EQ(st_id, grp.searchStudentFIO("Testing Qwerty Prog")->getId());
 }
 
 TEST(group, test2)
